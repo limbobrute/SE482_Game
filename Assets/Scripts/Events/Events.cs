@@ -5,9 +5,9 @@ using UnityEngine;
 public class Events : BaseEvent
 {
     private bool isPaused = false;
-    private int EndDay;
-    private int EndHour;
-    private int EndMinute;
+    int EndDay;
+    int EndHour;
+    int EndMinute;
 
     public void SetStartTime(int d, int h, int m)
     { SetTime(d, h, m); }
