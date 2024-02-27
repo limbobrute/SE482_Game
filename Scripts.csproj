@@ -59,13 +59,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Buidlings\BaseBuilding.cs" />
-    <Compile Include="Assets\Scripts\HexRender.cs" />
+    <Compile Include="Assets\Scripts\Map\HexRender.cs" />
     <Compile Include="Assets\Scripts\Buidlings\Building.cs" />
-    <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\Events\Events.cs" />
-    <Compile Include="Assets\Scripts\MapGen.cs" />
+    <Compile Include="Assets\Scripts\Map\MapGen.cs" />
     <Compile Include="Assets\Scripts\Events\BaseEvent.cs" />
     <Compile Include="Assets\Scripts\Managers\ProjectTimer.cs" />
+    <Compile Include="Assets\Scripts\Map\Tile.cs" />
+    <Compile Include="Assets\Scripts\TechTreeNode.cs" />
     <Compile Include="Assets\Scripts\Events\WeatherEvent.cs" />
     <Compile Include="Assets\Scripts\Managers\RTSTimer.cs" />
     <Compile Include="Assets\Scripts\Events\Task.cs" />

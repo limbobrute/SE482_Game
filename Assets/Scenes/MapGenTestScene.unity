@@ -330,16 +330,15 @@ MonoBehaviour:
   innersize: 0
   height: 0.1
   material: {fileID: 2100000, guid: 8339e1349e80a384b9faa5528b437f0f, type: 2}
-  size: {x: 40, y: 40}
+  size: {x: 50, y: 50}
   SeedString: {fileID: 1113003071}
   Tiles:
-  - {fileID: 5299214063944766542, guid: e02296ff4e3601144b7af5c58ba298f7, type: 3}
   - {fileID: 6775496984499017493, guid: c42a9d6ed2d04964590ea9b069b0bb0e, type: 3}
-  - {fileID: 4548508762735081471, guid: 9a9152178b474d644951d998dc722c86, type: 3}
   - {fileID: 3584368669262525902, guid: bf5beccc3791f7342b86e902074cbdc0, type: 3}
-  - {fileID: 6594367716319042384, guid: adf7323c698664441a2c61094fbc8765, type: 3}
+  - {fileID: 4548508762735081471, guid: 9a9152178b474d644951d998dc722c86, type: 3}
   - {fileID: 5835904594040703108, guid: 07e770f7f3bf59849b88ea6a1909286f, type: 3}
-  EmptyTiles: []
+  - {fileID: 5299214063944766542, guid: e02296ff4e3601144b7af5c58ba298f7, type: 3}
+  - {fileID: 6594367716319042384, guid: adf7323c698664441a2c61094fbc8765, type: 3}
 --- !u!1 &528748198
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +743,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 325717483}
         m_TargetAssemblyTypeName: MapGen, Scripts
-        m_MethodName: StartTile
+        m_MethodName: Begin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
