@@ -83,6 +83,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sand
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b3db873f433d5e94c8377b09dc098f22,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -117,7 +122,7 @@ MonoBehaviour:
     TopRight: {fileID: 0}
     BottomLeft: {fileID: 0}
     BottomRight: {fileID: 0}
-  UpperRange: 3
-  LowerRange: 1.48
+  UpperRange: 5.99
+  LowerRange: 4
   AcceptableRange: 0.15
   tile: {fileID: 0}

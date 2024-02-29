@@ -51,7 +51,7 @@ MonoBehaviour:
     TopRight: {fileID: 0}
     BottomLeft: {fileID: 0}
     BottomRight: {fileID: 0}
-  UpperRange: 2.5
+  UpperRange: 3.99
   LowerRange: 0
   AcceptableRange: 0.1
   tile: {fileID: 0}

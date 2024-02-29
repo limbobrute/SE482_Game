@@ -83,6 +83,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mountains
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b3db873f433d5e94c8377b09dc098f22,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -118,6 +123,6 @@ MonoBehaviour:
     BottomLeft: {fileID: 0}
     BottomRight: {fileID: 0}
   UpperRange: 25
-  LowerRange: 11
+  LowerRange: 19
   AcceptableRange: 1.5
   tile: {fileID: 0}

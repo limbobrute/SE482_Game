@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using JetBrains.Annotations;
 
 //Created On: 2/19/2024
 //Created By: William HP.
@@ -26,7 +27,7 @@ public class MapGen : MonoBehaviour
     public Vector2Int size;
     public TextMeshProUGUI SeedString;
     public List<GameObject> Tiles = new List<GameObject>();
-    public List<GameObject> EmptyTiles = new List<GameObject>();
+    [SerializeField]public GameObject[,] EmptyTiles;
 
 
     private void Awake()
@@ -44,6 +45,7 @@ public class MapGen : MonoBehaviour
     #region CREATE_HEX_GRID
     void LayoutGrid()
     {
+        GameObject[,] LTile = new GameObject[size.x, size.y];
         for (int x = 0; x < size.x; x++)
         {
             for (int y = 0; y < size.y; y++)
@@ -61,9 +63,11 @@ public class MapGen : MonoBehaviour
                 hex.DrawMesh();
 
                 tile.gameObject.transform.parent = this.gameObject.transform;
-                EmptyTiles.Add(tile);
+                LTile[x, y] = tile;
+                
             }
         }
+        EmptyTiles = LTile;
     }
 
     public Vector3 GetPosForHex(Vector2Int coordinate)
@@ -95,7 +99,8 @@ public class MapGen : MonoBehaviour
     }
     #endregion
 
-    public void StartTile()
+    #region PUSDEO_WAVE_FUNCTION_COLLAPSE
+    /*public void StartTile()
     {
         var s = SeedString.text.Substring(0, SeedString.text.Length - 1);
         //seed = Convert.ToInt32(SeedString.text.ToString());
@@ -217,5 +222,80 @@ public class MapGen : MonoBehaviour
         MadeTiles.Add(newTile);
         range.UpdateNeigbhours();
         StopCoroutine(PickTile(null));
+    }*/
+    #endregion
+
+    public void Begin()
+    {
+        var s = SeedString.text.Substring(0, SeedString.text.Length - 1);
+        int.TryParse(s, out seed);
+        Debug.Log("Seed is " + s);
+        System.Random Srand = new System.Random(seed);
+        rand = Srand;
+
+        StartCoroutine(PerlinNoise());
+
+    }
+
+    public void Restart()
+    {
+        foreach (GameObject tile in EmptyTiles)
+        {
+            tile.gameObject.SetActive(true);
+            /*var temp = tile.GetComponent<HexRender>();
+            temp.entropy.Collapsed = false;
+            temp.acceptableTiles = Tiles;
+            temp.GameTiles.Clear();
+            temp.entropy.LowerAcceptable = 0;
+            temp.entropy.UpperAcceptable = 0;*/
+        }
+
+        foreach (GameObject tile in MadeTiles)
+        { Destroy(tile); }
+        MadeTiles.Clear();
+
+        var s = SeedString.text.Substring(0, SeedString.text.Length - 1);
+        int.TryParse(s, out seed);
+        //Debug.Log("Seed is " + s);
+        System.Random Srand = new System.Random(seed);
+        rand = Srand;
+
+        StartCoroutine(PerlinNoise());
+    }
+
+
+        IEnumerator PerlinNoise()
+    {
+        for (int x = 0; x < size.x; x++)
+        {
+            for(int y = 0 ; y < size.y; y++)
+            {
+                double offX = rand.NextDouble();
+                double offY = rand.NextDouble();
+
+                GameObject OldTile = EmptyTiles[x, y];
+                float xCoord = (float)x / size.x * 50f + (float)offX;
+                float yCoord = (float)y / size.y * 50f + (float)offY;
+
+                //Debug.Log("xCoord is " + xCoord + "\n yCord is " + yCoord);
+                //Debug.Log("Perlin noise value is " + Mathf.PerlinNoise(xCoord, yCoord));
+                float height = Mathf.Lerp(0, 1, Mathf.PerlinNoise(xCoord, yCoord));
+                //Debug.Log("Height value is " + height);
+                float Zheight = Mathf.Lerp(0, 25, height);
+                foreach(GameObject tile in Tiles)
+                {
+                    var data = tile.GetComponent<Tile>();
+                    if (Zheight >= data.LowerRange && Zheight <= data.UpperRange)
+                    {
+                        var newTile = Instantiate(tile, OldTile.transform.position, Quaternion.Euler(90, 0, 0));
+                        newTile.transform.localScale = new Vector3(newTile.transform.localScale.x, newTile.transform.localScale.y, Zheight);
+                        OldTile.SetActive(false);
+                        MadeTiles.Add(newTile);
+                        break;
+                    }
+                }
+            }
+            yield return null;
+        }
     }
 }

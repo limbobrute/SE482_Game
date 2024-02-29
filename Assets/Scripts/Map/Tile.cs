@@ -49,8 +49,8 @@ public class Tile : MonoBehaviour
         if (Eneigbhours.BottomRight != null)
         { Eneigbhours.BottomRight.GetComponent<HexRender>().ReduceEntropy(gameObject); }
 
-        var next = map.SortGrid();
-        map.NextTile(next);
+        /*var next = map.SortGrid();
+        map.NextTile(next);*/
 
     }
 
