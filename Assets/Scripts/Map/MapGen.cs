@@ -14,7 +14,7 @@ using JetBrains.Annotations;
 public class MapGen : MonoBehaviour
 {
     public static MapGen instance;
-    private List<GameObject> MadeTiles = new List<GameObject>();
+    GameObject[,] MadeTiles;
     private int seed = 0;
     private System.Random rand;
     [Header("Tile Settings")]
@@ -26,6 +26,7 @@ public class MapGen : MonoBehaviour
     [Header("Grid Settings")]
     public Vector2Int size;
     public TextMeshProUGUI SeedString;
+    public GameObject StartTile;
     public List<GameObject> Tiles = new List<GameObject>();
     [SerializeField]public GameObject[,] EmptyTiles;
 
@@ -232,6 +233,8 @@ public class MapGen : MonoBehaviour
         Debug.Log("Seed is " + s);
         System.Random Srand = new System.Random(seed);
         rand = Srand;
+        var temp = new GameObject[size.x, size.y];
+        MadeTiles = temp;
 
         StartCoroutine(PerlinNoise());
 
@@ -252,7 +255,6 @@ public class MapGen : MonoBehaviour
 
         foreach (GameObject tile in MadeTiles)
         { Destroy(tile); }
-        MadeTiles.Clear();
 
         var s = SeedString.text.Substring(0, SeedString.text.Length - 1);
         int.TryParse(s, out seed);
@@ -263,12 +265,43 @@ public class MapGen : MonoBehaviour
         StartCoroutine(PerlinNoise());
     }
 
+    void SetStart()
+    {
+        GameObject tile = MadeTiles[0, 0];
 
-        IEnumerator PerlinNoise()
+        /*Generate a Start tile at bottom right corner of the map*/
+        var startTile = Instantiate(StartTile, tile.transform.position, Quaternion.Euler(90, 0, 0));
+        MadeTiles[0, 0] = startTile;
+        Destroy(tile);
+
+
+        tile = MadeTiles[0, size.y - 1];
+        /*Generate a Start tile at the upper right corner of the map*/
+        startTile = Instantiate(StartTile, tile.transform.position, Quaternion.Euler(90, 0, 0));
+        MadeTiles[0, size.y - 1] = startTile;
+        Destroy(tile);
+
+
+        tile = MadeTiles[size.x - 1, size.y - 1];
+        /*Generate a Start tile at the upper left corner of the map*/
+        startTile = Instantiate(StartTile, tile.transform.position, Quaternion.Euler(90, 0, 0));
+        MadeTiles[size.x - 1, size.y - 1] = startTile;
+        Destroy(tile);
+
+
+        tile = MadeTiles[size.x - 1, 0];
+        /*Generate a Start tile at the bottom right of the map*/
+        startTile = Instantiate(StartTile, tile.transform.position, Quaternion.Euler(90, 0, 0));
+        MadeTiles[size.x - 1, 0] = startTile;
+        Destroy(tile);
+    }
+
+
+    IEnumerator PerlinNoise()
     {
         for (int x = 0; x < size.x; x++)
         {
-            for(int y = 0 ; y < size.y; y++)
+            for (int y = 0 ; y < size.y; y++)
             {
                 double offX = rand.NextDouble();
                 double offY = rand.NextDouble();
@@ -290,11 +323,13 @@ public class MapGen : MonoBehaviour
                         var newTile = Instantiate(tile, OldTile.transform.position, Quaternion.Euler(90, 0, 0));
                         newTile.transform.localScale = new Vector3(newTile.transform.localScale.x, newTile.transform.localScale.y, Zheight);
                         OldTile.SetActive(false);
-                        MadeTiles.Add(newTile);
+                        MadeTiles[x,y] = newTile;
                         break;
                     }
                 }
             }
+            if (MadeTiles[size.x - 1, size.y - 1] != null)
+            { SetStart(); StopCoroutine(PerlinNoise()); }
             yield return null;
         }
     }

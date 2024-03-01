@@ -332,6 +332,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 8339e1349e80a384b9faa5528b437f0f, type: 2}
   size: {x: 50, y: 50}
   SeedString: {fileID: 1113003071}
+  StartTile: {fileID: 4240169931132127765, guid: 1747ab84667f15e4ba5957e0f2688b0c,
+    type: 3}
   Tiles:
   - {fileID: 6775496984499017493, guid: c42a9d6ed2d04964590ea9b069b0bb0e, type: 3}
   - {fileID: 3584368669262525902, guid: bf5beccc3791f7342b86e902074cbdc0, type: 3}

@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60878fda37e2dd34a8022ec1cdd75eb2, type: 3}
   m_Name: TechTreeNode
   m_EditorClassIdentifier: 
+  Prequisites:
+    _pairs: []
+  Bonues:
+    _pairs: []
+  Reserached: 0
