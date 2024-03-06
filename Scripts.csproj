@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Events\Events.cs" />
     <Compile Include="Assets\Scripts\Map\MapGen.cs" />
     <Compile Include="Assets\Scripts\PSF\SerializableDictionary\Scripts\SerializableDictionary.cs" />
+    <Compile Include="Assets\Scripts\MouseSelecter.cs" />
     <Compile Include="Assets\Scripts\Events\BaseEvent.cs" />
     <Compile Include="Assets\Scripts\Managers\ProjectTimer.cs" />
     <Compile Include="Assets\Scripts\PSF\SerializableDictionary\Demo\Scripts\SerializableDictionaryDemo_1.cs" />

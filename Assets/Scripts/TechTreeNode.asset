@@ -13,7 +13,15 @@ MonoBehaviour:
   m_Name: TechTreeNode
   m_EditorClassIdentifier: 
   Prequisites:
-    _pairs: []
+    _pairs:
+    - _key: ahgpahbpangape
+      _value: 1
+    - _key: 
+      _value: 0
   Bonues:
-    _pairs: []
+    _pairs:
+    - _key: Housing
+      _value: 5
+    - _key: 
+      _value: 0
   Reserached: 0
