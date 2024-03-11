@@ -58,21 +58,28 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Buidlings\Buildings.cs" />
+    <Compile Include="Assets\Scripts\TechTree.cs" />
     <Compile Include="Assets\Scripts\Buidlings\BaseBuilding.cs" />
     <Compile Include="Assets\Scripts\Map\HexRender.cs" />
     <Compile Include="Assets\Scripts\Buidlings\Building.cs" />
+    <Compile Include="Assets\Scripts\Managers\ResourceManager.cs" />
+    <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\Events\Events.cs" />
     <Compile Include="Assets\Scripts\Map\MapGen.cs" />
     <Compile Include="Assets\Scripts\PSF\SerializableDictionary\Scripts\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\MouseSelecter.cs" />
+    <Compile Include="Assets\Scripts\BuildingData.cs" />
     <Compile Include="Assets\Scripts\Events\BaseEvent.cs" />
     <Compile Include="Assets\Scripts\Managers\ProjectTimer.cs" />
     <Compile Include="Assets\Scripts\PSF\SerializableDictionary\Demo\Scripts\SerializableDictionaryDemo_1.cs" />
     <Compile Include="Assets\Scripts\Map\Tile.cs" />
+    <Compile Include="Assets\Scripts\BuildingCost.cs" />
     <Compile Include="Assets\Scripts\TechTreeNode.cs" />
     <Compile Include="Assets\Scripts\Events\WeatherEvent.cs" />
     <Compile Include="Assets\Scripts\Managers\RTSTimer.cs" />
     <Compile Include="Assets\Scripts\PSF\SerializableDictionary\Demo\Scripts\SerializableDictionaryDemo_2.cs" />
+    <Compile Include="Assets\Scripts\Managers\BuildingManager.cs" />
     <Compile Include="Assets\Scripts\Events\Task.cs" />
     <Compile Include="Assets\Scripts\Resources\BaseResource.cs" />
   </ItemGroup>
