@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class TechNode : MonoBehaviour
 {
+    public TechTreeNode nodeScriptableObject;
     public TechNode[] nextNodes;
     public Button nodeButton;
     public Color lockedColor;
@@ -42,7 +44,7 @@ public class TechNode : MonoBehaviour
     {
         cb.disabledColor = lockedColor;
         nodeButton.colors = cb;
-        Debug.Log("color reset: " + nodeID);
+        //Debug.Log("color reset: " + nodeID);
     }
 
     public void NodeUnlock()
