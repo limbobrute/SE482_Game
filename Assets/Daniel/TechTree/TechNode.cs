@@ -9,10 +9,11 @@ public class TechNode : MonoBehaviour
 {
     public TechTreeNode nodeScriptableObject;
     public TechNode[] nextNodes;
-    public Button nodeButton;
-    public Color lockedColor;
-    public Color activatedColor;
-    ColorBlock cb;
+    private TechNodeModifyButton nodeButton;
+//    public Button nodeButton;
+//    public Color lockedColor;
+//    public Color activatedColor;
+//    ColorBlock cb;
     //public Color canActivateColor;
     public int nodeID = 0;
     public int numPreviousNode = 0;
@@ -25,8 +26,9 @@ public class TechNode : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        nodeButton = transform.GetComponent<TechNodeModifyButton>();
         ResetNode();
-        cb = nodeButton.colors;
+        //cb = nodeButton.colors;
     }
 
     // Update is called once per frame
@@ -37,39 +39,44 @@ public class TechNode : MonoBehaviour
 
     public void ResetNode()
     {
+        nodeButton.LockedColor();
         NodeLock();
         canInteract = false;
         isActivated = false;
         canActivate = false;
     }
-    public void ResetLockedColor()
+/*    public void ResetLockedColor()
     {
         cb.disabledColor = lockedColor;
         nodeButton.colors = cb;
         //Debug.Log("color reset: " + nodeID);
     }
+*/
 
     public void NodeUnlock()
     {
-        nodeButton.interactable = true;
+        //nodeButton.interactable = true;
+        nodeButton.ButtonInteractable(true);
         canInteract = true;
     }
 
     public void NodeLock()
     {
-        nodeButton.interactable = false;
+        //nodeButton.interactable = false;
+        nodeButton.ButtonInteractable(false);
         canInteract = true;
     }
 
     public void Activate()
     {
+        nodeButton.ActivatedColor();
         NodeLock();
-        cb.disabledColor = activatedColor;
-        nodeButton.colors = cb;
+        //        cb.disabledColor = activatedColor;
+        //        nodeButton.colors = cb;
+        //ActivateNode.Invoke();
         isActivated = true;
         canActivate = false;
         canInteract = false;
-        ActivateNode.Invoke();
     }
 
         public void TestDisplayEvent()

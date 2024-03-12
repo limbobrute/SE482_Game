@@ -4,12 +4,13 @@ using UnityEngine.UI;
 
 public class HoverText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    //private TechTreeNode nodeScriptableObject;
     public Text Header; // Reference to the Header Text component
     public Text Description; // Reference to the Description Text component
     public Text Requirements; // Reference to the Requirements Text component
     private TechNode parentNode;
 
-    void Start()
+    void Awake()
     {
         parentNode = transform.parent.transform.GetComponent<TechNode>();
     }

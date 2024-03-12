@@ -156,9 +156,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1687190287}
   - {fileID: 1058004644}
-  nodeButton: {fileID: 560129224}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 6
   numPreviousNode: 0
   canInteract: 0
@@ -218,9 +215,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeScriptableObject: {fileID: 0}
   nextNodes: []
-  nodeButton: {fileID: 1197605421}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 8
   numPreviousNode: 0
   canInteract: 0
@@ -1933,9 +1927,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeScriptableObject: {fileID: 0}
   nextNodes: []
-  nodeButton: {fileID: 206662594}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 10
   numPreviousNode: 0
   canInteract: 0
@@ -2258,6 +2249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 342649096}
   - component: {fileID: 342649097}
+  - component: {fileID: 342649098}
   m_Layer: 5
   m_Name: Node 09
   m_TagString: Untagged
@@ -2300,9 +2292,6 @@ MonoBehaviour:
   nodeScriptableObject: {fileID: 11400000, guid: a85e726483547ab43a8b112cb7172db3,
     type: 2}
   nextNodes: []
-  nodeButton: {fileID: 1983050827}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 9
   numPreviousNode: 0
   canInteract: 0
@@ -2323,6 +2312,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 342649097}
+        m_TargetAssemblyTypeName: TechNode, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &342649098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342649095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b230a3120bbb60478c084f29264884c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
 --- !u!1 &352316951
 GameObject:
   m_ObjectHideFlags: 0
@@ -3951,6 +3966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 585810060}
   - component: {fileID: 585810061}
+  - component: {fileID: 585810062}
   m_Layer: 5
   m_Name: Node 03
   m_TagString: Untagged
@@ -3995,9 +4011,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 707101248}
   - {fileID: 1912446384}
-  nodeButton: {fileID: 226096686}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 3
   numPreviousNode: 0
   canInteract: 0
@@ -4018,6 +4031,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 585810061}
+        m_TargetAssemblyTypeName: TechNode, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &585810062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585810059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b230a3120bbb60478c084f29264884c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
 --- !u!1 &591859586
 GameObject:
   m_ObjectHideFlags: 0
@@ -4335,6 +4374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 618168987}
   - component: {fileID: 618168988}
+  - component: {fileID: 618168989}
   m_Layer: 5
   m_Name: Node 02
   m_TagString: Untagged
@@ -4379,9 +4419,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1063725606}
   - {fileID: 1568076334}
-  nodeButton: {fileID: 282847851}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 2
   numPreviousNode: 0
   canInteract: 0
@@ -4402,6 +4439,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 618168988}
+        m_TargetAssemblyTypeName: TechNode, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &618168989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618168986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b230a3120bbb60478c084f29264884c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
 --- !u!1 &631987193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5084,6 +5147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 707101247}
   - component: {fileID: 707101248}
+  - component: {fileID: 707101249}
   m_Layer: 5
   m_Name: Node 06
   m_TagString: Untagged
@@ -5128,9 +5192,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 342649097}
   - {fileID: 1213364799}
-  nodeButton: {fileID: 1952531569}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 6
   numPreviousNode: 0
   canInteract: 0
@@ -5151,6 +5212,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 707101248}
+        m_TargetAssemblyTypeName: TechNode, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &707101249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707101246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b230a3120bbb60478c084f29264884c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
 --- !u!1 &727250141
 GameObject:
   m_ObjectHideFlags: 0
@@ -6734,9 +6821,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1118674073}
   - {fileID: 1230298811}
-  nodeButton: {fileID: 1855251461}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 3
   numPreviousNode: 0
   canInteract: 0
@@ -6966,9 +7050,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 56615164}
   - {fileID: 1145601047}
-  nodeButton: {fileID: 769862522}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 5
   numPreviousNode: 0
   canInteract: 0
@@ -8006,9 +8087,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeScriptableObject: {fileID: 0}
   nextNodes: []
-  nodeButton: {fileID: 2020002808}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 10
   numPreviousNode: 0
   canInteract: 0
@@ -8047,6 +8125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1063725605}
   - component: {fileID: 1063725606}
+  - component: {fileID: 1063725607}
   m_Layer: 5
   m_Name: Node 04
   m_TagString: Untagged
@@ -8090,9 +8169,6 @@ MonoBehaviour:
     type: 2}
   nextNodes:
   - {fileID: 1517752456}
-  nodeButton: {fileID: 266458611}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 4
   numPreviousNode: 0
   canInteract: 0
@@ -8113,6 +8189,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1063725606}
+        m_TargetAssemblyTypeName: TechNode, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1063725607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063725604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b230a3120bbb60478c084f29264884c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
 --- !u!1 &1063822273
 GameObject:
   m_ObjectHideFlags: 0
@@ -8302,9 +8404,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1145601047}
   - {fileID: 315764605}
-  nodeButton: {fileID: 904968020}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 6
   numPreviousNode: 0
   canInteract: 0
@@ -8709,9 +8808,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeScriptableObject: {fileID: 0}
   nextNodes: []
-  nodeButton: {fileID: 352316952}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 9
   numPreviousNode: 0
   canInteract: 0
@@ -9210,6 +9306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213364798}
   - component: {fileID: 1213364799}
+  - component: {fileID: 1213364800}
   m_Layer: 5
   m_Name: Node 10
   m_TagString: Untagged
@@ -9252,9 +9349,6 @@ MonoBehaviour:
   nodeScriptableObject: {fileID: 11400000, guid: 29fee40f145f9964f8699815c81d34d0,
     type: 2}
   nextNodes: []
-  nodeButton: {fileID: 1334963126}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 10
   numPreviousNode: 0
   canInteract: 0
@@ -9275,6 +9369,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1213364799}
+        m_TargetAssemblyTypeName: TechNode, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1213364800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213364797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b230a3120bbb60478c084f29264884c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
 --- !u!1 &1214633547
 GameObject:
   m_ObjectHideFlags: 0
@@ -9285,6 +9405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1214633548}
   - component: {fileID: 1214633549}
+  - component: {fileID: 1214633550}
   m_Layer: 5
   m_Name: Node 00
   m_TagString: Untagged
@@ -9328,9 +9449,6 @@ MonoBehaviour:
     type: 2}
   nextNodes:
   - {fileID: 1322644417}
-  nodeButton: {fileID: 1518189364}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 0
   numPreviousNode: 0
   canInteract: 0
@@ -9351,6 +9469,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1214633549}
+        m_TargetAssemblyTypeName: TechNode, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1214633550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214633547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b230a3120bbb60478c084f29264884c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
 --- !u!1 &1228191668
 GameObject:
   m_ObjectHideFlags: 0
@@ -9462,9 +9606,6 @@ MonoBehaviour:
   nodeScriptableObject: {fileID: 0}
   nextNodes:
   - {fileID: 315764605}
-  nodeButton: {fileID: 74482763}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 7
   numPreviousNode: 0
   canInteract: 0
@@ -9684,9 +9825,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 29684348}
   - {fileID: 1893399566}
-  nodeButton: {fileID: 994132071}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 3
   numPreviousNode: 0
   canInteract: 0
@@ -9725,6 +9863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322644416}
   - component: {fileID: 1322644417}
+  - component: {fileID: 1322644418}
   m_Layer: 5
   m_Name: Node 01
   m_TagString: Untagged
@@ -9769,9 +9908,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 618168988}
   - {fileID: 585810061}
-  nodeButton: {fileID: 591859588}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 1
   numPreviousNode: 0
   canInteract: 0
@@ -9792,6 +9928,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1322644417}
+        m_TargetAssemblyTypeName: TechNode, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1322644418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322644415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b230a3120bbb60478c084f29264884c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
 --- !u!1 &1334963124
 GameObject:
   m_ObjectHideFlags: 0
@@ -10387,9 +10549,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeScriptableObject: {fileID: 0}
   nextNodes: []
-  nodeButton: {fileID: 631987194}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 8
   numPreviousNode: 0
   canInteract: 0
@@ -10498,9 +10657,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1914736570}
   - {fileID: 1986525683}
-  nodeButton: {fileID: 939941653}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 2
   numPreviousNode: 0
   canInteract: 0
@@ -10641,9 +10797,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1960605192}
   - {fileID: 967077575}
-  nodeButton: {fileID: 805195364}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 2
   numPreviousNode: 0
   canInteract: 0
@@ -10815,6 +10968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1517752455}
   - component: {fileID: 1517752456}
+  - component: {fileID: 1517752457}
   m_Layer: 5
   m_Name: Node 08
   m_TagString: Untagged
@@ -10857,9 +11011,6 @@ MonoBehaviour:
   nodeScriptableObject: {fileID: 11400000, guid: 662391e61e6a6c6488473bb8531ff425,
     type: 2}
   nextNodes: []
-  nodeButton: {fileID: 1641911400}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 8
   numPreviousNode: 0
   canInteract: 0
@@ -10880,6 +11031,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1517752456}
+        m_TargetAssemblyTypeName: TechNode, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1517752457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517752454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b230a3120bbb60478c084f29264884c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
 --- !u!1 &1518189362
 GameObject:
   m_ObjectHideFlags: 0
@@ -11196,6 +11373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1568076333}
   - component: {fileID: 1568076334}
+  - component: {fileID: 1568076335}
   m_Layer: 5
   m_Name: Node 05
   m_TagString: Untagged
@@ -11240,9 +11418,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1517752456}
   - {fileID: 342649097}
-  nodeButton: {fileID: 481214956}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 5
   numPreviousNode: 0
   canInteract: 0
@@ -11263,6 +11438,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1568076334}
+        m_TargetAssemblyTypeName: TechNode, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1568076335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568076332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b230a3120bbb60478c084f29264884c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
 --- !u!1 &1574062776
 GameObject:
   m_ObjectHideFlags: 0
@@ -11296,9 +11497,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1372190552}
   - {fileID: 1311591472}
-  nodeButton: {fileID: 1973523830}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 1
   numPreviousNode: 0
   canInteract: 0
@@ -11823,9 +12021,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeScriptableObject: {fileID: 0}
   nextNodes: []
-  nodeButton: {fileID: 1819363439}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 9
   numPreviousNode: 0
   canInteract: 0
@@ -11887,9 +12082,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1412617032}
   - {fileID: 948267835}
-  nodeButton: {fileID: 1207811649}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 1
   numPreviousNode: 0
   canInteract: 0
@@ -12396,9 +12588,6 @@ MonoBehaviour:
   nodeScriptableObject: {fileID: 0}
   nextNodes:
   - {fileID: 1574062777}
-  nodeButton: {fileID: 1128230171}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 0
   numPreviousNode: 0
   canInteract: 0
@@ -13063,9 +13252,6 @@ MonoBehaviour:
   nodeScriptableObject: {fileID: 0}
   nextNodes:
   - {fileID: 1058004644}
-  nodeButton: {fileID: 910116378}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 7
   numPreviousNode: 0
   canInteract: 0
@@ -13183,6 +13369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1912446383}
   - component: {fileID: 1912446384}
+  - component: {fileID: 1912446385}
   m_Layer: 5
   m_Name: Node 07
   m_TagString: Untagged
@@ -13226,9 +13413,6 @@ MonoBehaviour:
     type: 2}
   nextNodes:
   - {fileID: 1213364799}
-  nodeButton: {fileID: 1356327099}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 7
   numPreviousNode: 0
   canInteract: 0
@@ -13249,6 +13433,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1912446384}
+        m_TargetAssemblyTypeName: TechNode, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1912446385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912446382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b230a3120bbb60478c084f29264884c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockedColor: {r: 0.7529412, g: 0.7529412, b: 0.7529412, a: 1}
+  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
 --- !u!1 &1914736569
 GameObject:
   m_ObjectHideFlags: 0
@@ -13281,9 +13491,6 @@ MonoBehaviour:
   nodeScriptableObject: {fileID: 0}
   nextNodes:
   - {fileID: 1360011071}
-  nodeButton: {fileID: 1352047216}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 4
   numPreviousNode: 0
   canInteract: 0
@@ -13741,9 +13948,6 @@ MonoBehaviour:
   nodeScriptableObject: {fileID: 0}
   nextNodes:
   - {fileID: 56615164}
-  nodeButton: {fileID: 390294583}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 4
   numPreviousNode: 0
   canInteract: 0
@@ -14087,9 +14291,6 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1360011071}
   - {fileID: 1687190287}
-  nodeButton: {fileID: 651775195}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 5
   numPreviousNode: 0
   canInteract: 0
@@ -14455,9 +14656,6 @@ MonoBehaviour:
   nodeScriptableObject: {fileID: 0}
   nextNodes:
   - {fileID: 1695284313}
-  nodeButton: {fileID: 660714326}
-  lockedColor: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}
-  activatedColor: {r: 0.4745098, g: 0.98039216, b: 0.74509805, a: 1}
   nodeID: 0
   numPreviousNode: 0
   canInteract: 0

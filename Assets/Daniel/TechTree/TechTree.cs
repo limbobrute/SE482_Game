@@ -43,7 +43,8 @@ public class TechTree : MonoBehaviour
 
     public void ActivateNode(int nodeID)
     {
-        nodes[nodeID].Activate();
+        //nodes[nodeID].Activate();
+        nodes[nodeID].ActivateNode.Invoke();
         UnlockNextNodes(nodeID);
     }
 
@@ -75,7 +76,7 @@ public class TechTree : MonoBehaviour
         for (int i = 0; i < nodes.Length; i++)
         {
             nodes[i].ResetNode();
-            nodes[i].ResetLockedColor();
+            //nodes[i].ResetLockedColor();
         }
         ActivateNode(nodeIndex);
     }

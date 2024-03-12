@@ -59,14 +59,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Daniel\Player\Blink.cs" />
-    <Compile Include="Assets\Daniel\TechTree\TechNodeHover.cs" />
     <Compile Include="Assets\Daniel\UIManager.cs" />
     <Compile Include="Assets\Daniel\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Daniel\Player\CameraPerspective.cs" />
+    <Compile Include="Assets\Daniel\TechTree\TechNodeModifyButton.cs" />
     <Compile Include="Assets\Daniel\ScreenNavigation.cs" />
     <Compile Include="Assets\Daniel\Player\DronePlayerMovement.cs" />
     <Compile Include="Assets\Daniel\TechTree\TechTree.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Daniel\TechTree\HoverText.cs" />
     <Compile Include="Assets\Daniel\Player\SpinObject.cs" />
     <Compile Include="Assets\Daniel\TechTree\TechNode.cs" />
     <Compile Include="Assets\Daniel\Player\PlayerTilt.cs" />
