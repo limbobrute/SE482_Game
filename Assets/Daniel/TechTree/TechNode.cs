@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class TechNode : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class TechNode : MonoBehaviour
     public bool isActivated = false;
     public bool canActivate = false;
 
-
+    public UnityEvent ActivateNode;
+ 
     // Start is called before the first frame update
     void Awake()
     {
@@ -67,6 +69,12 @@ public class TechNode : MonoBehaviour
         isActivated = true;
         canActivate = false;
         canInteract = false;
+        ActivateNode.Invoke();
+    }
+
+        public void TestDisplayEvent()
+    {
+        Debug.Log("TEST SUCCESSFUL FOR NODE " + nodeID);
     }
 
     /*    public void AddPreviousNodeCount()

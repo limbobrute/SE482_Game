@@ -24,7 +24,6 @@ public class HoverText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         Header.GetComponent<Text>().enabled = true;
         Description.GetComponent<Text>().enabled = true;
         Requirements.GetComponent<Text>().enabled = true;
-
     }
 
     public void OnPointerExit(PointerEventData eventData)
