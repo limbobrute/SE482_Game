@@ -10,13 +10,7 @@ public class TechNode : MonoBehaviour
     public TechTreeNode nodeScriptableObject;
     public TechNode[] nextNodes;
     private TechNodeModifyButton nodeButton;
-//    public Button nodeButton;
-//    public Color lockedColor;
-//    public Color activatedColor;
-//    ColorBlock cb;
-    //public Color canActivateColor;
-    public int nodeID = 0;
-    public int numPreviousNode = 0;
+
     public bool canInteract = false;
     public bool isActivated = false;
     public bool canActivate = false;
@@ -28,13 +22,6 @@ public class TechNode : MonoBehaviour
     {
         nodeButton = transform.GetComponent<TechNodeModifyButton>();
         ResetNode();
-        //cb = nodeButton.colors;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void ResetNode()
@@ -42,27 +29,19 @@ public class TechNode : MonoBehaviour
         nodeButton.LockedColor();
         NodeLock();
         canInteract = false;
-        isActivated = false;
+        //isActivated = false;
+        nodeScriptableObject.Researched = false;
         canActivate = false;
     }
-/*    public void ResetLockedColor()
-    {
-        cb.disabledColor = lockedColor;
-        nodeButton.colors = cb;
-        //Debug.Log("color reset: " + nodeID);
-    }
-*/
 
     public void NodeUnlock()
     {
-        //nodeButton.interactable = true;
         nodeButton.ButtonInteractable(true);
         canInteract = true;
     }
 
     public void NodeLock()
     {
-        //nodeButton.interactable = false;
         nodeButton.ButtonInteractable(false);
         canInteract = true;
     }
@@ -71,22 +50,14 @@ public class TechNode : MonoBehaviour
     {
         nodeButton.ActivatedColor();
         NodeLock();
-        //        cb.disabledColor = activatedColor;
-        //        nodeButton.colors = cb;
-        //ActivateNode.Invoke();
-        isActivated = true;
+        //isActivated = true;
+        nodeScriptableObject.Researched = true;
         canActivate = false;
         canInteract = false;
     }
 
         public void TestDisplayEvent()
     {
-        Debug.Log("TEST SUCCESSFUL FOR NODE " + nodeID);
+        Debug.Log("TEST SUCCESSFUL FOR NODE " + nodeScriptableObject.NodeID);
     }
-
-    /*    public void AddPreviousNodeCount()
-        {
-            numPreviousNode++;
-        }
-    */
 }

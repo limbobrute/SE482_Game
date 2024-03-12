@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class HoverText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    //private TechTreeNode nodeScriptableObject;
     public Text Header; // Reference to the Header Text component
     public Text Description; // Reference to the Description Text component
     public Text Requirements; // Reference to the Requirements Text component
@@ -15,16 +14,32 @@ public class HoverText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         parentNode = transform.parent.transform.GetComponent<TechNode>();
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void UpdatePanel()
     {
         // Update the text fields when the mouse pointer enters the button
-        Header.text = "Node " + parentNode.nodeID.ToString();
+        //Header.text = "Node " + parentNode.nodeScriptableObject.NodeName;
+        Header.text = parentNode.nodeScriptableObject.NodeLabel;
+
         Description.text = parentNode.nodeScriptableObject.Description;
-        Requirements.text = parentNode.nodeScriptableObject.Prereques;
+        if (parentNode.nodeScriptableObject.Researched)
+        {
+            Requirements.text = "RESEARCHED";
+        }
+        else
+        {
+            Requirements.text = parentNode.nodeScriptableObject.Prereques;
+        }
 
         Header.GetComponent<Text>().enabled = true;
         Description.GetComponent<Text>().enabled = true;
         Requirements.GetComponent<Text>().enabled = true;
+    }
+
+
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        UpdatePanel();
     }
 
     public void OnPointerExit(PointerEventData eventData)

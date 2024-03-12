@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60878fda37e2dd34a8022ec1cdd75eb2, type: 3}
   m_Name: Node10
   m_EditorClassIdentifier: 
+  NodeLabel: Building Speed III
+  NodeID: 10
   Description: 'This is a description. How neat!
 
 
@@ -26,4 +28,4 @@ MonoBehaviour:
     _pairs: []
   Bonues:
     _pairs: []
-  Reserached: 0
+  Researched: 0

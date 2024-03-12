@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60878fda37e2dd34a8022ec1cdd75eb2, type: 3}
   m_Name: Node00
   m_EditorClassIdentifier: 
+  NodeLabel: BUILDINGS
+  NodeID: 0
   Description: "This is a description. How neat! \n\nSPECIAL 0"
   Prereques: '* Item 1          * Item 4
 
@@ -23,4 +25,4 @@ MonoBehaviour:
     _pairs: []
   Bonues:
     _pairs: []
-  Reserached: 0
+  Researched: 1
