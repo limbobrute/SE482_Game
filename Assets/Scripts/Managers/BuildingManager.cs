@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Enums;
 using System.Linq;
+using System.Diagnostics.Contracts;
 
 public class BuildingManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class BuildingManager : MonoBehaviour
     public ResourceManager ResourceManager { get; set; }
     public Dictionary<BuildingType, Buildings> BuildingTypesToBuild { get; set; }
     public List<Buildings> BuildingsInScene { get; set; }
+
+    public Vector3 instancePostition = Vector3.zero; 
 
     // Method to instantiate a building
 
@@ -37,7 +40,7 @@ public class BuildingManager : MonoBehaviour
             }
             // Instantiate the prefab in the game scene
             // You can adjust the position, rotation and parent parameters as needed
-             Instantiate(buildingPrefab, Vector3.zero, Quaternion.identity, null);
+             Instantiate(buildingPrefab, instancePostition, Quaternion.identity, null);
 
             // Deduct the resources from the ResourceManager according to the costs of the building
             foreach (var cost in buildingPrefab.Costs)
