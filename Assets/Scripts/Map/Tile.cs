@@ -6,7 +6,7 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     private MapGen map;
-    [Serializable]
+    /*[Serializable]
     public struct EmptyNeigbours
     {
         public GameObject Up;
@@ -17,18 +17,20 @@ public class Tile : MonoBehaviour
         public GameObject BottomRight;
 
     }
-    public EmptyNeigbours Eneigbhours;
+    public EmptyNeigbours Eneigbhours;*/
+    [Tooltip("Upper Z scale value that this tile can be found at.")]
     public float UpperRange = 0f;
+    [Tooltip("Lower Z scale value that this tile can be found at.")]
     public float LowerRange = 0f;
     public float AcceptableRange = 0f;
-    public GameObject tile;
+    //public GameObject tile;
 
     private void Awake()
     {
         map = MapGen.instance;
     }
 
-    public void UpdateNeigbhours()
+    /*public void UpdateNeigbhours()
     {
         //Debug.Log("Name of this tile is " + gameObject.name);
         if(Eneigbhours.Up != null)
@@ -49,9 +51,9 @@ public class Tile : MonoBehaviour
         if (Eneigbhours.BottomRight != null)
         { Eneigbhours.BottomRight.GetComponent<HexRender>().ReduceEntropy(gameObject); }
 
-        /*var next = map.SortGrid();
-        map.NextTile(next);*/
+        var next = map.SortGrid();
+        map.NextTile(next);
 
-    }
+    }*/
 
 }
