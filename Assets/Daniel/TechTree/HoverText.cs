@@ -35,14 +35,7 @@ public class HoverText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         Requirements.GetComponent<Text>().enabled = true;
     }
 
-
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        UpdatePanel();
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
+    public void ClearPanel()
     {
         Header.GetComponent<Text>().enabled = false;
         Description.GetComponent<Text>().enabled = false;
@@ -52,5 +45,15 @@ public class HoverText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         Header.text = "";
         Description.text = "";
         Requirements.text = "";
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        UpdatePanel();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        ClearPanel();
     }
 }

@@ -56,8 +56,9 @@ public class TechNode : MonoBehaviour
         canInteract = false;
     }
 
-        public void TestDisplayEvent()
+/*    public void TestDisplayEvent()
     {
         Debug.Log("TEST SUCCESSFUL FOR NODE " + nodeScriptableObject.NodeID);
     }
+*/
 }

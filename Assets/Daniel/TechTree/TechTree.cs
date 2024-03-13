@@ -7,6 +7,7 @@ public class TechTree : MonoBehaviour
 {
     public TechNode[] nodes;
     public int nodeIndex = 0;
+    bool start = true;
 
     // Start is called before the first frame update
     void Start()
