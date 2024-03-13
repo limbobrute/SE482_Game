@@ -310,7 +310,7 @@ public class MapGen : MonoBehaviour
                 float xCoord = (float)x / size.x * 50f + (float)offX;
                 float yCoord = (float)y / size.y * 50f + (float)offY;
 
-                //Debug.Log("xCoord is " + xCoord + "\n yCord is " + yCoord);
+                Debug.Log("xCoord is " + xCoord + "\n yCord is " + yCoord);
                 //Debug.Log("Perlin noise value is " + Mathf.PerlinNoise(xCoord, yCoord));
                 float height = Mathf.Lerp(0, 1, Mathf.PerlinNoise(xCoord, yCoord));
                 //Debug.Log("Height value is " + height);
