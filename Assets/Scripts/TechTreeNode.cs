@@ -1,10 +1,21 @@
 using System.Collections.Generic;
 using SerializableDictionary.Scripts;
 using UnityEngine;
+using Enums;
+using System;
 
 [CreateAssetMenu(fileName = "TechTreeNode", menuName = "ScriptableObjects/TechTreeNode", order = 1)]
 public class TechTreeNode : ScriptableObject
 {
+    [Serializable]public struct Cost
+    {
+        public int Housing;
+        public int Metal;
+        public int Energy;
+        public int BioOrganics;
+        public int Workforce;
+    }
+
     public string NodeLabel; // make into tool
     public int NodeID;       // make into tool
 
@@ -12,6 +23,7 @@ public class TechTreeNode : ScriptableObject
     public string Description;
     [TextAreaAttribute]
     public string Prereques;
+    [SerializeField]public Cost cost;
 
     [Tooltip("Dictionary of all prequeisites and if they have been reserached")]
     [SerializeField] SerializableDictionary<string, bool> Prequisites = new SerializableDictionary<string, bool>();
