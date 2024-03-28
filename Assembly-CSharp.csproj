@@ -67,9 +67,13 @@
     <Compile Include="Assets\Daniel\Player\DronePlayerMovement.cs" />
     <Compile Include="Assets\Daniel\TechTree\TechTree.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Daniel\Buildings\BuildingData.cs" />
     <Compile Include="Assets\Daniel\TechTree\HoverText.cs" />
+    <Compile Include="Assets\Daniel\Buildings\Building.cs" />
     <Compile Include="Assets\Daniel\Player\SpinObject.cs" />
+    <Compile Include="Assets\Daniel\Buildings\ManpowerSlot.cs" />
     <Compile Include="Assets\Daniel\TechTree\TechNode.cs" />
+    <Compile Include="Assets\Daniel\Buildings\BuilderData.cs" />
     <Compile Include="Assets\Daniel\Player\PlayerTilt.cs" />
   </ItemGroup>
   <ItemGroup>
