@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E595941A-2D71-2582-C3FA-E2D64C4DA0E1}|Assembly-CSharp.csproj|c:\\users\\dleon\\documents\\scsu\\sy24 sp\\se 482 - computer animation and visualization\\se482_game\\assets\\daniel\\buildingmouseselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E595941A-2D71-2582-C3FA-E2D64C4DA0E1}|Assembly-CSharp.csproj|solutionrelative:assets\\daniel\\buildingmouseselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E595941A-2D71-2582-C3FA-E2D64C4DA0E1}|Assembly-CSharp.csproj|C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\assets\\daniel\\buildings\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E595941A-2D71-2582-C3FA-E2D64C4DA0E1}|Assembly-CSharp.csproj|solutionrelative:assets\\daniel\\buildings\\building.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E595941A-2D71-2582-C3FA-E2D64C4DA0E1}|Assembly-CSharp.csproj|C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\assets\\daniel\\uimanager2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E595941A-2D71-2582-C3FA-E2D64C4DA0E1}|Assembly-CSharp.csproj|solutionrelative:assets\\daniel\\uimanager2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E595941A-2D71-2582-C3FA-E2D64C4DA0E1}|Assembly-CSharp.csproj|C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\assets\\daniel\\buildings\\buildingdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E595941A-2D71-2582-C3FA-E2D64C4DA0E1}|Assembly-CSharp.csproj|solutionrelative:assets\\daniel\\buildings\\buildingdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\assets\\scripts\\mouseselecter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|solutionrelative:assets\\scripts\\mouseselecter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E595941A-2D71-2582-C3FA-E2D64C4DA0E1}|Assembly-CSharp.csproj|C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\assets\\daniel\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E595941A-2D71-2582-C3FA-E2D64C4DA0E1}|Assembly-CSharp.csproj|solutionrelative:assets\\daniel\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 213,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BuildingData.cs",
+              "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\Buildings\\BuildingData.cs",
+              "RelativeDocumentMoniker": "Assets\\Daniel\\Buildings\\BuildingData.cs",
+              "ToolTip": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\Buildings\\BuildingData.cs",
+              "RelativeToolTip": "Assets\\Daniel\\Buildings\\BuildingData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T15:43:29.825Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Daniel\\UIManager.cs",
+              "ToolTip": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Daniel\\UIManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:24:50.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UIManager2.cs",
+              "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\UIManager2.cs",
+              "RelativeDocumentMoniker": "Assets\\Daniel\\UIManager2.cs",
+              "ToolTip": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\UIManager2.cs",
+              "RelativeToolTip": "Assets\\Daniel\\UIManager2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:24:10.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BuildingMouseSelector.cs",
+              "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\BuildingMouseSelector.cs",
+              "RelativeDocumentMoniker": "Assets\\Daniel\\BuildingMouseSelector.cs",
+              "ToolTip": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\BuildingMouseSelector.cs",
+              "RelativeToolTip": "Assets\\Daniel\\BuildingMouseSelector.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T16:16:20.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Building.cs",
+              "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\Buildings\\Building.cs",
+              "RelativeDocumentMoniker": "Assets\\Daniel\\Buildings\\Building.cs",
+              "ToolTip": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\Buildings\\Building.cs",
+              "RelativeToolTip": "Assets\\Daniel\\Buildings\\Building.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T17:04:55.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MouseSelecter.cs",
+              "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\MouseSelecter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MouseSelecter.cs",
+              "ToolTip": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\MouseSelecter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MouseSelecter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T15:29:24.357Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
