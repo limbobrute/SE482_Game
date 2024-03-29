@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class BuildingMouseSelector : MonoBehaviour
 {
-    [SerializeField] UIManager2 uiManager;
+    [SerializeField] BuildingMain myBuilding;
+    [SerializeField] UIManager uiManager;
     [SerializeField] bool canHover = true; // Flag to track hover state
     [SerializeField] bool canSelect = true;
 
     private void Start()
     {
-        BuildingFlagSet(!uiManager.GetPopupOpen());
+        myBuilding = GetComponent<BuildingMain>();
+        BuildingFlagSet(!uiManager.GetPopupOpen()); 
     }
     void BuildingFlagSet(bool setting)
     {
@@ -21,7 +23,7 @@ public class BuildingMouseSelector : MonoBehaviour
         BuildingFlagSet(!uiManager.GetPopupOpen());
         if (canHover)
         {
-            uiManager.OpenHoverDisplayPanel(); // Show your hover information panel
+            uiManager.OpenHoverDisplayPanel(myBuilding.GetHoverData()); // Show your hover information panel
         }
     }
 

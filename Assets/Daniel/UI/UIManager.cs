@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager2 : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
 
     [SerializeField] GameObject[] screens;
@@ -37,7 +37,7 @@ public class UIManager2 : MonoBehaviour
         return popupOpen;
     }
 
-    public void OpenHoverDisplayPanel()
+    public void OpenHoverDisplayPanel(UIHoverData objectUIData)
     {
         OpenScreen(screens[0]);
     }

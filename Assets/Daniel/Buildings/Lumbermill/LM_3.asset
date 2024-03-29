@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Lumbermill
   buildingLevel: 3
-  buildingPrefab: {fileID: 1431677752768785160, guid: 6d779a7d6864d6345b30a1543b7bb39a,
+  buildingPrefab: {fileID: 2957891402658899951, guid: ffc38d8b9ab64bb4598004457b5d1b0d,
     type: 3}
   icon: {fileID: 0}
+  description: 
   nextLevel: {fileID: 11400000, guid: f1d455483a5b0ee4b94726f07bbf34da, type: 2}
   canLevelUp: 0
   woodCost: 10

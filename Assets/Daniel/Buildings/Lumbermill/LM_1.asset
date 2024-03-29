@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Lumbermill
   buildingLevel: 1
-  buildingPrefab: {fileID: 6505214512496611519, guid: 94d31fab584912e4394490eefc09343a,
+  buildingPrefab: {fileID: 2957891402658899951, guid: 775b62df861a11a4398d9a4987eaded8,
     type: 3}
   icon: {fileID: 0}
   nextLevel: {fileID: 11400000, guid: 5fc07aae33732a543a5685acd7a1f3ee, type: 2}

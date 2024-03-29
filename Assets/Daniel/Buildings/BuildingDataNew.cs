@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BuildingData", menuName = "ScriptableObjects/BuildingDataNew", order = 1)]
+[CreateAssetMenu(fileName = "BuildingDataNew", menuName = "ScriptableObjects/BuildingDataNew", order = 1)]
 public class BuildingDataNew : ScriptableObject
 {
     [Header("General Info")]
@@ -10,6 +10,7 @@ public class BuildingDataNew : ScriptableObject
     public int buildingLevel;
     public GameObject buildingPrefab;
     public Sprite icon;
+    public string description;
 
     [Header("Next Level")]
     public BuildingDataNew nextLevel;

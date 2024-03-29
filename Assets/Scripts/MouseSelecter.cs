@@ -34,6 +34,4 @@ public class MouseSelecter : MonoBehaviour
     private void OnMouseDown() {
         buildingManager.instancePostition = transform.position;
     }
-
-
 }
