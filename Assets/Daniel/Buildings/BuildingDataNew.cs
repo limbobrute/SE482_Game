@@ -10,7 +10,7 @@ public class BuildingDataNew : ScriptableObject
     public int buildingLevel;
     public GameObject buildingPrefab;
     public Sprite icon;
-    public string description;
+    public string description = "Short Description";
 
     [Header("Next Level")]
     public BuildingDataNew nextLevel;

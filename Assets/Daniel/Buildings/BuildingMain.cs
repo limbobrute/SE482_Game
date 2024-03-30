@@ -55,6 +55,7 @@ public class BuildingMain : MonoBehaviour
     void UpdateHoverData()
     {
         hoverData.objectName = buildingData.buildingName;
+        hoverData.isBuilding = true;
         hoverData.level = buildingData.buildingLevel;
         hoverData.description = buildingData.description;
         hoverData.needRequirementPanel = true;

@@ -43,8 +43,18 @@ public class UIManager : MonoBehaviour
     public void OpenHoverDisplayPanel(UIHoverData objectUIData)
     {
         OpenScreen(screens[0]);
-        hoverTexts[0].text = objectUIData.objectName + " LV " + objectUIData.level.ToString();
+        if (objectUIData.isBuilding)
+        {
+            hoverTexts[0].text = objectUIData.objectName + " LV " + objectUIData.level.ToString();
+        }
+        else
+        {
+            hoverTexts[0].text = objectUIData.objectName;;
+        }
+
+        Debug.Log(objectUIData.description);
         hoverTexts[1].text = objectUIData.description;
+        
         if (objectUIData.needRequirementPanel)
         {
             hoverRequirementPanel.SetActive(true);
@@ -52,8 +62,16 @@ public class UIManager : MonoBehaviour
             hoverTexts[3].text = objectUIData.crystalCost.ToString();
             hoverTexts[4].text = objectUIData.metalCost.ToString();
             hoverTexts[5].text = objectUIData.synthiaCost.ToString();
-            hoverTexts[6].text = objectUIData.manpowerCost.ToString();
-            hoverTexts[7].text = objectUIData.constructionTime.ToString() + "s";
+            if (objectUIData.isBuilding)
+            {
+                hoverTexts[6].text = objectUIData.manpowerCost.ToString();
+                hoverTexts[7].text = objectUIData.constructionTime.ToString() + "s";
+            }
+            else
+            {
+                hoverTexts[6].text = "N/A";
+                hoverTexts[7].text = "N/A";
+            }
         }
         else
         {
