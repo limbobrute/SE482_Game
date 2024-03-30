@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d77a1b655230642a112ac54a7f2d15, type: 3}
+  m_Name: RF_5
+  m_EditorClassIdentifier: 
+  buildingName: Research Factory
+  buildingLevel: 5
+  buildingPrefab: {fileID: 4867597468710742087, guid: 575293daf51ea1749b81cc6807c5541c,
+    type: 3}
+  icon: {fileID: 0}
+  description: 
+  nextLevel: {fileID: 0}
+  canLevelUp: 0
+  woodCost: 10000
+  crystalCost: 10000
+  metalCost: 10000
+  synthiaCost: 5000
+  builderCost: 30
+  currentManpower: 0
+  constructionTime: 15000
+  flatResourceIncrement: 0
+  slots: []

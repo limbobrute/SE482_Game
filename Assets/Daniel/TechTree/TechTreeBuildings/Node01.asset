@@ -18,12 +18,17 @@ MonoBehaviour:
 
 
     SPECIAL 1'
-  Prereques: '* Item 1          * Item 4
-
-    * Item 2          * Item 5
-
-    * Item
-    3          * Item 6'
+  cost:
+    Housing: 0
+    Metal: 0
+    Energy: 0
+    BioOrganics: 0
+    Workforce: 0
+    Wood: 0
+    Crystal: 0
+    Synthia: 0
+    WorkForce: 0
+    Time: 0
   Prequisites:
     _pairs: []
   Bonues:
