@@ -6,7 +6,7 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     private MapGen map;
-    /*[Serializable]
+    [Serializable]
     public struct EmptyNeigbours
     {
         public GameObject Up;
@@ -17,7 +17,7 @@ public class Tile : MonoBehaviour
         public GameObject BottomRight;
 
     }
-    public EmptyNeigbours Eneigbhours;*/
+    public EmptyNeigbours Eneigbhours;
     [Tooltip("Upper Z scale value that this tile can be found at.")]
     public float UpperRange = 0f;
     [Tooltip("Lower Z scale value that this tile can be found at.")]

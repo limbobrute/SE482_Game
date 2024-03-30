@@ -47,7 +47,7 @@ public class HexRender : MonoBehaviour
         public double LowerAcceptable;
         public bool Collapsed;
     }
-    [Serializable]
+    /*[Serializable]
     public struct Neigbours
     {
         public GameObject Up;
@@ -57,9 +57,11 @@ public class HexRender : MonoBehaviour
         public GameObject BottomLeft;
         public GameObject BottomRight;
     }
-    public Neigbours neigbhours;
+    public Neigbours neigbhours;*/
+    public List<GameObject>neigbhours = new List<GameObject>();
     public Entropy entropy;
     public List<GameObject> GameTiles = new List<GameObject>();
+    public GameObject NewTile;
 
     #region MAKE_TILE
     private void Awake()
@@ -147,6 +149,7 @@ public class HexRender : MonoBehaviour
     #region WAVE_FUNCTION_COLLAPSE
     public void GetNeigbhours()
     {
+        GameObject[] temp = new GameObject[6];
         int up = 1;
         int down = -1;
         string Upname;
@@ -171,15 +174,18 @@ public class HexRender : MonoBehaviour
         }
         Upname = "Hex " + x.ToString() + "," + (y + up).ToString();
         Downname = "Hex " + x.ToString() + "," + (y + down).ToString();
-        
-        neigbhours.Up = GameObject.Find(Upname);
-        neigbhours.Down = GameObject.Find(Downname);
-        neigbhours.TopLeft = GameObject.Find(TopLeft);
-        neigbhours.TopRight = GameObject.Find(TopRight);
-        neigbhours.BottomLeft = GameObject.Find(BottomLeft);
-        neigbhours.BottomRight = GameObject.Find(BottomRight);
-        
+        temp[0] = GameObject.Find(Upname);
+        temp[1] = GameObject.Find(Downname);
+        temp[2] = GameObject.Find(TopLeft);
+        temp[3] = GameObject.Find(TopRight);
+        temp[4] = GameObject.Find(BottomLeft);
+        temp[5] = GameObject.Find(BottomRight);
 
+        for (int i = 0; i < temp.Length; i++)
+        {
+            if (temp[i] != null)
+            { neigbhours.Add(temp[i]); }
+        }
     }
 
     public void ReduceEntropy(GameObject newTile)
