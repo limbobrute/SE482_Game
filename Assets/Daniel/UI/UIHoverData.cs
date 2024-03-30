@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIHoverData
 {
 
-    public string name;
+    public string objectName;
     public int level;
     public string description;
 

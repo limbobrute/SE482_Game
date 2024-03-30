@@ -12,18 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d77a1b655230642a112ac54a7f2d15, type: 3}
   m_Name: RF_5
   m_EditorClassIdentifier: 
-  buildingName: 
-  buildingLevel: 0
-  buildingPrefab: {fileID: 0}
+  buildingName: Research Factory
+  buildingLevel: 5
+  buildingPrefab: {fileID: 4867597468710742087, guid: 575293daf51ea1749b81cc6807c5541c,
+    type: 3}
   icon: {fileID: 0}
+  description: 
   nextLevel: {fileID: 0}
   canLevelUp: 0
-  woodCost: 0
-  crystalCost: 0
-  metalCost: 0
-  synthiaCost: 0
-  builderCost: 0
+  woodCost: 10000
+  crystalCost: 10000
+  metalCost: 10000
+  synthiaCost: 5000
+  builderCost: 30
   currentManpower: 0
-  constructionTime: 0
+  constructionTime: 15000
   flatResourceIncrement: 0
   slots: []
