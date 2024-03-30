@@ -18,7 +18,7 @@ public class TechNode : MonoBehaviour
     public UnityEvent ActivateNode;
  
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         nodeButton = transform.GetComponent<TechNodeModifyButton>();
         ResetNode();
@@ -29,7 +29,6 @@ public class TechNode : MonoBehaviour
         nodeButton.LockedColor();
         NodeLock();
         canInteract = false;
-        //isActivated = false;
         nodeScriptableObject.Researched = false;
         canActivate = false;
     }
@@ -50,7 +49,6 @@ public class TechNode : MonoBehaviour
     {
         nodeButton.ActivatedColor();
         NodeLock();
-        //isActivated = true;
         nodeScriptableObject.Researched = true;
         canActivate = false;
         canInteract = false;
