@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Lumbermill
   buildingLevel: 5
-  buildingPrefab: {fileID: 2957891402658899951, guid: 6584ff04dad227a4fa6c394ab770bfb3,
+  cost:
+    Wood: 200
+    Crystal: 200
+    Metal: 1000
+    Synthia: 500
+    Workforce: 11
+    Time: 1500
+  buildingPrefab: {fileID: 958592876648073626, guid: 12d533dba653308468ff95db0397df62,
     type: 3}
   icon: {fileID: 0}
   description: 
   nextLevel: {fileID: 0}
   canLevelUp: 0
-  woodCost: 200
-  crystalCost: 200
-  metalCost: 1000
-  synthiaCost: 500
-  builderCost: 11
-  currentManpower: 0
-  constructionTime: 1500
   flatResourceIncrement: 13
   slots:
   - {fileID: 0}

@@ -59,12 +59,12 @@ public class BuildingMain : MonoBehaviour
         hoverData.level = buildingData.buildingLevel;
         hoverData.description = buildingData.description;
         hoverData.needRequirementPanel = true;
-        hoverData.woodCost = buildingData.woodCost;
-        hoverData.crystalCost = buildingData.crystalCost;
-        hoverData.metalCost = buildingData.metalCost;
-        hoverData.synthiaCost = buildingData.synthiaCost;
-        hoverData.manpowerCost = buildingData.builderCost;
-        hoverData.constructionTime = buildingData.constructionTime;
+        hoverData.woodCost = buildingData.cost.Wood;
+        hoverData.crystalCost = buildingData.cost.Crystal;
+        hoverData.metalCost = buildingData.cost.Metal;
+        hoverData.synthiaCost = buildingData.cost.Synthia;
+        hoverData.manpowerCost = buildingData.cost.Workforce;
+        hoverData.constructionTime = buildingData.cost.Time;
     }
 
     // Update UI with building information

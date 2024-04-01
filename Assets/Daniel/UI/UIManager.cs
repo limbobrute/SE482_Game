@@ -13,7 +13,12 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        
+        InitializeScreen();
+    }
+
+    private void InitializeScreen()
+    {
+        CloseAllScreens();
     }
 
     void OpenScreen(GameObject screen)
@@ -28,7 +33,7 @@ public class UIManager : MonoBehaviour
 
     void CloseAllScreens()
     {
-        for (int i = 0; i < screens.Length; i++)
+        for (int i = 1; i < screens.Length; i++)
         {
             CloseScreen(screens[i]);
         }
@@ -42,7 +47,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenHoverDisplayPanel(UIHoverData objectUIData)
     {
-        OpenScreen(screens[0]);
+        OpenScreen(screens[1]);
         if (objectUIData.isBuilding)
         {
             hoverTexts[0].text = objectUIData.objectName + " LV " + objectUIData.level.ToString();
@@ -52,7 +57,7 @@ public class UIManager : MonoBehaviour
             hoverTexts[0].text = objectUIData.objectName;;
         }
 
-        Debug.Log(objectUIData.description);
+        //Debug.Log(objectUIData.description);
         hoverTexts[1].text = objectUIData.description;
         
         if (objectUIData.needRequirementPanel)
@@ -82,32 +87,32 @@ public class UIManager : MonoBehaviour
     // Example usage to close the DisplayPanel
     public void CloseHoverDisplayPanel()
     {
-        CloseScreen(screens[0]);
+        CloseScreen(screens[1]);
     }
 
     public void OpenBuildingPopup()
-    {
-        CloseAllScreens();
-        OpenScreen(screens[1]);
-        popupOpen = true;
-    }
-
-    public void CloseBuildingPopup()
-    {
-        CloseScreen(screens[1]);
-        popupOpen = false;
-    }
-
-    public void OpenTechTreePopup()
     {
         CloseAllScreens();
         OpenScreen(screens[2]);
         popupOpen = true;
     }
 
-    public void CloseTechTreePopup()
+    public void CloseBuildingPopup()
     {
         CloseScreen(screens[2]);
+        popupOpen = false;
+    }
+
+    public void OpenTechTreePopup()
+    {
+        CloseAllScreens();
+        OpenScreen(screens[3]);
+        popupOpen = true;
+    }
+
+    public void CloseTechTreePopup()
+    {
+        CloseScreen(screens[3]);
         popupOpen = false;
     }
 }
