@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d77a1b655230642a112ac54a7f2d15, type: 3}
+  m_Name: LM_1
+  m_EditorClassIdentifier: 
+  buildingName: Lumbermill
+  buildingLevel: 1
+  buildingPrefab: {fileID: 2957891402658899951, guid: 775b62df861a11a4398d9a4987eaded8,
+    type: 3}
+  icon: {fileID: 0}
+  description: Short Description
+  nextLevel: {fileID: 11400000, guid: 5fc07aae33732a543a5685acd7a1f3ee, type: 2}
+  canLevelUp: 1
+  woodCost: 0
+  crystalCost: 0
+  metalCost: 10
+  synthiaCost: 5
+  builderCost: 3
+  currentManpower: 0
+  constructionTime: 15
+  flatResourceIncrement: 5
+  slots:
+  - {fileID: 0}

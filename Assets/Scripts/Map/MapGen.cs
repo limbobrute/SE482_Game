@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using JetBrains.Annotations;
+using System.Threading;
 using UnityEngine.Events;
 
 //Created On: 2/19/2024
@@ -25,6 +26,7 @@ public class MapGen : MonoBehaviour
     public Material material;
 
     [Header("Grid Settings")]
+    public bool ChangeSmoothing;
     public Vector2Int size;
     public TextMeshProUGUI SeedString;
     public GameObject StartTile;
@@ -231,6 +233,9 @@ public class MapGen : MonoBehaviour
 
     public void Begin()
     {
+        foreach (GameObject tile in EmptyTiles)
+        { tile.GetComponent<HexRender>().GetNeigbhours(); }
+
         var s = SeedString.text.Substring(0, SeedString.text.Length - 1);
         int.TryParse(s, out seed);
         //Debug.Log("Seed is " + s);
@@ -238,22 +243,20 @@ public class MapGen : MonoBehaviour
         rand = Srand;
         var temp = new GameObject[size.x, size.y];
         MadeTiles = temp;
+        double offX = rand.NextDouble();
+        double offY = rand.NextDouble();
 
-        StartCoroutine(PerlinNoise());
+        StartCoroutine(PerlinNoise(offX, offY));
 
     }
 
+    public void BoolChange()
+    { ChangeSmoothing = !ChangeSmoothing; }
     public void Restart()
     {
         foreach (GameObject tile in EmptyTiles)
         {
-            tile.gameObject.SetActive(true);
-            /*var temp = tile.GetComponent<HexRender>();
-            temp.entropy.Collapsed = false;
-            temp.acceptableTiles = Tiles;
-            temp.GameTiles.Clear();
-            temp.entropy.LowerAcceptable = 0;
-            temp.entropy.UpperAcceptable = 0;*/
+            tile.GetComponent<HexRender>().NewTile = null;
         }
 
         foreach (GameObject tile in MadeTiles)
@@ -264,38 +267,47 @@ public class MapGen : MonoBehaviour
         //Debug.Log("Seed is " + s);
         System.Random Srand = new System.Random(seed);
         rand = Srand;
+        double offX = rand.NextDouble();
+        double offY = rand.NextDouble();
 
-        StartCoroutine(PerlinNoise());
+        StartCoroutine(PerlinNoise(offX, offY));
     }
 
     void SetStart()
     {
         GameObject tile = MadeTiles[0, 0];
-
+        var oldTile = EmptyTiles[0, 0];
         /*Generate a Start tile at bottom right corner of the map*/
         var startTile = Instantiate(StartTile, tile.transform.position, Quaternion.Euler(90, 0, 0));
         MadeTiles[0, 0] = startTile;
+        oldTile.GetComponent<HexRender>().NewTile = startTile;
         Destroy(tile);
 
 
         tile = MadeTiles[0, size.y - 1];
+        oldTile = EmptyTiles[0, size.y - 1];
         /*Generate a Start tile at the upper right corner of the map*/
         startTile = Instantiate(StartTile, tile.transform.position, Quaternion.Euler(90, 0, 0));
         MadeTiles[0, size.y - 1] = startTile;
+        oldTile.GetComponent<HexRender>().NewTile = startTile;
         Destroy(tile);
 
 
         tile = MadeTiles[size.x - 1, size.y - 1];
+        oldTile = EmptyTiles[size.x - 1, size.y - 1];
         /*Generate a Start tile at the upper left corner of the map*/
         startTile = Instantiate(StartTile, tile.transform.position, Quaternion.Euler(90, 0, 0));
         MadeTiles[size.x - 1, size.y - 1] = startTile;
+        oldTile.GetComponent<HexRender>().NewTile = startTile;
         Destroy(tile);
 
 
         tile = MadeTiles[size.x - 1, 0];
+        oldTile = EmptyTiles[size.x - 1, 0];
         /*Generate a Start tile at the bottom right of the map*/
         startTile = Instantiate(StartTile, tile.transform.position, Quaternion.Euler(90, 0, 0));
         MadeTiles[size.x - 1, 0] = startTile;
+        oldTile.GetComponent<HexRender>().NewTile = startTile;
         Destroy(tile);
 
         OnMapGenComplete?.Invoke();
@@ -303,14 +315,15 @@ public class MapGen : MonoBehaviour
     }
 
 
-    IEnumerator PerlinNoise()
+    IEnumerator PerlinNoise(double offX, double offY)
     {
         for (int x = 0; x < size.x; x++)
         {
             for (int y = 0 ; y < size.y; y++)
             {
-                double offX = rand.NextDouble();
-                double offY = rand.NextDouble();
+                GameObject newTile = null;
+                /*double offX = rand.NextDouble();
+                double offY = rand.NextDouble();*/
 
                 GameObject OldTile = EmptyTiles[x, y];
                 float xCoord = (float)x / size.x * 50f + (float)offX;
@@ -318,24 +331,88 @@ public class MapGen : MonoBehaviour
 
                // Debug.Log("xCoord is " + xCoord + "\n yCord is " + yCoord);
                 //Debug.Log("Perlin noise value is " + Mathf.PerlinNoise(xCoord, yCoord));
-                float height = Mathf.Lerp(0, 1, Mathf.PerlinNoise(xCoord, yCoord));
+                //float height = Mathf.Lerp(0, 1, Mathf.PerlinNoise(xCoord, yCoord));0
                 //Debug.Log("Height value is " + height);
-                float Zheight = Mathf.Lerp(0, 25, height);
+                float Zheight = Mathf.Lerp(0, 25, Mathf.PerlinNoise(xCoord, yCoord));
                 foreach(GameObject tile in Tiles)
                 {
                     var data = tile.GetComponent<Tile>();
                     if (Zheight >= data.LowerRange && Zheight <= data.UpperRange)
                     {
-                        var newTile = Instantiate(tile, OldTile.transform.position, Quaternion.Euler(90, 0, 0));
+                        newTile = Instantiate(tile, OldTile.transform.position, Quaternion.Euler(90, 0, 0));
                         newTile.transform.localScale = new Vector3(newTile.transform.localScale.x, newTile.transform.localScale.y, Zheight);
-                        OldTile.SetActive(false);
+                        OldTile.GetComponent<HexRender>().NewTile = newTile;
+                        OldTile.GetComponent<MeshRenderer>().enabled = false;
                         MadeTiles[x,y] = newTile;
                         break;
                     }
                 }
+                if(newTile == null)// I have no clue as to how this can happen, but sometimes it won't make a tile, so we'll force it
+                {
+                    newTile = Instantiate(Tiles[2], OldTile.transform.position, Quaternion.Euler(90, 0, 0));
+                    newTile.transform.localScale = new Vector3(newTile.transform.localScale.x, newTile.transform.localScale.y, 7f);
+                    OldTile.GetComponent<HexRender>().NewTile = newTile;
+                    OldTile.GetComponent<MeshRenderer>().enabled = false;
+                    MadeTiles[x, y] = newTile;
+                }
             }
-            if (MadeTiles[size.x - 1, size.y - 1] != null)
-            { SetStart(); StopCoroutine(PerlinNoise()); }
+            yield return null;
+        }
+        if (MadeTiles[size.x - 1, size.y - 1] != null)
+        {
+            SetStart();
+            if (!ChangeSmoothing)
+            { StartCoroutine(Smoothing()); }
+            else
+            { StartCoroutine(Smoothing2()); }
+            StopCoroutine(PerlinNoise(offX, offY));
+        }
+    }
+
+    IEnumerator Smoothing2()
+    {
+        foreach(GameObject tile in MadeTiles)
+        {
+            if (tile.CompareTag("Sand"))
+            { tile.transform.localScale = new Vector3(tile.transform.localScale.x, tile.transform.localScale.y, 4.5f); }
+            else if (tile.CompareTag("Grass"))
+            { tile.transform.localScale = new Vector3(tile.transform.localScale.x, tile.transform.localScale.y, 8.5f); }
+            else if (tile.CompareTag("Forest"))
+            { tile.transform.localScale = new Vector3(tile.transform.localScale.x, tile.transform.localScale.y, 15f); }
+            else if (tile.CompareTag("Crystal"))
+            { tile.transform.localScale = new Vector3(tile.transform.localScale.x, tile.transform.localScale.y, 18.5f); }
+            else if (tile.CompareTag("Mountain"))
+            { tile.transform.localScale = new Vector3(tile.transform.localScale.x, tile.transform.localScale.y, 22f); }
+            else if(tile.name == "StartTile(Clone)")
+            { continue; }
+
+            yield return null;
+        }
+    }
+    IEnumerator Smoothing()
+    {
+        foreach(GameObject tile in EmptyTiles)
+        {
+            Debug.Log("Smoothing tile at " + tile.name);
+            float aveheight = 0f;
+            int divider = 0;
+            var neigbhours = tile.GetComponent<HexRender>();
+            foreach(GameObject NTile in neigbhours.neigbhours)
+            {
+                var check = NTile.GetComponent<HexRender>().NewTile;
+                if(check == null)
+                {
+                    var whoops = Instantiate(Tiles[2], NTile.transform.position, Quaternion.Euler(90, 0, 0));
+                    whoops.transform.localScale = new Vector3(whoops.transform.localScale.x, whoops.transform.localScale.y, 7f);
+                    NTile.GetComponent<HexRender>().NewTile = whoops;
+                }
+                var temp = NTile.GetComponent<HexRender>();
+                aveheight += temp.NewTile.transform.localScale.z;
+                divider++;
+            }
+            
+            aveheight /= divider;
+            neigbhours.NewTile.transform.localScale = new Vector3(neigbhours.NewTile.transform.localScale.x, neigbhours.NewTile.transform.localScale.y, aveheight);
             yield return null;
         }
     }

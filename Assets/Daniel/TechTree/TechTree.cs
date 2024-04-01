@@ -6,8 +6,7 @@ using UnityEngine.Events;
 public class TechTree : MonoBehaviour
 {
     public TechNode[] nodes;
-    public int nodeIndex = 0;
-    bool start = true;
+    int nodeIndex = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +20,7 @@ public class TechTree : MonoBehaviour
         for (int i = 0; i < currNode.nextNodes.Length; i++)
         {
             TechNode nextNode = currNode.nextNodes[i];
-            //if (!nextNode.isActivated)
-            if(!nextNode.nodeScriptableObject.Researched)
+            if(!nextNode.nodeData.Researched)
             {
                 nextNode.NodeUnlock();
             }
@@ -31,7 +29,8 @@ public class TechTree : MonoBehaviour
 
     public void ActivateNode(int nodeID)
     {
-        nodes[nodeID].ActivateNode.Invoke();
+        Debug.Log("Node: " + nodeID);
+        nodes[nodeID].ActivateNode.Invoke();    
         UnlockNextNodes(nodeID);
     }
 

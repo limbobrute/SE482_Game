@@ -8,10 +8,13 @@ public class TechNodeModifyButton : MonoBehaviour
     public Color activatedColor;
     ColorBlock cb;
 
-    // Start is called before the first frame update
     void Awake()
     {
         nodeButton = transform.GetChild(0).GetComponent<Button>();
+    }
+
+    private void Start()
+    {
         UpdateButtonColors();
     }
 

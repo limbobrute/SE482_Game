@@ -39,6 +39,4 @@ public class MouseSelecter : MonoBehaviour
             buildingManager.instancePostition = newPosition;
         }
     }
-
-
 }

@@ -7,9 +7,10 @@ using UnityEngine.Events;
 
 public class TechNode : MonoBehaviour
 {
-    public TechTreeNode nodeScriptableObject;
+    public TechTreeNode nodeData;
     public TechNode[] nextNodes;
-    private TechNodeModifyButton nodeButton;
+    TechNodeModifyButton nodeButton;
+    UIHoverData hoverData;
 
     public bool canInteract = false;
     public bool isActivated = false;
@@ -21,6 +22,12 @@ public class TechNode : MonoBehaviour
     void Start()
     {
         nodeButton = transform.GetComponent<TechNodeModifyButton>();
+    }
+
+    void Start()
+    {
+        hoverData = new UIHoverData();
+        SetHoverData();
         ResetNode();
     }
 
@@ -29,8 +36,7 @@ public class TechNode : MonoBehaviour
         nodeButton.LockedColor();
         NodeLock();
         canInteract = false;
-        //isActivated = false;
-        nodeScriptableObject.Researched = false;
+        nodeData.Researched = false;
         canActivate = false;
     }
 
@@ -50,15 +56,35 @@ public class TechNode : MonoBehaviour
     {
         nodeButton.ActivatedColor();
         NodeLock();
-        //isActivated = true;
-        nodeScriptableObject.Researched = true;
+        nodeData.Researched = true;
+        hoverData.needRequirementPanel = false;
         canActivate = false;
         canInteract = false;
     }
 
-/*    public void TestDisplayEvent()
+    void SetHoverData()
     {
-        Debug.Log("TEST SUCCESSFUL FOR NODE " + nodeScriptableObject.NodeID);
+        hoverData.objectName = nodeData.NodeLabel;
+        hoverData.isBuilding = false;
+        //hoverData.level = nodeData.buildingLevel;
+        hoverData.description = nodeData.Description;
+        hoverData.needRequirementPanel = true;
+        hoverData.woodCost = nodeData.cost.Wood;
+        hoverData.crystalCost = nodeData.cost.Crystal;
+        hoverData.metalCost = nodeData.cost.Metal;
+        hoverData.synthiaCost = nodeData.cost.Synthia;
+        //hoverData.manpowerCost = nodeData.builderCost;
+        //hoverData.constructionTime = nodeData.constructionTime;
     }
-*/
+
+    public UIHoverData GetHoverData()
+    {
+        return hoverData;
+    }
+
+    /*    public void TestDisplayEvent()
+        {
+            Debug.Log("TEST SUCCESSFUL FOR NODE " + nodeScriptableObject.NodeID);
+        }
+    */
 }

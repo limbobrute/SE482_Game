@@ -17,15 +17,19 @@ MonoBehaviour:
   Description: Metal Mine builds cost 10% fewer resources
   Prereques: 'Synthia: 4
 
-    Wood: 15
 
-    Metal: 15'
+    SPECIAL 5'
   cost:
     Housing: 0
     Metal: 0
     Energy: 0
     BioOrganics: 0
     Workforce: 0
+    Wood: 0
+    Crystal: 0
+    Synthia: 0
+    WorkForce: 0
+    Time: 0
   Prequisites:
     _pairs: []
   Bonues:
