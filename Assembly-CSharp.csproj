@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Daniel\Player\Blink.cs" />
     <Compile Include="Assets\Daniel\TechTree\TechNodeHoverText.cs" />
+    <Compile Include="Assets\Daniel\UI\ObjectDataForUI.cs" />
     <Compile Include="Assets\Daniel\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Daniel\Player\CameraPerspective.cs" />
     <Compile Include="Assets\Daniel\TechTree\TechNodeModifyButton.cs" />
@@ -75,7 +76,6 @@
     <Compile Include="Assets\Daniel\Buildings\BuildingMain.cs" />
     <Compile Include="Assets\Daniel\TechTree\TechNode.cs" />
     <Compile Include="Assets\Daniel\Buildings\BuilderData.cs" />
-    <Compile Include="Assets\Daniel\UI\UIHoverData.cs" />
     <Compile Include="Assets\Daniel\Player\PlayerTilt.cs" />
   </ItemGroup>
   <ItemGroup>

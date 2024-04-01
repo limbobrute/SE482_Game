@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject[] screens;
     [SerializeField] GameObject hoverRequirementPanel;
     [SerializeField] Text[] hoverTexts;
+    [SerializeField] Text[] buildingPopupTexts;
     bool popupOpen = false;
 
     private void Start()
@@ -45,7 +46,7 @@ public class UIManager : MonoBehaviour
         return popupOpen;
     }
 
-    public void OpenHoverDisplayPanel(UIHoverData objectUIData)
+    public void OpenHoverDisplayPanel(ObjectDataForUI objectUIData)
     {
         OpenScreen(screens[1]);
         if (objectUIData.isBuilding)
@@ -90,11 +91,27 @@ public class UIManager : MonoBehaviour
         CloseScreen(screens[1]);
     }
 
-    public void OpenBuildingPopup()
+    public void OpenBuildingPopup(ObjectDataForUI objectUIData)
     {
         CloseAllScreens();
         OpenScreen(screens[2]);
         popupOpen = true;
+
+        buildingPopupTexts[0].text = objectUIData.objectName + " LV " + objectUIData.level.ToString();
+        buildingPopupTexts[1].text = objectUIData.woodCost.ToString();
+        buildingPopupTexts[2].text = objectUIData.crystalCost.ToString();
+        buildingPopupTexts[3].text = objectUIData.metalCost.ToString();
+        buildingPopupTexts[4].text = objectUIData.synthiaCost.ToString();
+        buildingPopupTexts[5].text = objectUIData.manpowerCost.ToString();
+        buildingPopupTexts[6].text = objectUIData.constructionTime.ToString() + "s";
+        if(objectUIData.level < 1)
+        {
+            buildingPopupTexts[7].text = "Buy";
+        }
+        else
+        {
+            buildingPopupTexts[7].text = "Upgrade";
+        }
     }
 
     public void CloseBuildingPopup()
