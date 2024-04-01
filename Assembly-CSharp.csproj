@@ -72,8 +72,8 @@
     <Compile Include="Assets\Daniel\UI\UIManager.cs" />
     <Compile Include="Assets\Daniel\UI\ScreenNavigation.cs" />
     <Compile Include="Assets\Daniel\Buildings\ManpowerSlot.cs" />
-    <Compile Include="Assets\Daniel\Buildings\BuildingMain.cs" />
     <Compile Include="Assets\Daniel\TechTree\TechNode.cs" />
+    <Compile Include="Assets\Daniel\Buildings\BuildingMain.cs" />
     <Compile Include="Assets\Daniel\Buildings\BuilderData.cs" />
     <Compile Include="Assets\Daniel\UI\UIHoverData.cs" />
     <Compile Include="Assets\Daniel\Player\PlayerTilt.cs" />
