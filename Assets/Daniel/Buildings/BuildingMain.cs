@@ -33,6 +33,7 @@ public class BuildingMain : MonoBehaviour
         currentBuildingPrefab.transform.SetParent(transform); // Set the parent
         currentBuildingPrefab.transform.localPosition = originalPosition; // Example position
         currentBuildingPrefab.transform.localRotation = originalRotation;
+        currentBuildingPrefab.transform.localScale = new Vector3(1, 1, 1);
 
         UpdateUIData();
     }

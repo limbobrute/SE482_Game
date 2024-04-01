@@ -46,6 +46,12 @@ public class UIManager : MonoBehaviour
         return popupOpen;
     }
 
+    public void OpenHoverDisplayPanel(string title, string description)
+    {
+        hoverTexts[0].text = title;
+        hoverTexts[1].text = description;
+    }
+
     public void OpenHoverDisplayPanel(ObjectDataForUI objectUIData)
     {
         OpenScreen(screens[1]);
