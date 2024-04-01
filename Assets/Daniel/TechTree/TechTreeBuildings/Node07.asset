@@ -12,18 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60878fda37e2dd34a8022ec1cdd75eb2, type: 3}
   m_Name: Node07
   m_EditorClassIdentifier: 
-  NodeLabel: Building Efficiency III
+  NodeLabel: Through The Roof
   NodeID: 7
-  Description: 'This is a description. How neat!
+  Description: Housing buildings' capacity increase by 15%
+  Prereques: 'Wood: 150
 
+    Metal: 125
 
-    SPECIAL 7'
-  Prereques: '* Item 1          * Item 4
+    Crystal: 50
 
-    * Item 2          * Item 5
-
-    * Item
-    3          * Item 6'
+    Synthia: 50'
+  cost:
+    Housing: 0
+    Metal: 0
+    Energy: 0
+    BioOrganics: 0
+    Workforce: 0
   Prequisites:
     _pairs: []
   Bonues:

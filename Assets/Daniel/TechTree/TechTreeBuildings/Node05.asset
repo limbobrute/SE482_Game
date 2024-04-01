@@ -12,20 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60878fda37e2dd34a8022ec1cdd75eb2, type: 3}
   m_Name: Node05
   m_EditorClassIdentifier: 
-  NodeLabel: Building Efficiency II
+  NodeLabel: Of the Mines
   NodeID: 5
-  Description: 'This is a description. How neat!
+  Description: Metal Mine builds cost 10% fewer resources
+  Prereques: 'Synthia: 4
 
+    Wood: 15
 
-    SPECIAL 5'
-  Prereques: '* Item 1          * Item 4
-
-    * Item 2          * Item 5
-
-    * Item
-    3          * Item 6'
+    Metal: 15'
+  cost:
+    Housing: 0
+    Metal: 0
+    Energy: 0
+    BioOrganics: 0
+    Workforce: 0
   Prequisites:
     _pairs: []
   Bonues:
     _pairs: []
-  Researched: 1
+  Researched: 0

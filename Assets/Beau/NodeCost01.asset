@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc18d9e4ab2fd0448bdd1b746c086091, type: 3}
-  m_Name: Build2
-  m_EditorClassIdentifier: 
-  buildingType: 0
+  m_Script: {fileID: 0}
+  m_Name: NodeCost01
+  m_EditorClassIdentifier: Scripts::NodeCost
   costs:
   - resourceType: 1
-    cost: 10
+    cost: 3
   - resourceType: 3
-    cost: 5
+    cost: 2

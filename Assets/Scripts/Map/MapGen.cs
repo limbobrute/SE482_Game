@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using JetBrains.Annotations;
+using UnityEngine.Events;
 
 //Created On: 2/19/2024
 //Created By: William HP.
@@ -30,6 +31,8 @@ public class MapGen : MonoBehaviour
     public List<GameObject> Tiles = new List<GameObject>();
     [SerializeField]public GameObject[,] EmptyTiles;
 
+    public UnityEvent OnMapGenComplete;
+    
 
     private void Awake()
     {
@@ -230,7 +233,7 @@ public class MapGen : MonoBehaviour
     {
         var s = SeedString.text.Substring(0, SeedString.text.Length - 1);
         int.TryParse(s, out seed);
-        Debug.Log("Seed is " + s);
+        //Debug.Log("Seed is " + s);
         System.Random Srand = new System.Random(seed);
         rand = Srand;
         var temp = new GameObject[size.x, size.y];
@@ -294,6 +297,9 @@ public class MapGen : MonoBehaviour
         startTile = Instantiate(StartTile, tile.transform.position, Quaternion.Euler(90, 0, 0));
         MadeTiles[size.x - 1, 0] = startTile;
         Destroy(tile);
+
+        OnMapGenComplete?.Invoke();
+
     }
 
 
@@ -310,7 +316,7 @@ public class MapGen : MonoBehaviour
                 float xCoord = (float)x / size.x * 50f + (float)offX;
                 float yCoord = (float)y / size.y * 50f + (float)offY;
 
-                Debug.Log("xCoord is " + xCoord + "\n yCord is " + yCoord);
+               // Debug.Log("xCoord is " + xCoord + "\n yCord is " + yCoord);
                 //Debug.Log("Perlin noise value is " + Mathf.PerlinNoise(xCoord, yCoord));
                 float height = Mathf.Lerp(0, 1, Mathf.PerlinNoise(xCoord, yCoord));
                 //Debug.Log("Height value is " + height);

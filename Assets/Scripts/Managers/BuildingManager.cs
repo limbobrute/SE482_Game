@@ -38,9 +38,15 @@ public class BuildingManager : MonoBehaviour
             {
             buildingPrefab.DefineCosts();
             }
+            // Get the height of the prefab
+            float prefabHeight = buildingPrefab.GetComponent<Renderer>().bounds.size.y;
+
+            // Add half the height of the prefab to the instance position
+            Vector3 newPosition = new Vector3(instancePostition.x, instancePostition.y + prefabHeight / 2, instancePostition.z);
+
             // Instantiate the prefab in the game scene
             // You can adjust the position, rotation and parent parameters as needed
-             Instantiate(buildingPrefab, instancePostition, Quaternion.identity, null);
+            Instantiate(buildingPrefab, newPosition, Quaternion.identity, null);
 
             // Deduct the resources from the ResourceManager according to the costs of the building
             foreach (var cost in buildingPrefab.Costs)
@@ -101,7 +107,7 @@ public class BuildingManager : MonoBehaviour
 
                 // Modify the value
                 //build.DefineCosts();
-                build.DecreaseCosts(.8f);
+                build.DecreaseCosts(.95f);
 
                 // Update the value in the dictionary
                 BuildingTypesToBuild[key] = build;

@@ -18,7 +18,7 @@ public class TechNode : MonoBehaviour
     public UnityEvent ActivateNode;
  
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         nodeButton = transform.GetComponent<TechNodeModifyButton>();
         ResetNode();

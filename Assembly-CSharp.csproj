@@ -69,6 +69,7 @@
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Daniel\TechTree\HoverText.cs" />
     <Compile Include="Assets\Daniel\Player\SpinObject.cs" />
+    <Compile Include="Assets\Beau\UIElement.cs" />
     <Compile Include="Assets\Daniel\TechTree\TechNode.cs" />
     <Compile Include="Assets\Daniel\Player\PlayerTilt.cs" />
   </ItemGroup>

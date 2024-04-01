@@ -12,18 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60878fda37e2dd34a8022ec1cdd75eb2, type: 3}
   m_Name: Node08
   m_EditorClassIdentifier: 
-  NodeLabel: Building Cost III
+  NodeLabel: Metal Man
   NodeID: 8
-  Description: 'This is a description. How neat!
+  Description: Metal Mining buildings' yields increase by 15%
+  Prereques: 'Crystal: 150
 
+    Wood: 150
 
-    SPECIAL 8'
-  Prereques: '* Item 1          * Item 4
-
-    * Item 2          * Item 5
-
-    * Item
-    3          * Item 6'
+    Synthia: 75'
+  cost:
+    Housing: 0
+    Metal: 0
+    Energy: 0
+    BioOrganics: 0
+    Workforce: 0
   Prequisites:
     _pairs: []
   Bonues:

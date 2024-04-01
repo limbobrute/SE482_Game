@@ -2,10 +2,10 @@ namespace Enums
 {
     public enum ResourceType
     {
-        Housing,
+        Wood,
         Metal,
-        Energy,
-        BioOrganics,
+        Crystal,
+        Synthia,
         Workforce
     }
 

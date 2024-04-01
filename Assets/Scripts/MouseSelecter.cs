@@ -17,7 +17,7 @@ public class MouseSelecter : MonoBehaviour
 
         if (buildingManager == null)
         {
-            Debug.LogError("No BuildingManager found in the scene.");
+            Debug.Log("No BuildingManager found in the scene.");
         }
     }
 
@@ -32,7 +32,12 @@ public class MouseSelecter : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        buildingManager.instancePostition = transform.position;
+        if (buildingManager != null)
+        {
+            float height = render.bounds.size.y;
+            Vector3 newPosition = new Vector3(transform.position.x, transform.position.y + height, transform.position.z);
+            buildingManager.instancePostition = newPosition;
+        }
     }
 
 

@@ -12,7 +12,7 @@ public class TechTree : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ActivateNode(nodeIndex);
+        StartCoroutine(LateStart(0.1f)); 
     }
 
     void UnlockNextNodes(int nodeID)
@@ -43,4 +43,11 @@ public class TechTree : MonoBehaviour
         }
         ActivateNode(nodeIndex);
     }
+    IEnumerator LateStart(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+
+        ActivateNode(nodeIndex);
+    }
+
 }
