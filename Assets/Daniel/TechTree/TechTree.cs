@@ -9,8 +9,12 @@ public class TechTree : MonoBehaviour
     int index = 0;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
+        // Wait for the end of the frame to ensure all TechNode objects have been initialized
+        yield return new WaitForEndOfFrame();
+
+        // Now activate the TechTree
         ActivateNode(index);
     }
 

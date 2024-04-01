@@ -22,6 +22,9 @@ public class TechNode : MonoBehaviour
     void Awake()
     {
         nodeButton = transform.GetComponent<TechNodeModifyButton>();
+        //hoverData = new ObjectDataForUI();
+        //SetHoverData();
+        //ResetNode();
     }
 
     void Start()
