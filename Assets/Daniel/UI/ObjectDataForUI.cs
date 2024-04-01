@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIHoverData
+public class ObjectDataForUI
 {
     public string objectName = "";
     public bool isBuilding = false;

@@ -10,18 +10,15 @@ public class TechTreeNode : ScriptableObject
     [Serializable]public struct Cost
     {
         public int Housing;
+
+        public int Wood;
+        public int Crystal;
         public int Metal;
+        public int Synthia;
+
         public int Energy;
         public int BioOrganics;
         public int Workforce;
-
-        // Remove or Revise After
-        public int Wood;
-        public int Crystal;
-        //public int Metal;
-        public int Synthia;
-        public int WorkForce;
-        public float Time;
     }
 
     public string NodeLabel; // make into tool

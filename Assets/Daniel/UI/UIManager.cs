@@ -9,11 +9,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject[] screens;
     [SerializeField] GameObject hoverRequirementPanel;
     [SerializeField] Text[] hoverTexts;
+    [SerializeField] Text[] buildingPopupTexts;
     bool popupOpen = false;
 
     private void Start()
     {
-        
+        InitializeScreen();
+    }
+
+    private void InitializeScreen()
+    {
+        CloseAllScreens();
     }
 
     void OpenScreen(GameObject screen)
@@ -28,7 +34,7 @@ public class UIManager : MonoBehaviour
 
     void CloseAllScreens()
     {
-        for (int i = 0; i < screens.Length; i++)
+        for (int i = 1; i < screens.Length; i++)
         {
             CloseScreen(screens[i]);
         }
@@ -40,9 +46,9 @@ public class UIManager : MonoBehaviour
         return popupOpen;
     }
 
-    public void OpenHoverDisplayPanel(UIHoverData objectUIData)
+    public void OpenHoverDisplayPanel(ObjectDataForUI objectUIData)
     {
-        OpenScreen(screens[0]);
+        OpenScreen(screens[1]);
         if (objectUIData.isBuilding)
         {
             hoverTexts[0].text = objectUIData.objectName + " LV " + objectUIData.level.ToString();
@@ -52,7 +58,7 @@ public class UIManager : MonoBehaviour
             hoverTexts[0].text = objectUIData.objectName;;
         }
 
-        Debug.Log(objectUIData.description);
+        //Debug.Log(objectUIData.description);
         hoverTexts[1].text = objectUIData.description;
         
         if (objectUIData.needRequirementPanel)
@@ -82,32 +88,48 @@ public class UIManager : MonoBehaviour
     // Example usage to close the DisplayPanel
     public void CloseHoverDisplayPanel()
     {
-        CloseScreen(screens[0]);
+        CloseScreen(screens[1]);
     }
 
-    public void OpenBuildingPopup()
+    public void OpenBuildingPopup(ObjectDataForUI objectUIData)
     {
         CloseAllScreens();
-        OpenScreen(screens[1]);
+        OpenScreen(screens[2]);
         popupOpen = true;
+
+        buildingPopupTexts[0].text = objectUIData.objectName + " LV " + objectUIData.level.ToString();
+        buildingPopupTexts[1].text = objectUIData.woodCost.ToString();
+        buildingPopupTexts[2].text = objectUIData.crystalCost.ToString();
+        buildingPopupTexts[3].text = objectUIData.metalCost.ToString();
+        buildingPopupTexts[4].text = objectUIData.synthiaCost.ToString();
+        buildingPopupTexts[5].text = objectUIData.manpowerCost.ToString();
+        buildingPopupTexts[6].text = objectUIData.constructionTime.ToString() + "s";
+        if(objectUIData.level < 1)
+        {
+            buildingPopupTexts[7].text = "Buy";
+        }
+        else
+        {
+            buildingPopupTexts[7].text = "Upgrade";
+        }
     }
 
     public void CloseBuildingPopup()
     {
-        CloseScreen(screens[1]);
+        CloseScreen(screens[2]);
         popupOpen = false;
     }
 
     public void OpenTechTreePopup()
     {
         CloseAllScreens();
-        OpenScreen(screens[2]);
+        OpenScreen(screens[3]);
         popupOpen = true;
     }
 
     public void CloseTechTreePopup()
     {
-        CloseScreen(screens[2]);
+        CloseScreen(screens[3]);
         popupOpen = false;
     }
 }

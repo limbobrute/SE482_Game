@@ -10,25 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40d77a1b655230642a112ac54a7f2d15, type: 3}
-  m_Name: LM_3
+  m_Name: Protobuilding
   m_EditorClassIdentifier: 
-  buildingName: Lumbermill
-  buildingLevel: 3
+  buildingName: Proto
+  buildingLevel: 0
   cost:
-    Wood: 10
-    Crystal: 10
-    Metal: 50
-    Synthia: 25
-    Workforce: 7
-    Time: 75
-  buildingPrefab: {fileID: 958592876648073626, guid: feceabfadd33c0d4caa293e3f868f3a3,
+    Wood: 5
+    Crystal: 5
+    Metal: 5
+    Synthia: 5
+    Workforce: 1
+    Time: 5
+  buildingPrefab: {fileID: 524405443524869290, guid: c41dce2e971ff3541bbf0d2ee6d0ed43,
     type: 3}
   icon: {fileID: 0}
-  description: 
-  nextLevel: {fileID: 11400000, guid: f1d455483a5b0ee4b94726f07bbf34da, type: 2}
+  description: Short Description
+  nextLevel: {fileID: 0}
   canLevelUp: 0
-  flatResourceIncrement: 9
-  slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  flatResourceIncrement: 0
+  slots: []

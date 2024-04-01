@@ -5,13 +5,13 @@ using UnityEngine;
 public class BuildingMain : MonoBehaviour
 {
     [SerializeField] BuildingDataNew buildingData; // Reference to the BuildingData asset
-    UIHoverData hoverData; 
+    ObjectDataForUI uiData; 
     GameObject currentBuildingPrefab; // Reference to the instantiated prefab
 
     // Start is called before the first frame update
     void Start()
     {
-        hoverData = new UIHoverData();
+        uiData = new ObjectDataForUI();
         ConstructBuilding();
     }
 
@@ -34,7 +34,7 @@ public class BuildingMain : MonoBehaviour
         currentBuildingPrefab.transform.localPosition = originalPosition; // Example position
         currentBuildingPrefab.transform.localRotation = originalRotation;
 
-        UpdateHoverData();
+        UpdateUIData();
     }
 
     // Called when upgrading the building
@@ -52,25 +52,25 @@ public class BuildingMain : MonoBehaviour
         }
     }
 
-    void UpdateHoverData()
+    void UpdateUIData()
     {
-        hoverData.objectName = buildingData.buildingName;
-        hoverData.isBuilding = true;
-        hoverData.level = buildingData.buildingLevel;
-        hoverData.description = buildingData.description;
-        hoverData.needRequirementPanel = true;
-        hoverData.woodCost = buildingData.woodCost;
-        hoverData.crystalCost = buildingData.crystalCost;
-        hoverData.metalCost = buildingData.metalCost;
-        hoverData.synthiaCost = buildingData.synthiaCost;
-        hoverData.manpowerCost = buildingData.builderCost;
-        hoverData.constructionTime = buildingData.constructionTime;
+        uiData.objectName = buildingData.buildingName;
+        uiData.isBuilding = true;
+        uiData.level = buildingData.buildingLevel;
+        uiData.description = buildingData.description;
+        uiData.needRequirementPanel = true;
+        uiData.woodCost = buildingData.cost.Wood;
+        uiData.crystalCost = buildingData.cost.Crystal;
+        uiData.metalCost = buildingData.cost.Metal;
+        uiData.synthiaCost = buildingData.cost.Synthia;
+        uiData.manpowerCost = buildingData.cost.Workforce;
+        uiData.constructionTime = buildingData.cost.Time;
     }
 
     // Update UI with building information
-    public UIHoverData GetHoverData()
+    public ObjectDataForUI GetUIData()
     {
         // Example: Update UI text labels with building name, level, etc.
-        return hoverData;
+        return uiData;
     }
 }

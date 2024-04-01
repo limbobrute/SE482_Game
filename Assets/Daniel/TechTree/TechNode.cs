@@ -10,7 +10,7 @@ public class TechNode : MonoBehaviour
     public TechTreeNode nodeData;
     public TechNode[] nextNodes;
     TechNodeModifyButton nodeButton;
-    UIHoverData hoverData;
+    ObjectDataForUI hoverData;
 
     public bool canInteract = false;
     public bool isActivated = false;
@@ -19,10 +19,17 @@ public class TechNode : MonoBehaviour
     public UnityEvent ActivateNode;
  
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         nodeButton = transform.GetComponent<TechNodeModifyButton>();
-        hoverData = new UIHoverData();
+        //hoverData = new ObjectDataForUI();
+        //SetHoverData();
+        //ResetNode();
+    }
+
+    void Start()
+    {
+        hoverData = new ObjectDataForUI();
         SetHoverData();
         ResetNode();
     }
@@ -73,7 +80,7 @@ public class TechNode : MonoBehaviour
         //hoverData.constructionTime = nodeData.constructionTime;
     }
 
-    public UIHoverData GetHoverData()
+    public ObjectDataForUI GetHoverData()
     {
         return hoverData;
     }

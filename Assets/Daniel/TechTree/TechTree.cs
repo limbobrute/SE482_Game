@@ -6,12 +6,16 @@ using UnityEngine.Events;
 public class TechTree : MonoBehaviour
 {
     public TechNode[] nodes;
-    int nodeIndex = 0;
+    int index = 0;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        StartCoroutine(LateStart(0.1f)); 
+        // Wait for the end of the frame to ensure all TechNode objects have been initialized
+        yield return new WaitForEndOfFrame();
+
+        // Now activate the TechTree
+        ActivateNode(index);
     }
 
     void UnlockNextNodes(int nodeID)
@@ -29,7 +33,7 @@ public class TechTree : MonoBehaviour
 
     public void ActivateNode(int nodeID)
     {
-        Debug.Log("Node: " + nodeID);
+        //Debug.Log("Node: " + nodeID);
         nodes[nodeID].ActivateNode.Invoke();    
         UnlockNextNodes(nodeID);
     }
@@ -40,13 +44,6 @@ public class TechTree : MonoBehaviour
         {
             nodes[i].ResetNode();
         }
-        ActivateNode(nodeIndex);
+        ActivateNode(index);
     }
-    IEnumerator LateStart(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-
-        ActivateNode(nodeIndex);
-    }
-
 }

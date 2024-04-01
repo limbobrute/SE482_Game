@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,25 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BuildingDataNew", menuName = "ScriptableObjects/BuildingDataNew", order = 1)]
 public class BuildingDataNew : ScriptableObject
 {
+    [Serializable] public struct Cost
+    {
+        [Header("Material Cost")]
+        public int Wood;
+        public int Crystal;
+        public int Metal;
+        public int Synthia;
+
+        [Header("Builder Cost")]
+        public int Workforce;
+
+        [Header("Time Cost")]
+        public float Time;
+    }
+
     [Header("General Info")]
     public string buildingName;
     public int buildingLevel;
+    public Cost cost;
     public GameObject buildingPrefab;
     public Sprite icon;
     public string description = "Short Description";
@@ -15,19 +32,6 @@ public class BuildingDataNew : ScriptableObject
     [Header("Next Level")]
     public BuildingDataNew nextLevel;
     public bool canLevelUp;
-
-    [Header("Material Cost")]
-    public int woodCost;
-    public int crystalCost;
-    public int metalCost;
-    public int synthiaCost;
-
-    [Header("Builder Cost")]
-    public int builderCost;
-    public int currentManpower;
-
-    [Header("Time Cost")]
-    public float constructionTime;
 
     [Header("Buff Properties")]
     public int flatResourceIncrement; // Buff 1

@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Research Factory
   buildingLevel: 1
+  cost:
+    Wood: 50
+    Crystal: 50
+    Metal: 50
+    Synthia: 25
+    Workforce: 6
+    Time: 120
   buildingPrefab: {fileID: 4867597468710742087, guid: 11b9b6f64fccd30488a25efc25b39021,
     type: 3}
   icon: {fileID: 0}
   description: Short Description
   nextLevel: {fileID: 11400000, guid: 42314770cd6b26a488b66cf161cd69bd, type: 2}
   canLevelUp: 0
-  woodCost: 50
-  crystalCost: 50
-  metalCost: 50
-  synthiaCost: 25
-  builderCost: 6
-  currentManpower: 0
-  constructionTime: 120
   flatResourceIncrement: 0
   slots: []
