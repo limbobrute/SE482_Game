@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
+using System;
 
 public class RTSTimer : MonoBehaviour
 {
+    public UnityEvent onFiveSeconds; 
     int minute = 0;
     int hour = 0;
     int day = 0;
@@ -36,6 +39,11 @@ public class RTSTimer : MonoBehaviour
         { Mstring = "00"; }
         else if(minute < 10)
         { Mstring = "0" + minute.ToString(); }
+
+            if (minute % 5 == 0)
+            {
+                Debug.Log("Multiple of 5");
+            }
 
         if(hour < 10)
         { Hstring = "0" + hour.ToString(); }

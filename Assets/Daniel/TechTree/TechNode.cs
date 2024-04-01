@@ -22,10 +22,6 @@ public class TechNode : MonoBehaviour
     void Start()
     {
         nodeButton = transform.GetComponent<TechNodeModifyButton>();
-    }
-
-    void Start()
-    {
         hoverData = new UIHoverData();
         SetHoverData();
         ResetNode();
