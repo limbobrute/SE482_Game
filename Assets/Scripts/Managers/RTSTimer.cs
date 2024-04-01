@@ -26,7 +26,7 @@ public class RTSTimer : MonoBehaviour
         while (timer < delay)
         { timer += Time.deltaTime; yield return null; }
 
-        minute += 15;
+        minute += 1;
         if (minute == 60)
         { minute = 0; hour += 1; }
 
@@ -34,6 +34,9 @@ public class RTSTimer : MonoBehaviour
         var Hstring = hour.ToString();
         if(minute == 0)
         { Mstring = "00"; }
+        else if(minute < 10)
+        { Mstring = "0" + minute.ToString(); }
+
         if(hour < 10)
         { Hstring = "0" + hour.ToString(); }
 

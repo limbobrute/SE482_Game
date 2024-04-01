@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Building
+  - Water
+  - Sand
+  - Grass
+  - Forest
+  - Crystal
+  - Mountain
   layers:
   - Default
   - TransparentFX

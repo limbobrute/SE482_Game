@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8147965076897526233}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,4 +54,3 @@ MonoBehaviour:
   UpperRange: 3.99
   LowerRange: 0
   AcceptableRange: 0.1
-  tile: {fileID: 0}

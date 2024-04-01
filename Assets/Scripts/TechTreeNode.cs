@@ -14,6 +14,14 @@ public class TechTreeNode : ScriptableObject
         public int Energy;
         public int BioOrganics;
         public int Workforce;
+
+        // Remove or Revise After
+        public int Wood;
+        public int Crystal;
+        //public int Metal;
+        public int Synthia;
+        public int WorkForce;
+        public float Time;
     }
 
     public string NodeLabel; // make into tool
@@ -21,8 +29,8 @@ public class TechTreeNode : ScriptableObject
 
     [TextAreaAttribute]
     public string Description;
-    [TextAreaAttribute]
-    public string Prereques;
+    //[TextAreaAttribute]
+    //public string Prereques;
     [SerializeField]public Cost cost;
 
     [Tooltip("Dictionary of all prequeisites and if they have been reserached")]
