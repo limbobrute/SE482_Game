@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2276,7 +2276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeData: {fileID: 11400000, guid: 662391e61e6a6c6488473bb8531ff425, type: 2}
+  nodeData: {fileID: 11400000, guid: a85e726483547ab43a8b112cb7172db3, type: 2}
   nextNodes: []
   canInteract: 0
   isActivated: 0
@@ -3853,36 +3853,39 @@ MonoBehaviour:
         Housing: 5
         Metal: 0
         Energy: 0
-        BioOrganics: 0
+        Wood: 0
         Workforce: 0
     - _key: 
       _value:
         Housing: 0
         Metal: 0
         Energy: 0
-        BioOrganics: 0
+        Wood: 0
         Workforce: 0
     - _key: 
       _value:
         Housing: 0
         Metal: 0
         Energy: 0
-        BioOrganics: 0
+        Wood: 0
         Workforce: 0
     - _key: 
       _value:
         Housing: 0
         Metal: 0
         Energy: 0
-        BioOrganics: 0
+        Wood: 0
         Workforce: 0
     - _key: 
       _value:
         Housing: 0
         Metal: 0
         Energy: 0
-        BioOrganics: 0
+        Wood: 0
         Workforce: 0
+  OnResourceUpdate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &247760545
 GameObject:
   m_ObjectHideFlags: 0
@@ -5470,7 +5473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeData: {fileID: 11400000, guid: d11556c8a72fc7f48885e394b64960a5, type: 2}
+  nodeData: {fileID: 11400000, guid: a22b3b8292c55334e8dfa95ebe844cb2, type: 2}
   nextNodes:
   - {fileID: 1348373330}
   - {fileID: 1886395257}
@@ -9626,7 +9629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeData: {fileID: 11400000, guid: 07be25cc1975c3849ac2391049f8e847, type: 2}
+  nodeData: {fileID: 11400000, guid: ecab1822cf54c864b8ec01331753c7cc, type: 2}
   nextNodes:
   - {fileID: 120173797}
   canInteract: 0
@@ -10262,7 +10265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeData: {fileID: 11400000, guid: ecab1822cf54c864b8ec01331753c7cc, type: 2}
+  nodeData: {fileID: 11400000, guid: dbdbe9622c9c257458b543ab1722d430, type: 2}
   nextNodes:
   - {fileID: 1959623240}
   canInteract: 0
@@ -11522,7 +11525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeData: {fileID: 11400000, guid: 9fd84b2b2c707ea4d9332da3a6f9f67d, type: 2}
+  nodeData: {fileID: 11400000, guid: 6b241c7d097bbf6458b65b542ce24fec, type: 2}
   nextNodes:
   - {fileID: 732843991}
   - {fileID: 769821378}
@@ -16691,7 +16694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeData: {fileID: 11400000, guid: a22b3b8292c55334e8dfa95ebe844cb2, type: 2}
+  nodeData: {fileID: 11400000, guid: acb0db2207c77c042b48e111dba64a52, type: 2}
   nextNodes:
   - {fileID: 888599420}
   canInteract: 0
@@ -19060,6 +19063,9 @@ MonoBehaviour:
   - {fileID: 5835904594040703108, guid: 07e770f7f3bf59849b88ea6a1909286f, type: 3}
   - {fileID: 5299214063944766542, guid: e02296ff4e3601144b7af5c58ba298f7, type: 3}
   - {fileID: 6594367716319042384, guid: adf7323c698664441a2c61094fbc8765, type: 3}
+  OnMapGenComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!224 &1575874627
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19279,7 +19285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeData: {fileID: 11400000, guid: dbdbe9622c9c257458b543ab1722d430, type: 2}
+  nodeData: {fileID: 11400000, guid: 662391e61e6a6c6488473bb8531ff425, type: 2}
   nextNodes:
   - {fileID: 540470778}
   canInteract: 0
@@ -22058,7 +22064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeData: {fileID: 11400000, guid: acb0db2207c77c042b48e111dba64a52, type: 2}
+  nodeData: {fileID: 11400000, guid: 9fd84b2b2c707ea4d9332da3a6f9f67d, type: 2}
   nextNodes:
   - {fileID: 1931112308}
   canInteract: 0
@@ -22471,7 +22477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeData: {fileID: 11400000, guid: 6b241c7d097bbf6458b65b542ce24fec, type: 2}
+  nodeData: {fileID: 11400000, guid: 07be25cc1975c3849ac2391049f8e847, type: 2}
   nextNodes:
   - {fileID: 769821378}
   - {fileID: 1583860021}
@@ -23056,7 +23062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeData: {fileID: 11400000, guid: a85e726483547ab43a8b112cb7172db3, type: 2}
+  nodeData: {fileID: 11400000, guid: 29fee40f145f9964f8699815c81d34d0, type: 2}
   nextNodes: []
   canInteract: 0
   isActivated: 0
@@ -23928,7 +23934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.9}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2071884411

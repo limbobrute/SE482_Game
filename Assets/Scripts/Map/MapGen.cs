@@ -393,7 +393,7 @@ public class MapGen : MonoBehaviour
     {
         foreach(GameObject tile in EmptyTiles)
         {
-            Debug.Log("Smoothing tile at " + tile.name);
+            //Debug.Log("Smoothing tile at " + tile.name);
             float aveheight = 0f;
             int divider = 0;
             var neigbhours = tile.GetComponent<HexRender>();
