@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 710.4782, y: 529.2522, z: -33.97888}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -121,8 +121,11 @@ MonoBehaviour:
   tileName: Grass Tile
   desription: 'Buildings: Residence, Research Facility'
   buildingPrefabs:
-  - {fileID: 1168200572866911377, guid: 93c9f0ad449836d4cb236a6ec0bc963d, type: 3}
-  - {fileID: 7099533938829789283, guid: 252817f1fcc86284bbe85290bc4081df, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  buildingData:
+  - {fileID: 11400000, guid: 69ecf487acbf1e4499aa09d5b80e99b8, type: 2}
+  - {fileID: 11400000, guid: f267818e0e81e8447b2f809816206501, type: 2}
   uiManager: {fileID: 0}
   canHover: 1
   canSelect: 1

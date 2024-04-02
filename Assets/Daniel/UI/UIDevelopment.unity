@@ -22822,21 +22822,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2782130377457010716, guid: bc514076e29492842bd466a22a351436,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2782130377457010716, guid: bc514076e29492842bd466a22a351436,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2782130377457010716, guid: bc514076e29492842bd466a22a351436,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2782130377457010716, guid: bc514076e29492842bd466a22a351436,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -22895,23 +22880,6 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 957397607}
-    - target: {fileID: 9063946493613922396, guid: bc514076e29492842bd466a22a351436,
-        type: 3}
-      propertyPath: buildingData.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9063946493613922396, guid: bc514076e29492842bd466a22a351436,
-        type: 3}
-      propertyPath: buildingData.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 69ecf487acbf1e4499aa09d5b80e99b8,
-        type: 2}
-    - target: {fileID: 9063946493613922396, guid: bc514076e29492842bd466a22a351436,
-        type: 3}
-      propertyPath: buildingData.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: f267818e0e81e8447b2f809816206501,
-        type: 2}
     - target: {fileID: 9063946493613922396, guid: bc514076e29492842bd466a22a351436,
         type: 3}
       propertyPath: buildingPrefabs.Array.data[0]

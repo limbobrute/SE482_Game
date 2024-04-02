@@ -6,6 +6,12 @@ public class MoveCamera : MonoBehaviour
 {
     public float speed = 10.0f; // Speed of the camera movement
 
+    // Define the movement constraints
+    public float minX = -30;
+    public float maxX = 60;
+    public float minZ = -60;
+    public float maxZ = 30;
+
     // Update is called once per frame
     void Update()
     {
@@ -15,7 +21,14 @@ public class MoveCamera : MonoBehaviour
         // Calculate new position
         Vector3 newPosition = new Vector3(-horizontalInput, 0, -verticalInput) * speed * Time.deltaTime;
 
+        // Add the new position to the current position
+        Vector3 targetPosition = transform.position + newPosition;
+
+        // Constrain the target position within the defined bounds
+        targetPosition.x = Mathf.Clamp(targetPosition.x, minX, maxX);
+        targetPosition.z = Mathf.Clamp(targetPosition.z, minZ, maxZ);
+
         // Move the camera smoothly to the new position
-        transform.position += newPosition;
+        transform.position = targetPosition;
     }
 }

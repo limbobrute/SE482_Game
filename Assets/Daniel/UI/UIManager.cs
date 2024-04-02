@@ -48,6 +48,11 @@ public class UIManager : MonoBehaviour
         popupOpen = false;
     }
 
+    public void CloseMapGen()
+    {
+        CloseScreen(screens[0]);
+    }
+
     public bool GetPopupOpen()
     {
         return popupOpen;
