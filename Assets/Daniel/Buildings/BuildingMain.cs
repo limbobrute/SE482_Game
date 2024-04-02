@@ -5,13 +5,15 @@ using UnityEngine;
 public class BuildingMain : MonoBehaviour
 {
     [SerializeField] BuildingDataNew buildingData; // Reference to the BuildingData asset
-    ObjectDataForUI uiData; 
+    ObjectDataForUI uiData;
+    ObjectDataForUI nextUIData;
     GameObject currentBuildingPrefab; // Reference to the instantiated prefab
 
     // Start is called before the first frame update
     void Start()
     {
         uiData = new ObjectDataForUI();
+        nextUIData = new ObjectDataForUI();
         ConstructBuilding();
     }
 
@@ -53,25 +55,38 @@ public class BuildingMain : MonoBehaviour
         }
     }
 
+    void UpdateUIDataInfo(ObjectDataForUI od, BuildingDataNew bd)
+    {
+        od.objectName = bd.buildingName;
+        od.isBuilding = true;
+        od.level = bd.buildingLevel.ToString();
+        od.description = bd.description;
+        // Need to further work buff
+        od.buff = "+" + bd.description;
+        od.needRequirementPanel = true;
+        od.woodCost = bd.cost.Wood.ToString();
+        od.crystalCost = bd.cost.Crystal.ToString();
+        od.metalCost = bd.cost.Metal.ToString();
+        od.synthiaCost = bd.cost.Synthia.ToString();
+        od.manpowerCost = bd.cost.Workforce.ToString();
+        od.constructionTime = bd.cost.Time.ToString();
+    }
+
     void UpdateUIData()
     {
-        uiData.objectName = buildingData.buildingName;
-        uiData.isBuilding = true;
-        uiData.level = buildingData.buildingLevel;
-        uiData.description = buildingData.description;
-        uiData.needRequirementPanel = true;
-        uiData.woodCost = buildingData.cost.Wood;
-        uiData.crystalCost = buildingData.cost.Crystal;
-        uiData.metalCost = buildingData.cost.Metal;
-        uiData.synthiaCost = buildingData.cost.Synthia;
-        uiData.manpowerCost = buildingData.cost.Workforce;
-        uiData.constructionTime = buildingData.cost.Time;
+        UpdateUIDataInfo(uiData, buildingData);
+        UpdateUIDataInfo(nextUIData, buildingData.nextLevel);
     }
 
     // Update UI with building information
-    public ObjectDataForUI GetUIData()
+    public ObjectDataForUI GetThisUIData()
     {
         // Example: Update UI text labels with building name, level, etc.
         return uiData;
+    }
+
+    public ObjectDataForUI GetNextUIData()
+    {
+        return nextUIData;
     }
 }

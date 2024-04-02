@@ -29,7 +29,7 @@ public class BuildingMouseSelector : MonoBehaviour
         BuildingFlagSet(!uiManager.GetPopupOpen());
         if (canHover)
         {
-            uiManager.OpenHoverDisplayPanel(myBuilding.GetUIData()); // Show your hover information panel
+            uiManager.OpenHoverDisplayPanel(myBuilding.GetThisUIData()); // Show your hover information panel
         }
     }
 
@@ -42,7 +42,7 @@ public class BuildingMouseSelector : MonoBehaviour
     {
         if (canSelect)
         {
-            uiManager.OpenBuildingPopup(myBuilding.GetUIData());
+            uiManager.OpenBuildingPopup(myBuilding.GetThisUIData(), myBuilding.GetNextUIData());
             BuildingFlagSet(!uiManager.GetPopupOpen());
         }
     }

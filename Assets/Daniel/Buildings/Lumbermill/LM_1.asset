@@ -24,7 +24,7 @@ MonoBehaviour:
   buildingPrefab: {fileID: 958592876648073626, guid: b5ed63401a4cfef499875f70f992a614,
     type: 3}
   icon: {fileID: 0}
-  description: Short Description
+  description: +5 Wood
   nextLevel: {fileID: 11400000, guid: 5fc07aae33732a543a5685acd7a1f3ee, type: 2}
   canLevelUp: 1
   flatResourceIncrement: 5
