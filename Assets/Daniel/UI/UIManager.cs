@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject[] screens;
     [SerializeField] GameObject hoverRequirementPanel;
     [SerializeField] Text[] hoverTexts;
+    [SerializeField] GameObject[] buildingsToBuyPanels;
+    [SerializeField] Text[] tilePopupTexts;
     [SerializeField] Text[] buildingPopupTexts;
     bool popupOpen = false;
 
@@ -34,6 +37,10 @@ public class UIManager : MonoBehaviour
 
     void CloseAllScreens()
     {
+        for(int i = 0; i < buildingsToBuyPanels.Length; i++)
+        {
+            buildingsToBuyPanels[i].SetActive(false); 
+        }
         for (int i = 1; i < screens.Length; i++)
         {
             CloseScreen(screens[i]);
@@ -41,9 +48,22 @@ public class UIManager : MonoBehaviour
         popupOpen = false;
     }
 
+    public void CloseMapGen()
+    {
+        CloseScreen(screens[0]);
+    }
+
     public bool GetPopupOpen()
     {
         return popupOpen;
+    }
+
+    public void OpenHoverDisplayPanel(string title, string description)
+    {
+        OpenScreen(screens[1]);
+        hoverRequirementPanel.SetActive(false);
+        hoverTexts[0].text = title;
+        hoverTexts[1].text = description;
     }
 
     public void OpenHoverDisplayPanel(ObjectDataForUI objectUIData)
@@ -91,27 +111,68 @@ public class UIManager : MonoBehaviour
         CloseScreen(screens[1]);
     }
 
-    public void OpenBuildingPopup(ObjectDataForUI objectUIData)
+    void BuildingDisplay(ObjectDataForUI uiData, Text[] texts, int index)
+    {
+        if (uiData != null)
+        {
+            texts[index].text = "LV " + uiData.level;
+            texts[index + 1].text = uiData.description;
+            texts[index + 2].text = uiData.woodCost;
+            texts[index + 3].text = uiData.crystalCost;
+            texts[index + 4].text = uiData.metalCost;
+            texts[index + 5].text = uiData.synthiaCost;
+            texts[index + 6].text = uiData.manpowerCost;
+            texts[index + 7].text = uiData.constructionTime + "s";
+        }
+        else
+        {
+            texts[index].text = "";
+            texts[index + 2].text = "";
+            texts[index + 3].text = "MAXED OUT";
+            texts[index + 4].text = "";
+            texts[index + 5].text = "";
+            texts[index + 6].text = "";
+            texts[index + 7].text = "";
+            texts[index + 8].text = "";
+        }
+    }
+
+    public void OpenTilePopup(string name, ObjectDataForUI[] uiData, int length)
+    {
+        CloseAllScreens();
+        OpenScreen(screens[4]);
+        popupOpen = true;
+
+        tilePopupTexts[0].text = name;
+        for (int i = 0; i < length; i++)
+        {
+            int index = (i * 8) + 1;
+            buildingsToBuyPanels[i].SetActive(true);
+            BuildingDisplay(uiData[i], tilePopupTexts, index);
+        }
+    }
+
+    public void CloseTilePopup()
+    {
+        for (int i = 0; i < buildingsToBuyPanels.Length; i++)
+        {
+            buildingsToBuyPanels[i].SetActive(false);
+        }
+
+        CloseScreen(screens[4]);
+        popupOpen = false;
+    }
+
+    public void OpenBuildingPopup(ObjectDataForUI currUIData, ObjectDataForUI nextUIData)
     {
         CloseAllScreens();
         OpenScreen(screens[2]);
         popupOpen = true;
 
-        buildingPopupTexts[0].text = objectUIData.objectName + " LV " + objectUIData.level.ToString();
-        buildingPopupTexts[1].text = objectUIData.woodCost.ToString();
-        buildingPopupTexts[2].text = objectUIData.crystalCost.ToString();
-        buildingPopupTexts[3].text = objectUIData.metalCost.ToString();
-        buildingPopupTexts[4].text = objectUIData.synthiaCost.ToString();
-        buildingPopupTexts[5].text = objectUIData.manpowerCost.ToString();
-        buildingPopupTexts[6].text = objectUIData.constructionTime.ToString() + "s";
-        if(objectUIData.level < 1)
-        {
-            buildingPopupTexts[7].text = "Buy";
-        }
-        else
-        {
-            buildingPopupTexts[7].text = "Upgrade";
-        }
+        buildingPopupTexts[0].text = currUIData.objectName; 
+        buildingPopupTexts[1].text = "LV " + currUIData.level;
+        buildingPopupTexts[2].text = currUIData.description;
+        BuildingDisplay(nextUIData, buildingPopupTexts, 3);
     }
 
     public void CloseBuildingPopup()

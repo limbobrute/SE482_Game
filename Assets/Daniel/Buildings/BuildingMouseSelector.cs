@@ -7,7 +7,6 @@ public class BuildingMouseSelector : MonoBehaviour
     [SerializeField] bool canHover = true; // Flag to track hover state
     [SerializeField] bool canSelect = true;
 
-
     private void Awake()
     {
         myBuilding = GetComponent<BuildingMain>();
@@ -30,7 +29,7 @@ public class BuildingMouseSelector : MonoBehaviour
         BuildingFlagSet(!uiManager.GetPopupOpen());
         if (canHover)
         {
-            uiManager.OpenHoverDisplayPanel(myBuilding.GetUIData()); // Show your hover information panel
+            uiManager.OpenHoverDisplayPanel(myBuilding.GetThisUIData()); // Show your hover information panel
         }
     }
 
@@ -43,7 +42,7 @@ public class BuildingMouseSelector : MonoBehaviour
     {
         if (canSelect)
         {
-            uiManager.OpenBuildingPopup(myBuilding.GetUIData());
+            uiManager.OpenBuildingPopup(myBuilding.GetThisUIData(), myBuilding.GetNextUIData());
             BuildingFlagSet(!uiManager.GetPopupOpen());
         }
     }

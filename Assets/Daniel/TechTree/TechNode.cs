@@ -72,10 +72,10 @@ public class TechNode : MonoBehaviour
         //hoverData.level = nodeData.buildingLevel;
         hoverData.description = nodeData.Description;
         hoverData.needRequirementPanel = true;
-        hoverData.woodCost = nodeData.cost.Wood;
-        hoverData.crystalCost = nodeData.cost.Crystal;
-        hoverData.metalCost = nodeData.cost.Metal;
-        hoverData.synthiaCost = nodeData.cost.Synthia;
+        hoverData.woodCost = nodeData.cost.Wood.ToString();
+        hoverData.crystalCost = nodeData.cost.Crystal.ToString();
+        hoverData.metalCost = nodeData.cost.Metal.ToString();
+        hoverData.synthiaCost = nodeData.cost.Synthia.ToString();
         //hoverData.manpowerCost = nodeData.builderCost;
         //hoverData.constructionTime = nodeData.constructionTime;
     }

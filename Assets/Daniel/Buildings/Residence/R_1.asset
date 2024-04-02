@@ -10,24 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40d77a1b655230642a112ac54a7f2d15, type: 3}
-  m_Name: LM_2
+  m_Name: R_1
   m_EditorClassIdentifier: 
-  buildingName: Lumbermill
-  buildingLevel: 2
+  buildingName: Residence
+  buildingLevel: 1
   cost:
-    Wood: 0
-    Crystal: 0
-    Metal: 30
-    Synthia: 15
-    Workforce: 5
-    Time: 45
-  buildingPrefab: {fileID: 958592876648073626, guid: cce389cc976e7af41a964ce784368947,
+    Wood: 5
+    Crystal: 5
+    Metal: 5
+    Synthia: 5
+    Workforce: 1
+    Time: 5
+  buildingPrefab: {fileID: 524405443524869290, guid: c41dce2e971ff3541bbf0d2ee6d0ed43,
     type: 3}
   icon: {fileID: 0}
-  description: +7 Wood
-  nextLevel: {fileID: 11400000, guid: 0d3d5641dbc59394ea4e5382c0bc6923, type: 2}
+  description: Short Description
+  nextLevel: {fileID: 11400000, guid: 0f17b70a828d7b74eb4e810fa3c99029, type: 2}
   canLevelUp: 0
-  flatResourceIncrement: 7
-  slots:
-  - {fileID: 0}
-  - {fileID: 0}
+  flatResourceIncrement: 0
+  slots: []

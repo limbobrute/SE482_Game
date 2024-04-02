@@ -6,6 +6,7 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     private MapGen map;
+
     [Serializable]
     public struct EmptyNeigbours
     {
