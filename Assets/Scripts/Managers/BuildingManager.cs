@@ -9,9 +9,10 @@ public class BuildingManager : MonoBehaviour
     [field: SerializeField]
     public ResourceManager ResourceManager { get; set; }
     public Dictionary<BuildingType, Buildings> BuildingTypesToBuild { get; set; }
-    public List<Buildings> BuildingsInScene { get; set; }
+    public List<Buildings> BuildingsInScene { get; set; } 
 
-    public Vector3 instancePostition = Vector3.zero; 
+    public Vector3 instancePostition = Vector3.zero;
+
 
     // Method to instantiate a building
 
@@ -53,7 +54,7 @@ public class BuildingManager : MonoBehaviour
             {
                 ResourceType resourceType = cost.Key;
                 int costValue = cost.Value;
-                ResourceManager.DeductResource(resourceType, costValue);
+                ResourceManager.DeductResource();
             }
 
             // Add the instantiated building object to the list of buildings in the scene

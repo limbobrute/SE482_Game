@@ -1,59 +1,64 @@
 using UnityEngine;
-using System.Collections.Generic;
 using Enums;
 using System;
 using SerializableDictionary.Scripts;
-using PlasticPipe.PlasticProtocol.Messages;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using Codice.CM.Client.Differences;
 
-[CreateAssetMenu(fileName = "NewNodeCost", menuName = "ScriptableObjects/NodeCost", order = 52)]
-public class NodeCost : ScriptableObject
-{
-    public List<ResourceCost> costs;
-}
+
 public class ResourceManager : MonoBehaviour
 {
     [Serializable]
     public struct Cost
     {
-        public int Housing;
+        public int Synthia;
         public int Metal;
-        public int Energy;
+        public int Crystal;
         public int Wood;
         public int Workforce;
     }
-    [SerializeField]
-    private Dictionary<ResourceType, int> resources = new Dictionary<ResourceType, int>();
+
+    public int wood;
+    public int metal;
+    public int crystal;
+    public int synthia;
+    public int workforce;
+
+    public int woodToAdd; 
+    public int metalToAdd;
+    public int synthiaToAdd;
+    public int crystalToAdd;
+    public int workforceToAdd;//This one may be uneccessary
 
     [SerializeField] SerializableDictionary<string, Cost> BuidingCostTable = new SerializableDictionary<string, Cost>();
 
     public UnityEvent OnResourceUpdate;
 
+
     private void Start()
     {
-        AddResource(ResourceType.Metal, 50);
-        AddResource(ResourceType.Wood, 50);
-        AddResource(ResourceType.Workforce, 10);
-        AddResource(ResourceType.Crystal, 50);
-        AddResource(ResourceType.Synthia, 25);
+        metal = 50;
+        wood = 50; 
+        workforce = 10;
+        crystal = 50;
+        synthia = 25;
     }
 
     //Check to see if the given node can be researched
     public bool CanResearch(TechTreeNode node)
     {
         var cost = node.cost;
-        int StoredHousing = resources[ResourceType.Wood];
-        int StoredMetal = resources[ResourceType.Metal];
-        int StoredEnergy = resources[ResourceType.Crystal];
-        int StoredBioOrganics = resources[ResourceType.Synthia];
-        int StoredWorkforce = resources[ResourceType.Workforce];
+        int StoredSynthia = synthia;
+        int StoredMetal = metal;
+        int StoredCrystal = crystal;
+        int StoredWood = wood;
+        int StoredWorkforce = workforce;
 
-        if (StoredHousing >= cost.Housing 
+
+        if (StoredSynthia >= cost.Synthia 
             && StoredMetal >= cost.Metal 
-            && StoredEnergy >= cost.Energy
-            && StoredBioOrganics >= cost.BioOrganics
+            && StoredCrystal >= cost.Crystal
+            && StoredWood >= cost.Wood
             && StoredWorkforce >= cost.Workforce)
         { return true; }
         else
@@ -63,28 +68,28 @@ public class ResourceManager : MonoBehaviour
     //Check to see if the given building can be built
     public bool CanBuild(string building)
     {
-        int StoredHousing = resources[ResourceType.Wood];
-        int StoredMetal = resources[ResourceType.Metal];
-        int StoredEnergy = resources[ResourceType.Crystal];
-        int StoredBioOrganics = resources[ResourceType.Synthia];
-        int StoredWorkforce = resources[ResourceType.Workforce];
+        int StoredWood = wood;
+        int StoredMetal = metal;
+        int StoredCrystal = crystal;
+        int StoredSynthia = synthia;
+        int StoredWorkforce = workforce;
         /*
          * The reason for the different method of getting the value by key
          * is due to the nature of the serializable Dictionary 
          */
-        int AdjustedHousing = BuidingCostTable.Get(building).Housing;
+        int AdjustedSynthia = BuidingCostTable.Get(building).Synthia;
         int AdjustedMetal = BuidingCostTable.Get(building).Metal;
-        int AdjustedEnergy = BuidingCostTable.Get(building).Energy;
-        int AdjustedBioOrganics = BuidingCostTable.Get(building).Wood;
+        int AdjustedCrystal = BuidingCostTable.Get(building).Crystal;
+        int AdjustedWood = BuidingCostTable.Get(building).Wood;
         int AdjustedWorkforce = BuidingCostTable.Get(building).Workforce;
         /*
          * Change the local Adjusted ints here based on the co-efficents in the buildingManager
          * by building and any golbal co-efficient
          */
-        if (StoredHousing >= AdjustedHousing
+        if (StoredWood >= AdjustedWood
             && StoredMetal >= AdjustedMetal
-            && StoredEnergy >= AdjustedEnergy
-            && StoredBioOrganics >= AdjustedBioOrganics
+            && StoredCrystal >= AdjustedCrystal
+            && StoredSynthia >= AdjustedSynthia
             && StoredWorkforce >= AdjustedWorkforce)
         { return true; }
         else
@@ -92,37 +97,20 @@ public class ResourceManager : MonoBehaviour
     }
 
     // Method to add resources
-    public void AddResource(ResourceType resourceType, int amount)
+    public void AddResource()
     {
-        if (!resources.ContainsKey(resourceType))
-        {
-            resources[resourceType] = 0;
-        }
-
-        resources[resourceType] += amount;
+        wood += woodToAdd;
+        metal += metalToAdd;
+        crystal += crystalToAdd;
+        synthia += synthiaToAdd;
 
         OnResourceUpdate?.Invoke();
     }
 
     // Method to deduct resources
-    public void DeductResource(ResourceType resourceType, int amount)
+    public void DeductResource()
     {
-        if (resources.ContainsKey(resourceType) && resources[resourceType] >= amount)
-        {
-            resources[resourceType] -= amount;
-            OnResourceUpdate?.Invoke();
-        }
-        else
-        {
-            throw new Exception("Not enough resources");
-        }
-    }
-    public void DeductResource(NodeCost cost)
-    {
-        foreach (var price in cost.costs)
-        {
-            DeductResource(price.resourceType, price.cost);
-        }
+        throw new NotImplementedException("DeductResource is not implemented");
     }
 
     public void printResources() {
@@ -133,14 +121,14 @@ public class ResourceManager : MonoBehaviour
         var workforceText = GameObject.Find("Resource Panel/Workforce/Workforce Text")?.GetComponent<Text>();
 
         if (woodText != null)
-            woodText.text = resources[ResourceType.Wood].ToString();
+            woodText.text = wood.ToString();
         if (metalText != null)
-            metalText.text = resources[ResourceType.Metal].ToString();
+            metalText.text = metal.ToString();
         if (synthiaText != null)
-            synthiaText.text = resources[ResourceType.Synthia].ToString();
+            synthiaText.text = synthia.ToString();
         if (crystalText != null)
-            crystalText.text = resources[ResourceType.Crystal].ToString();
+            crystalText.text = crystal.ToString();
         if (workforceText != null)
-            workforceText.text = resources[ResourceType.Workforce].ToString();
+            workforceText.text = workforce.ToString();
     }
 }
