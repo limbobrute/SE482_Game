@@ -4,17 +4,17 @@ using UnityEngine;
 
     public class BuildingMain : MonoBehaviour
     {
-        [SerializeField] BuildingDataNew buildingData; // Reference to the BuildingData asset
-        ObjectDataForUI uiData;
-        ObjectDataForUI nextUIData;
+        [SerializeField] public BuildingDataNew buildingData; // Reference to the BuildingData asset
+        ObjectDataForUI uiData = new ObjectDataForUI();
+        ObjectDataForUI nextUIData= new ObjectDataForUI();
         GameObject currentBuildingPrefab; // Reference to the instantiated prefab
 
         // Start is called before the first frame update
         void Start()
         {
-            uiData = new ObjectDataForUI();
-            nextUIData = new ObjectDataForUI();
-            ConstructBuilding();
+            //uiData = new ObjectDataForUI();
+            //nextUIData = new ObjectDataForUI();
+            //ConstructBuilding();
         }
 
         private void Update()
@@ -26,19 +26,19 @@ using UnityEngine;
         }
 
         // Called when constructing or upgrading the building
-        public void ConstructBuilding()
-        {
-            currentBuildingPrefab = Instantiate(buildingData.buildingPrefab);
-            Vector3 originalPosition = currentBuildingPrefab.transform.position;
-            Quaternion originalRotation = currentBuildingPrefab.transform.rotation;
+        //public void ConstructBuilding()
+        //{
+        //    currentBuildingPrefab = Instantiate(buildingData.buildingPrefab);
+        //    Vector3 originalPosition = currentBuildingPrefab.transform.position;
+        //    Quaternion originalRotation = currentBuildingPrefab.transform.rotation;
 
-            currentBuildingPrefab.transform.SetParent(transform); // Set the parent
-            currentBuildingPrefab.transform.localPosition = originalPosition; // Example position
-            currentBuildingPrefab.transform.localRotation = originalRotation;
-            currentBuildingPrefab.transform.localScale = new Vector3(1, 1, 1);
+        //    currentBuildingPrefab.transform.SetParent(transform); // Set the parent
+        //    currentBuildingPrefab.transform.localPosition = originalPosition; // Example position
+        //    currentBuildingPrefab.transform.localRotation = originalRotation;
+        //    currentBuildingPrefab.transform.localScale = new Vector3(1, 1, 1);
 
-            UpdateUIData();
-        }
+        //    UpdateUIData();
+        //}
 
         // Called when upgrading the building
         public void UpgradeBuilding(BuildingDataNew nextLevel)
@@ -47,7 +47,7 @@ using UnityEngine;
             {
                 buildingData = nextLevel;
                 Destroy(currentBuildingPrefab); // Destroy the old prefab
-                ConstructBuilding(); // Instantiate the new prefab
+                //ConstructBuilding(); // Instantiate the new prefab
             }
             else
             {
@@ -72,7 +72,7 @@ using UnityEngine;
             od.constructionTime = bd.cost.Time.ToString();
         }
 
-        void UpdateUIData()
+       public void UpdateUIData()
         {
             UpdateUIDataInfo(uiData, buildingData);
             UpdateUIDataInfo(nextUIData, buildingData.nextLevel);

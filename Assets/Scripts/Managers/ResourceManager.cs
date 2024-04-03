@@ -24,17 +24,27 @@ public class ResourceManager : MonoBehaviour
     public int synthia;
     public int workforce;
 
-    public int woodToAdd; 
-    public int metalToAdd;
-    public int synthiaToAdd;
-    public int crystalToAdd;
-    public int workforceToAdd;//This one may be uneccessary
+    [SerializeField]
+    private int woodToAdd =0;
+    [SerializeField]
+    private int metalToAdd = 0;
+    [SerializeField]
+    private int synthiaToAdd = 0;
+    [SerializeField]
+    private int crystalToAdd = 0;
+    [SerializeField]
+    private int workforceToAdd = 0;//This one may be uneccessary
 
 
     [SerializeField] SerializableDictionary<string, Cost> BuidingCostTable = new SerializableDictionary<string, Cost>();
 
     public UnityEvent OnResourceUpdate;
 
+    public int WoodToAdd { get => woodToAdd; set => woodToAdd = value; }
+    public int MetalToAdd { get => metalToAdd; set => metalToAdd = value; }
+    public int SynthiaToAdd { get => synthiaToAdd; set => synthiaToAdd = value; }
+    public int CrystalToAdd { get => crystalToAdd; set => crystalToAdd = value; }
+    public int WorkforceToAdd { get => workforceToAdd; set => workforceToAdd = value; }
 
     private void Start()
     {
@@ -100,10 +110,10 @@ public class ResourceManager : MonoBehaviour
     // Method to add resources
     public void AddResource()
     {
-        wood += woodToAdd;
-        metal += metalToAdd;
-        crystal += crystalToAdd;
-        synthia += synthiaToAdd;
+        wood += WoodToAdd;
+        metal += MetalToAdd;
+        crystal += CrystalToAdd;
+        synthia += SynthiaToAdd;
 
         OnResourceUpdate?.Invoke();
     }

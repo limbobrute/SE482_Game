@@ -78,9 +78,9 @@
     <Compile Include="Assets\Scripts\MouseSelecter.cs" />
     <Compile Include="Assets\Scripts\Daniel\Player\Blink.cs" />
     <Compile Include="Assets\Scripts\Daniel\MoveCamera.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Buildings\BuildingMouseSelector.cs" />
     <Compile Include="Assets\Scripts\Events\BaseEvent.cs" />
     <Compile Include="Assets\Scripts\Daniel\Buildings\BuildingDataNew.cs" />
-    <Compile Include="Assets\Scripts\Daniel\Buildings\BuildingMouseSelector.cs" />
     <Compile Include="Assets\Scripts\Managers\ProjectTimer.cs" />
     <Compile Include="Assets\Scripts\PSF\SerializableDictionary\Demo\Scripts\SerializableDictionaryDemo_1.cs" />
     <Compile Include="Assets\Scripts\Map\Tile.cs" />

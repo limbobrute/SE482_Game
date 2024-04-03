@@ -9,6 +9,7 @@ public class BuildingMouseSelector : MonoBehaviour
 
     private void Awake()
     {
+        uiManager = FindObjectOfType<UIManager>();
         myBuilding = GetComponent<BuildingMain>();
     }
 
