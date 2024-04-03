@@ -121,6 +121,7 @@ MonoBehaviour:
   tileName: Crystal
   desription: 'Buildings: Residence, Research Facility'
   buildingPrefabs: []
+  buildingData: []
   uiManager: {fileID: 0}
   canHover: 1
   canSelect: 1
@@ -284,6 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5801545fac7c4de49b651f3a08c4b9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tileType: Grass
+  possibleBuildings: []
   Eneigbhours:
     Up: {fileID: 0}
     Down: {fileID: 0}

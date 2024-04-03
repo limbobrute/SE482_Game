@@ -18,18 +18,19 @@ public class BuildingManager : MonoBehaviour
 
     private void Start()
     {
-
         BuildingsInScene = new();
     }
     public void InstantiateBuilding(BuildingDataNew buildingData)
     {
         // Instantiate the BuildingMain prefab
-        GameObject newBuilding = Instantiate(buildingData.buildingPrefab);
+        GameObject newBuilding = Instantiate(buildingData.buildingPrefab, instancePostition, Quaternion.identity);
         newBuilding.AddComponent<BuildingMain>();
         newBuilding.GetComponent<BuildingMain>().buildingData = buildingData;
         newBuilding.GetComponent<BuildingMain>().UpdateUIData();
         newBuilding.AddComponent<BuildingMouseSelector>();
         newBuilding.AddComponent<BoxCollider>();
+
+        BuildingsInScene.Add(newBuilding.GetComponent<BuildingMain>());
 
         // Add the flatResourceIncrement to the corresponding resource in ResourceManager
 

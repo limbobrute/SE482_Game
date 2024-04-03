@@ -11,12 +11,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject hoverRequirementPanel;
     [SerializeField] Text[] hoverTexts;
     [SerializeField] GameObject[] buildingsToBuyPanels;
+    [SerializeField] Button[] buildingsToBuyButtons;
     [SerializeField] Text[] tilePopupTexts;
     [SerializeField] Text[] buildingPopupTexts;
+    BuildingManager buildingManager;
     bool popupOpen = false;
 
     private void Start()
     {
+        buildingManager = FindObjectOfType<BuildingManager>();
         InitializeScreen();
     }
 
@@ -123,6 +126,7 @@ public class UIManager : MonoBehaviour
             texts[index + 5].text = uiData.synthiaCost;
             texts[index + 6].text = uiData.manpowerCost;
             texts[index + 7].text = uiData.constructionTime + "s";
+       
         }
         else
         {
@@ -137,7 +141,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void OpenTilePopup(string name, ObjectDataForUI[] uiData, int length)
+    public void OpenTilePopup(string name, ObjectDataForUI[] uiData, List<BuildingDataNew> buildingData, int length)
     {
         CloseAllScreens();
         OpenScreen(screens[4]);
@@ -148,6 +152,11 @@ public class UIManager : MonoBehaviour
         {
             int index = (i * 8) + 1;
             buildingsToBuyPanels[i].SetActive(true);
+
+            // Create a temporary variable to hold the current value of i
+            int tempI = i;
+            buildingsToBuyButtons[i].onClick.AddListener(() => buildingManager.InstantiateBuilding(buildingData[tempI]));
+
             BuildingDisplay(uiData[i], tilePopupTexts, index);
         }
     }
@@ -156,6 +165,9 @@ public class UIManager : MonoBehaviour
     {
         for (int i = 0; i < buildingsToBuyPanels.Length; i++)
         {
+            // Remove all listeners from the button
+            buildingsToBuyButtons[i].onClick.RemoveAllListeners();
+
             buildingsToBuyPanels[i].SetActive(false);
         }
 
