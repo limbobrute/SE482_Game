@@ -9,15 +9,10 @@ public class TechTreeNode : ScriptableObject
 {
     [Serializable]public struct Cost
     {
-        public int Housing;
-
         public int Wood;
         public int Crystal;
         public int Metal;
         public int Synthia;
-
-        public int Energy;
-        public int BioOrganics;
         public int Workforce;
     }
 

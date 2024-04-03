@@ -59,31 +59,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Buidlings\Buildings.cs" />
-    <Compile Include="Assets\Scripts\TechTree.cs" />
+    <Compile Include="Assets\Scripts\Daniel\UI\ObjectDataForUI.cs" />
     <Compile Include="Assets\Scripts\Buidlings\BaseBuilding.cs" />
     <Compile Include="Assets\Scripts\Map\HexRender.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Player\CameraPerspective.cs" />
+    <Compile Include="Assets\Scripts\Daniel\TechTree\TechTree.cs" />
+    <Compile Include="Assets\Scripts\Daniel\UI\ScreenNavigation.cs" />
     <Compile Include="Assets\Scripts\Buidlings\Building.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Buildings\BuilderData.cs" />
     <Compile Include="Assets\Scripts\Managers\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\Events\Events.cs" />
     <Compile Include="Assets\Scripts\Map\MapGen.cs" />
+    <Compile Include="Assets\Scripts\Daniel\TechTree\TechNode.cs" />
+    <Compile Include="Assets\Scripts\Daniel\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Daniel\TechTree\TechNodeModifyButton.cs" />
     <Compile Include="Assets\Scripts\PSF\SerializableDictionary\Scripts\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\MouseSelecter.cs" />
-    <Compile Include="Assets\Scripts\BuildingData.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Player\Blink.cs" />
+    <Compile Include="Assets\Scripts\Daniel\MoveCamera.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Buildings\BuildingMouseSelector.cs" />
     <Compile Include="Assets\Scripts\Events\BaseEvent.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Buildings\BuildingDataNew.cs" />
     <Compile Include="Assets\Scripts\Managers\ProjectTimer.cs" />
     <Compile Include="Assets\Scripts\PSF\SerializableDictionary\Demo\Scripts\SerializableDictionaryDemo_1.cs" />
     <Compile Include="Assets\Scripts\Map\Tile.cs" />
     <Compile Include="Assets\Scripts\BuildingCost.cs" />
     <Compile Include="Assets\Scripts\TechTreeNode.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Buildings\ManpowerSlot.cs" />
     <Compile Include="Assets\Scripts\Events\WeatherEvent.cs" />
+    <Compile Include="Assets\Scripts\Daniel\TechTree\TechNodeHoverText.cs" />
     <Compile Include="Assets\Scripts\Managers\RTSTimer.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\BuildingMain.cs" />
     <Compile Include="Assets\Scripts\PSF\SerializableDictionary\Demo\Scripts\SerializableDictionaryDemo_2.cs" />
     <Compile Include="Assets\Scripts\Managers\BuildingManager.cs" />
     <Compile Include="Assets\Scripts\Events\Task.cs" />
     <Compile Include="Assets\Scripts\FPSTracker.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Player\SpinObject.cs" />
     <Compile Include="Assets\Scripts\DebugCatcher.cs" />
     <Compile Include="Assets\Scripts\Resources\BaseResource.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Player\DronePlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Buildings\BuildingProtoData.cs" />
+    <Compile Include="Assets\Scripts\Daniel\Player\PlayerTilt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Scripts.asmdef" />

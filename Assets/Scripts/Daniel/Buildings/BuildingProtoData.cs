@@ -71,7 +71,7 @@ public class BuildingProtoData : MonoBehaviour
     {
         if (canSelect)
         {
-            uiManager.OpenTilePopup(tileName, uiData, buildingData.Length);
+           // uiManager.OpenTilePopup(tileName, uiData, buildingData.Length);
             BuildingFlagSet(!uiManager.GetPopupOpen());
         }
     }
