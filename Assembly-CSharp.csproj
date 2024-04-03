@@ -58,28 +58,8 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Daniel\Player\Blink.cs" />
-    <Compile Include="Assets\Daniel\TechTree\TechNodeHoverText.cs" />
-    <Compile Include="Assets\Daniel\UI\ObjectDataForUI.cs" />
-    <Compile Include="Assets\Daniel\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Daniel\Player\CameraPerspective.cs" />
-    <Compile Include="Assets\Daniel\TechTree\TechNodeModifyButton.cs" />
-    <Compile Include="Assets\Daniel\Buildings\BuildingMouseSelector.cs" />
-    <Compile Include="Assets\Daniel\MoveCamera.cs" />
-    <Compile Include="Assets\Daniel\Player\DronePlayerMovement.cs" />
-    <Compile Include="Assets\Daniel\TechTree\TechTree.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Daniel\Player\SpinObject.cs" />
     <Compile Include="Assets\Beau\UIElement.cs" />
-    <Compile Include="Assets\Daniel\Buildings\BuildingDataNew.cs" />
-    <Compile Include="Assets\Daniel\Buildings\BuildingProtoData.cs" />
-    <Compile Include="Assets\Daniel\UI\UIManager.cs" />
-    <Compile Include="Assets\Daniel\UI\ScreenNavigation.cs" />
-    <Compile Include="Assets\Daniel\Buildings\ManpowerSlot.cs" />
-    <Compile Include="Assets\Daniel\Buildings\BuildingMain.cs" />
-    <Compile Include="Assets\Daniel\TechTree\TechNode.cs" />
-    <Compile Include="Assets\Daniel\Buildings\BuilderData.cs" />
-    <Compile Include="Assets\Daniel\Player\PlayerTilt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

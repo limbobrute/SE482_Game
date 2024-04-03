@@ -30,6 +30,7 @@ public class ResourceManager : MonoBehaviour
     public int crystalToAdd;
     public int workforceToAdd;//This one may be uneccessary
 
+
     [SerializeField] SerializableDictionary<string, Cost> BuidingCostTable = new SerializableDictionary<string, Cost>();
 
     public UnityEvent OnResourceUpdate;

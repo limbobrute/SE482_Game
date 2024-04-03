@@ -4527,6 +4527,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTileProtobuilding
       objectReference: {fileID: 0}
+    - target: {fileID: 6490213746960169267, guid: bc514076e29492842bd466a22a351436,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9063946493613922396, guid: bc514076e29492842bd466a22a351436,
         type: 3}
       propertyPath: uiManager
@@ -9526,6 +9531,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ResourceManager>k__BackingField: {fileID: 242158401}
+  <BuildingTypesToBuild>k__BackingField:
+  - {fileID: 1960676619844392526, guid: 47227a2e1d658564c966aec599a3e466, type: 3}
+  <BuildingsInScene>k__BackingField: []
   instancePostition: {x: 0, y: 0, z: 0}
 --- !u!1 &836255180
 GameObject:
@@ -12959,7 +12967,7 @@ PrefabInstance:
     - target: {fileID: 7099533938829789283, guid: 252817f1fcc86284bbe85290bc4081df,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16400,7 +16408,7 @@ PrefabInstance:
     - target: {fileID: 705468904212708108, guid: 47227a2e1d658564c966aec599a3e466,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9009969531195840328, guid: 47227a2e1d658564c966aec599a3e466,
         type: 3}
@@ -21302,7 +21310,7 @@ PrefabInstance:
     - target: {fileID: 1168200572866911377, guid: 93c9f0ad449836d4cb236a6ec0bc963d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3742144834855978118, guid: 93c9f0ad449836d4cb236a6ec0bc963d,
         type: 3}

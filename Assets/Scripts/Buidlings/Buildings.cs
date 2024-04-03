@@ -9,8 +9,8 @@ public class Buildings : MonoBehaviour
     public string buildingName; 
     public Dictionary<ResourceType, int> Costs { get; set; }
     public int rate;
-    [field: SerializeField]
-    public BuildingData BuildingData { get; set; }
+    //[field: SerializeField]
+    //public BuildingData BuildingData { get; set; }
 
     private void Start()
     {
@@ -24,8 +24,8 @@ public class Buildings : MonoBehaviour
     }
 
     public void DefineCosts() {
-         Costs = BuildingData.costs.ToDictionary(rc => rc.resourceType, rc => rc.cost);
-        buildingName = BuildingData.buildingType.ToString();
+        // Costs = BuildingData.costs.ToDictionary(rc => rc.resourceType, rc => rc.cost);
+        //buildingName = BuildingData.buildingType.ToString();
     }
 
     public void PrintBuildingCosts()

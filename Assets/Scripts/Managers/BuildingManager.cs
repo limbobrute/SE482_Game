@@ -8,8 +8,11 @@ public class BuildingManager : MonoBehaviour
 {
     [field: SerializeField]
     public ResourceManager ResourceManager { get; set; }
-    public Dictionary<BuildingType, Buildings> BuildingTypesToBuild { get; set; }
-    public List<Buildings> BuildingsInScene { get; set; } 
+    [field: SerializeField]
+    public List<BuildingMain> BuildingTypesToBuild { get; set; }
+    
+    [field: SerializeField]
+    public List<BuildingMain> BuildingsInScene { get; set; }
 
     public Vector3 instancePostition = Vector3.zero;
 
@@ -18,65 +21,67 @@ public class BuildingManager : MonoBehaviour
 
     private void Start()
     {
-        BuildingTypesToBuild = new Dictionary<BuildingType, Buildings>
-        {
-            //buildings.Costs.Add(ResourceType.Workforce, 3);
-            //BuildingTypes.Add(BuildingType.Agriculture, buildings);
-            { BuildingType.Agriculture, Resources.Load<Buildings>("Agriculture") }
-        };
+        //BuildingTypesToBuild = new Dictionary<BuildingType, Buildings>
+        //{
+        //    //buildings.Costs.Add(ResourceType.Workforce, 3);
+        //    //BuildingTypes.Add(BuildingType.Agriculture, buildings);
+        //    { BuildingType.Agriculture, Resources.Load<Buildings>("Agriculture") }
+        //};
+
+
         BuildingsInScene = new();
     }
-    public void InstantiateBuilding(int buildingType)
+    public void InstantiateBuilding()
     {
-        BuildingType bt = (BuildingType)buildingType;
-        // Check if the dictionary contains the requested building type
-        if (BuildingTypesToBuild.ContainsKey(bt))
-        {
-            // Get the prefab for the building type
-            Buildings buildingPrefab = BuildingTypesToBuild[bt];
+        //BuildingType bt = (BuildingType)buildingType;
+        //// Check if the dictionary contains the requested building type
+        //if (BuildingTypesToBuild.ContainsKey(bt))
+        //{
+        //    // Get the prefab for the building type
+        //    Buildings buildingPrefab = BuildingTypesToBuild[bt];
 
-            if(buildingPrefab.Costs ==  null)
-            {
-            buildingPrefab.DefineCosts();
-            }
-            // Get the height of the prefab
-            float prefabHeight = buildingPrefab.GetComponent<Renderer>().bounds.size.y;
+        //    if(buildingPrefab.Costs ==  null)
+        //    {
+        //    buildingPrefab.DefineCosts();
+        //    }
+        //    // Get the height of the prefab
+        //    float prefabHeight = buildingPrefab.GetComponent<Renderer>().bounds.size.y;
 
-            // Add half the height of the prefab to the instance position
-            Vector3 newPosition = new Vector3(instancePostition.x, instancePostition.y + prefabHeight / 2, instancePostition.z);
+        //    // Add half the height of the prefab to the instance position
+        //    Vector3 newPosition = new Vector3(instancePostition.x, instancePostition.y + prefabHeight / 2, instancePostition.z);
 
-            // Instantiate the prefab in the game scene
-            // You can adjust the position, rotation and parent parameters as needed
-            Instantiate(buildingPrefab, newPosition, Quaternion.identity, null);
+        //    // Instantiate the prefab in the game scene
+        //    // You can adjust the position, rotation and parent parameters as needed
+        //    Instantiate(buildingPrefab, newPosition, Quaternion.identity, null);
 
-            // Deduct the resources from the ResourceManager according to the costs of the building
-            foreach (var cost in buildingPrefab.Costs)
-            {
-                ResourceType resourceType = cost.Key;
-                int costValue = cost.Value;
-                ResourceManager.DeductResource();
-            }
+        //    // Deduct the resources from the ResourceManager according to the costs of the building
+        //    foreach (var cost in buildingPrefab.Costs)
+        //    {
+        //        ResourceType resourceType = cost.Key;
+        //        int costValue = cost.Value;
+        //        ResourceManager.DeductResource();
+        //    }
 
-            // Add the instantiated building object to the list of buildings in the scene
-            BuildingsInScene.Add(buildingPrefab);
-        }
-        else
-        {
-            // Handle the case when the building type is not found in the dictionary
-            // For example, log an error message
-            Debug.LogError($"Building type {buildingType} not found in the dictionary.");
-        }
+        //    // Add the instantiated building object to the list of buildings in the scene
+        //    BuildingsInScene.Add(buildingPrefab);
+        //}
+        //else
+        //{
+        //    // Handle the case when the building type is not found in the dictionary
+        //    // For example, log an error message
+        //    Debug.LogError($"Building type {buildingType} not found in the dictionary.");
+        //}
     }
 
     public void IncreaseProductionRate(BuildingType buildingType, int rate)
     {
-        foreach (var building in BuildingsInScene)
-        {
-            if (building.buildingName == buildingType.ToString())
-            {
-                building.rate = building.rate+(building.rate * rate);
-            }
-        }
+        //foreach (var building in BuildingsInScene)
+        //{
+        //    if (building.buildingName == buildingType.ToString())
+        //    {
+        //        building.rate = building.rate+(building.rate * rate);
+        //    }
+        //}
     }
 
     public void DecreaseBuildingCosts(int buildingType) 
@@ -95,26 +100,26 @@ public class BuildingManager : MonoBehaviour
         //    }
         //}
         // Use a for loop to iterate over the dictionary keys
-        for (int i = 0; i < BuildingTypesToBuild.Keys.Count; i++)
-        {
-            // Get the current key
-            var key = BuildingTypesToBuild.Keys.ElementAt(i);
+        //for (int i = 0; i < BuildingTypesToBuild.Keys.Count; i++)
+        //{
+        //    // Get the current key
+        //    var key = BuildingTypesToBuild.Keys.ElementAt(i);
 
-            // Check if the key matches the building type
-            if (bt == key)
-            {
-                // Get the current value
-                var build = BuildingTypesToBuild[key];
+        //    // Check if the key matches the building type
+        //    if (bt == key)
+        //    {
+        //        // Get the current value
+        //        var build = BuildingTypesToBuild[key];
 
-                // Modify the value
-                //build.DefineCosts();
-                build.DecreaseCosts(.95f);
+        //        // Modify the value
+        //        //build.DefineCosts();
+        //        build.DecreaseCosts(.95f);
 
-                // Update the value in the dictionary
-                BuildingTypesToBuild[key] = build;
+        //        // Update the value in the dictionary
+        //        BuildingTypesToBuild[key] = build;
 
-                Debug.Log("Building Cost Decreased");
-            }
-        }
+        //        Debug.Log("Building Cost Decreased");
+        //    }
+        //}
     }
 }
