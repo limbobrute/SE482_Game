@@ -8,16 +8,6 @@ using UnityEngine.UI;
 
 public class ResourceManager : MonoBehaviour
 {
-    [Serializable]
-    public struct Cost
-    {
-        public int Synthia;
-        public int Metal;
-        public int Crystal;
-        public int Wood;
-        public int Workforce;
-    }
-
     public int wood;
     public int metal;
     public int crystal;
@@ -77,22 +67,19 @@ public class ResourceManager : MonoBehaviour
     }
 
     //Check to see if the given building can be built
-    public bool CanBuild(string building)
+    public bool CanBuild(Cost buildingCost)
     {
         int StoredWood = wood;
         int StoredMetal = metal;
         int StoredCrystal = crystal;
         int StoredSynthia = synthia;
         int StoredWorkforce = workforce;
-        /*
-         * The reason for the different method of getting the value by key
-         * is due to the nature of the serializable Dictionary 
-         */
-        int AdjustedSynthia = BuidingCostTable.Get(building).Synthia;
-        int AdjustedMetal = BuidingCostTable.Get(building).Metal;
-        int AdjustedCrystal = BuidingCostTable.Get(building).Crystal;
-        int AdjustedWood = BuidingCostTable.Get(building).Wood;
-        int AdjustedWorkforce = BuidingCostTable.Get(building).Workforce;
+
+        int AdjustedSynthia = buildingCost.Synthia;
+        int AdjustedMetal = buildingCost.Metal;
+        int AdjustedCrystal = buildingCost.Crystal;
+        int AdjustedWood = buildingCost.Wood;
+        int AdjustedWorkforce = buildingCost.Workforce;
         /*
          * Change the local Adjusted ints here based on the co-efficents in the buildingManager
          * by building and any golbal co-efficient
@@ -119,9 +106,13 @@ public class ResourceManager : MonoBehaviour
     }
 
     // Method to deduct resources
-    public void DeductResource()
+    public void DeductResource(Cost resourceCost)
     {
-        throw new NotImplementedException("DeductResource is not implemented");
+        synthia -= resourceCost.Synthia;
+        crystal -= resourceCost.Crystal;
+        metal -= resourceCost.Metal;
+        wood -= resourceCost.Wood;
+        workforce -= resourceCost.Workforce;
     }
 
     public void printResources() {
