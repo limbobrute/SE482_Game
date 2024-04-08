@@ -16,9 +16,6 @@ public class MouseSelecter : MonoBehaviour
         buildingManager = FindObjectOfType<BuildingManager>();
         uiManager = FindObjectOfType<UIManager>();
 
-        if (GetComponent<Renderer>())
-        { render = GetComponent<Renderer>(); color = render.material.color; }
-
         if (buildingManager == null)
         {
             Debug.Log("No BuildingManager found in the scene.");
@@ -27,6 +24,9 @@ public class MouseSelecter : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (GetComponent<Renderer>())
+        { render = GetComponent<Renderer>(); color = render.material.color; }
+
         render.material.color = Color.blue;
     }
 

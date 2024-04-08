@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Buidlings\BaseBuilding.cs" />
     <Compile Include="Assets\Scripts\Map\HexRender.cs" />
     <Compile Include="Assets\Scripts\Daniel\Player\CameraPerspective.cs" />
+    <Compile Include="Assets\Scripts\DynamicMaterial.cs" />
     <Compile Include="Assets\Scripts\Daniel\TechTree\TechTree.cs" />
     <Compile Include="Assets\Scripts\Daniel\UI\ScreenNavigation.cs" />
     <Compile Include="Assets\Scripts\Buidlings\Building.cs" />
