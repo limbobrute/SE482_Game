@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] Text[] hoverTexts;
     [SerializeField] GameObject[] buildingsToBuyPanels;
     [SerializeField] Button[] buildingsToBuyButtons;
+    [SerializeField] Button upgradeButton;
     [SerializeField] Text[] tilePopupTexts;
     [SerializeField] Text[] buildingPopupTexts;
     BuildingManager buildingManager;
@@ -156,6 +157,8 @@ public class UIManager : MonoBehaviour
             // Create a temporary variable to hold the current value of i
             int tempI = i;
             buildingsToBuyButtons[i].onClick.AddListener(() => buildingManager.InstantiateBuilding(buildingData[tempI]));
+            buildingsToBuyButtons[i].onClick.AddListener(() => CloseTilePopup());
+
 
             BuildingDisplay(uiData[i], tilePopupTexts, index);
         }
@@ -175,7 +178,7 @@ public class UIManager : MonoBehaviour
         popupOpen = false;
     }
 
-    public void OpenBuildingPopup(ObjectDataForUI currUIData, ObjectDataForUI nextUIData)
+    public void OpenBuildingPopup(ObjectDataForUI currUIData, ObjectDataForUI nextUIData, GameObject currentBuilding)
     {
         CloseAllScreens();
         OpenScreen(screens[2]);
@@ -185,10 +188,14 @@ public class UIManager : MonoBehaviour
         buildingPopupTexts[1].text = "LV " + currUIData.level;
         buildingPopupTexts[2].text = currUIData.description;
         BuildingDisplay(nextUIData, buildingPopupTexts, 3);
+
+        upgradeButton.onClick.AddListener(() => buildingManager.UpgradeBuilding(currentBuilding));
+        upgradeButton.onClick.AddListener(() => CloseBuildingPopup());
     }
 
     public void CloseBuildingPopup()
     {
+        upgradeButton.onClick.RemoveAllListeners();
         CloseScreen(screens[2]);
         popupOpen = false;
     }

@@ -20,7 +20,7 @@ MonoBehaviour:
     Metal: 30
     Synthia: 15
     Workforce: 5
-    Time: 45
+    Time: 30
   buildingPrefab: {fileID: 958592876648073626, guid: cce389cc976e7af41a964ce784368947,
     type: 3}
   icon: {fileID: 0}
