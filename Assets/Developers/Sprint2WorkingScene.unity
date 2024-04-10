@@ -10953,6 +10953,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  scaffoldingPrefab: {fileID: 7813893202988338323, guid: 6c344788ab6663c4186be916f6dc007b,
+    type: 3}
 --- !u!1 &831258239
 GameObject:
   m_ObjectHideFlags: 0

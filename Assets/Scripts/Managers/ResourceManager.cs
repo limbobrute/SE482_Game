@@ -105,6 +105,11 @@ public class ResourceManager : MonoBehaviour
         OnResourceUpdate?.Invoke();
     }
 
+   public void ReallocateBuilder(int builders)
+    {
+        workforce += builders;
+    }
+
     // Method to deduct resources
     public void DeductResource(Cost resourceCost)
     {
