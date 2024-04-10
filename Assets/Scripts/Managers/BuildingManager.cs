@@ -69,11 +69,7 @@ public class BuildingManager : MonoBehaviour
         ResourceManager.ReallocateBuilder(buildingData.cost.Workforce);
         ResourceManager.printResources();
         GameObject newBuilding = Instantiate(buildingData.buildingPrefab, instancePostition, Quaternion.identity);
-        newBuilding.AddComponent<BuildingMain>();
-        newBuilding.GetComponent<BuildingMain>().buildingData = buildingData;
         newBuilding.GetComponent<BuildingMain>().UpdateUIData();
-        newBuilding.AddComponent<BuildingMouseSelector>();
-        newBuilding.AddComponent<BoxCollider>();
 
         BuildingsInScene.Add(newBuilding.GetComponent<BuildingMain>());
 
