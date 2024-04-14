@@ -12,27 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60878fda37e2dd34a8022ec1cdd75eb2, type: 3}
   m_Name: Node04
   m_EditorClassIdentifier: 
-  NodeLabel: Engineering
+  NodeLabel: Reduced Cost II
   NodeID: 4
-  Description: Housing builds cost 10% fewer resources.
-  Prereques: 'Wood: 10
-
-    Crystal: 10
-
-    SPECIAL 4'
+  Description: Decrease the cost of buildings by 10%
   cost:
-    Housing: 0
-    Metal: 0
-    Energy: 0
-    BioOrganics: 0
+    Wood: 100
+    Crystal: 100
+    Metal: 100
+    Synthia: 50
     Workforce: 0
-    Wood: 0
-    Crystal: 0
-    Synthia: 0
-    WorkForce: 0
-    Time: 0
   Prequisites:
     _pairs: []
   Bonues:
     _pairs: []
-  Researched: 0
+  Researched: 1

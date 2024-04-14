@@ -16,16 +16,11 @@ MonoBehaviour:
   NodeID: 0
   Description: "This is a description. How neat! \n\nSPECIAL 0"
   cost:
-    Housing: 0
-    Metal: 10
-    Energy: 0
-    BioOrganics: 0
-    Workforce: 0
-    Wood: 10
+    Wood: 0
     Crystal: 0
-    Synthia: 5
-    WorkForce: 0
-    Time: 0
+    Metal: 0
+    Synthia: 0
+    Workforce: 0
   Prequisites:
     _pairs: []
   Bonues:

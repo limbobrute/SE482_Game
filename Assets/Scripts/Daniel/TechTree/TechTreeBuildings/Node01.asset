@@ -12,24 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60878fda37e2dd34a8022ec1cdd75eb2, type: 3}
   m_Name: Node01
   m_EditorClassIdentifier: 
-  NodeLabel: Building Efficiency
+  NodeLabel: Reduced Cost I
   NodeID: 1
   Description: Decrease the cost of buildings by 5%
-  Prereques: 'Synthia: 2
-
-
-    SPECIAL 1'
   cost:
-    Housing: 0
-    Metal: 0
-    Energy: 0
-    BioOrganics: 0
+    Wood: 50
+    Crystal: 50
+    Metal: 50
+    Synthia: 25
     Workforce: 0
-    Wood: 0
-    Crystal: 0
-    Synthia: 0
-    WorkForce: 0
-    Time: 0
   Prequisites:
     _pairs: []
   Bonues:

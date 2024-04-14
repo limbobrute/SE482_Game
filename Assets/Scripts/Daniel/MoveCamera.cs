@@ -9,8 +9,10 @@ public class MoveCamera : MonoBehaviour
     // Define the movement constraints
     public float minX = -30;
     public float maxX = 60;
-    public float minZ = -60;
-    public float maxZ = 30;
+    
+    [Header("Z-axis is inverted.")]
+    public float minZ = 30;
+    public float maxZ = -60;
 
     // Update is called once per frame
     void Update()
@@ -26,7 +28,7 @@ public class MoveCamera : MonoBehaviour
 
         // Constrain the target position within the defined bounds
         targetPosition.x = Mathf.Clamp(targetPosition.x, minX, maxX);
-        targetPosition.z = Mathf.Clamp(targetPosition.z, minZ, maxZ);
+        targetPosition.z = Mathf.Clamp(targetPosition.z, maxZ, minZ);
 
         // Move the camera smoothly to the new position
         transform.position = targetPosition;
