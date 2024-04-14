@@ -120,10 +120,10 @@ public class ResourceManager : MonoBehaviour
         double adjuster = mod / 100;
         if(resource == "Uni")
         {
-            WoodToAdd = (int)(WoodToAdd * adjuster);
-            MetalToAdd = (int)(MetalToAdd * adjuster);
-            CrystalToAdd = (int)(CrystalToAdd * adjuster);
-            SynthiaToAdd = (int)(SynthiaToAdd * adjuster);
+            WoodToAdd += (int)(WoodToAdd * adjuster);
+            MetalToAdd += (int)(MetalToAdd * adjuster);
+            CrystalToAdd += (int)(CrystalToAdd * adjuster);
+            SynthiaToAdd += (int)(SynthiaToAdd * adjuster);
         }
         //else if()//Add logic for resource specific modeifiers
     }
