@@ -155,7 +155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: Crystal
-  possibleBuildings: []
+  possibleBuildings:
+  - {fileID: 11400000, guid: edeb02160013e474d886bae1e3c61f84, type: 2}
   Eneigbhours:
     Up: {fileID: 0}
     Down: {fileID: 0}

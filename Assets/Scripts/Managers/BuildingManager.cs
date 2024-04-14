@@ -60,6 +60,9 @@ public class BuildingManager : MonoBehaviour
                 case "Lumbermill":
                     ResourceManager.WoodToAdd = ResourceManager.WoodToAdd - currentBuildingData.flatResourceIncrement;
                     break;
+                case "Crystal Mine":
+                    ResourceManager.CrystalToAdd = ResourceManager.CrystalToAdd - currentBuildingData.flatResourceIncrement;
+                    break;
                 case "Research Factory":
                     onResearchUpgrade?.Invoke();
                     break;
@@ -117,6 +120,9 @@ public class BuildingManager : MonoBehaviour
         {
             case "Lumbermill":
                 ResourceManager.WoodToAdd = ResourceManager.WoodToAdd + buildingData.flatResourceIncrement;
+                break;
+            case "Crystal Mine":
+                ResourceManager.CrystalToAdd = ResourceManager.CrystalToAdd + buildingData.flatResourceIncrement;
                 break;
             case "Research Factory":
                 onResearchBuilt?.Invoke();

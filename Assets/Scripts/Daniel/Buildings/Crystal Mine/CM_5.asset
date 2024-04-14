@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d77a1b655230642a112ac54a7f2d15, type: 3}
+  m_Name: CM_5
+  m_EditorClassIdentifier: 
+  buildingName: Crystal Mine
+  buildingLevel: 5
+  cost:
+    Wood: 1000
+    Crystal: 200
+    Metal: 200
+    Synthia: 500
+    Workforce: 11
+    Time: 1500
+  buildingPrefab: {fileID: 5828796871881705173, guid: e99caf19a24afbf44b7154e738108c8c,
+    type: 3}
+  icon: {fileID: 0}
+  description: +13 Crystal
+  nextLevel: {fileID: 0}
+  canLevelUp: 0
+  flatResourceIncrement: 13
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
