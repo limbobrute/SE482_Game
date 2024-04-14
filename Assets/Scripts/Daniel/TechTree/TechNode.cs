@@ -45,6 +45,7 @@ public class TechNode : MonoBehaviour
 
     public void NodeUnlock()
     {
+        Debug.Log("UNLOCKED: " + gameObject.name);
         nodeButton.ButtonInteractable(true);
         canInteract = true;
     }

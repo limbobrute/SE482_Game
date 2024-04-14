@@ -12,26 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60878fda37e2dd34a8022ec1cdd75eb2, type: 3}
   m_Name: Node05
   m_EditorClassIdentifier: 
-  NodeLabel: Of the Mines
+  NodeLabel: Building Efficiency II
   NodeID: 5
-  Description: Metal Mine builds cost 10% fewer resources
-  Prereques: 'Synthia: 4
-
-
-    SPECIAL 5'
+  Description: Increase the efficiency of buildings by 10%
   cost:
-    Housing: 0
-    Metal: 0
-    Energy: 0
-    BioOrganics: 0
+    Wood: 100
+    Crystal: 100
+    Metal: 100
+    Synthia: 50
     Workforce: 0
-    Wood: 0
-    Crystal: 0
-    Synthia: 0
-    WorkForce: 0
-    Time: 0
   Prequisites:
     _pairs: []
   Bonues:
     _pairs: []
-  Researched: 0
+  Researched: 1
