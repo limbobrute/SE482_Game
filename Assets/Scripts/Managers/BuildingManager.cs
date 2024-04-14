@@ -16,7 +16,7 @@ public class BuildingManager : MonoBehaviour
     public List<BuildingMain> BuildingsInScene { get; set; }
 
     public Vector3 instancePostition = Vector3.zero;
-    public UnityEvent onNotEnoughResources;
+    public UnityEvent onNotEnoughResources, onResearchBuilt, onResearchUpgrade;
     public GameObject scaffoldingPrefab;
 
     private void Start()
@@ -59,6 +59,9 @@ public class BuildingManager : MonoBehaviour
             {
                 case "Lumbermill":
                     ResourceManager.WoodToAdd = ResourceManager.WoodToAdd - currentBuildingData.flatResourceIncrement;
+                    break;
+                case "Research Factory":
+                    onResearchUpgrade?.Invoke();
                     break;
                 default:
                     Debug.Log("BuildingName Not Recognized");
@@ -114,6 +117,9 @@ public class BuildingManager : MonoBehaviour
         {
             case "Lumbermill":
                 ResourceManager.WoodToAdd = ResourceManager.WoodToAdd + buildingData.flatResourceIncrement;
+                break;
+            case "Research Factory":
+                onResearchBuilt?.Invoke();
                 break;
             default:
                 Debug.Log("BuildingName Not Recognized");
