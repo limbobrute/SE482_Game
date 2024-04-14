@@ -4,6 +4,7 @@ using Enums;
 using UnityEngine.Events;
 using System;
 using System.Collections;
+using System.Linq;
 
 public class BuildingManager : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class BuildingManager : MonoBehaviour
     public Vector3 instancePostition = Vector3.zero;
     public UnityEvent onNotEnoughResources, onResearchBuilt, onResearchUpgrade;
     public GameObject scaffoldingPrefab;
+
+    //These values are to help track any/all changes to building cost
+    [HideInInspector]public int UniBuldingCoefficient = 0;
+    [HideInInspector] public int LumberCoefficient = 0;
 
     private void Start()
     {
@@ -90,6 +95,24 @@ public class BuildingManager : MonoBehaviour
     {
     }
 
+    public void AltarBuildMod(TechTreeNode node)
+    {
+        var Dic = node.Bonues;
+        string building = null;
+        if(Dic.ContainsKey("Housing"))
+        { building = "Housing"; }
+        else if(Dic.ContainsKey("Mill"))
+        { building = "Mill"; }
+        //else if()//Add additional building logic here
+
+        int bonus = Dic.Get(building);
+
+        if(building == "Mill")
+        { LumberCoefficient += bonus; }
+        else if(building == "Uni")
+        { UniBuldingCoefficient += bonus; }
+        //else if()//Add additional building logic here
+    }
     IEnumerator DelayedInstantiate(BuildingDataNew buildingData, Vector3 instancePositionAtSelection)
     {
         ResourceManager.DeductResource(buildingData.cost);

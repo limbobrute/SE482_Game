@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class ResourceManager : MonoBehaviour
 {
+    public BuildingManager buildingManager;
     public int wood;
     public int metal;
     public int crystal;
@@ -80,6 +81,12 @@ public class ResourceManager : MonoBehaviour
         int AdjustedCrystal = buildingCost.Crystal;
         int AdjustedWood = buildingCost.Wood;
         int AdjustedWorkforce = buildingCost.Workforce;
+
+        double adjuster = buildingManager.UniBuldingCoefficient/100;
+        AdjustedWood = (int)(AdjustedWood * adjuster);
+        AdjustedMetal = (int)(AdjustedMetal * adjuster);
+        AdjustedCrystal = (int)(AdjustedCrystal * adjuster);
+        AdjustedSynthia = (int)(AdjustedSynthia * adjuster);
         /*
          * Change the local Adjusted ints here based on the co-efficents in the buildingManager
          * by building and any golbal co-efficient
@@ -92,6 +99,33 @@ public class ResourceManager : MonoBehaviour
         { return true; }
         else
         { return false; }
+    }
+
+    public void ChangeResourceGain(TechTreeNode node)
+    {
+        var Dic = node.Bonues;
+        string resource = null;
+        if (Dic.ContainsKey("Wood"))
+        { resource = "Wood"; }
+        else if (Dic.ContainsKey("Metal"))
+        { resource = "Metal"; }
+        else if (Dic.ContainsKey("Crystal"))
+        { resource = "Crystal"; }
+        else if (Dic.ContainsKey("Synthia"))
+        { resource = "Synthia"; }
+        else if(Dic.ContainsKey("Uni"))
+        { resource = "Uni"; }
+
+        int mod = Dic.Get(resource);
+        double adjuster = mod / 100;
+        if(resource == "Uni")
+        {
+            WoodToAdd = (int)(WoodToAdd * adjuster);
+            MetalToAdd = (int)(MetalToAdd * adjuster);
+            CrystalToAdd = (int)(CrystalToAdd * adjuster);
+            SynthiaToAdd = (int)(SynthiaToAdd * adjuster);
+        }
+        //else if()//Add logic for resource specific modeifiers
     }
 
     // Method to add resources
