@@ -24,8 +24,8 @@ MonoBehaviour:
   buildingPrefab: {fileID: 4867597468710742087, guid: 62211e02cd60fc3449178c6ce7f93c79,
     type: 3}
   icon: {fileID: 0}
-  description: 
+  description: +1 Tech
   nextLevel: {fileID: 11400000, guid: 1d123478ab184e948a7f62030628b5e7, type: 2}
-  canLevelUp: 0
+  canLevelUp: 1
   flatResourceIncrement: 0
   slots: []
