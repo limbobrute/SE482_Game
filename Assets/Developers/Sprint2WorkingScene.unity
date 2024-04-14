@@ -2190,7 +2190,7 @@ Transform:
   m_GameObject: {fileID: 117834107}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08852135, y: 0.90767336, z: -0.24321039, w: 0.3303661}
-  m_LocalPosition: {x: -15, y: 20, z: 20}
+  m_LocalPosition: {x: -10, y: 12, z: 13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10954,6 +10954,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  onResearchBuilt:
+    m_PersistentCalls:
+      m_Calls: []
+  onResearchUpgrade:
+    m_PersistentCalls:
+      m_Calls: []
   scaffoldingPrefab: {fileID: 7813893202988338323, guid: 6c344788ab6663c4186be916f6dc007b,
     type: 3}
 --- !u!1 &831258239
