@@ -15,7 +15,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] Button upgradeButton;
     [SerializeField] Text[] tilePopupTexts;
     [SerializeField] Text[] buildingPopupTexts;
+    [SerializeField] Button ButtonTech;
     BuildingManager buildingManager;
+
     bool popupOpen = false;
 
     private void Start()
@@ -200,6 +202,14 @@ public class UIManager : MonoBehaviour
         popupOpen = false;
     }
 
+    public void EnableTechButton()
+    {
+        if(ButtonTech.interactable == false)
+        {
+            ButtonTech.interactable = true;
+        }        
+    }
+
     public void OpenTechTreePopup()
     {
         CloseAllScreens();
@@ -212,4 +222,6 @@ public class UIManager : MonoBehaviour
         CloseScreen(screens[3]);
         popupOpen = false;
     }
+
+
 }

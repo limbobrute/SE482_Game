@@ -24,6 +24,7 @@ public class TechTreeNode : ScriptableObject
     //[TextAreaAttribute]
     //public string Prereques;
     [SerializeField]public Cost cost;
+    [SerializeField]public int ReqResearchLevel;
 
     [Tooltip("Dictionary of all prequeisites and if they have been reserached")]
     [SerializeField] public SerializableDictionary<string, bool> Prequisites = new SerializableDictionary<string, bool>();

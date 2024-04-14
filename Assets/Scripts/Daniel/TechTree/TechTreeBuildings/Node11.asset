@@ -21,10 +21,11 @@ MonoBehaviour:
     Metal: 200
     Synthia: 100
     Workforce: 0
+  ReqResearchLevel: 4
   Prequisites:
     _pairs: []
   Bonuses:
     _pairs:
     - _key: Uni
       _value: 20
-  Researched: 1
+  Researched: 0

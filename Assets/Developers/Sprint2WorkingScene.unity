@@ -502,6 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f47459505c0d2642a0b5797ef7a11cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  researchLevel: 0
   nodes:
   - {fileID: 651120452}
   - {fileID: 914137778}
@@ -3023,6 +3024,7 @@ MonoBehaviour:
   - {fileID: 576909442}
   - {fileID: 1209759752}
   - {fileID: 1376616209}
+  ButtonTech: {fileID: 1072369070}
 --- !u!1 &140718511
 GameObject:
   m_ObjectHideFlags: 0
@@ -13102,10 +13104,46 @@ MonoBehaviour:
         m_CallState: 2
   onResearchBuilt:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1254529032}
+        m_TargetAssemblyTypeName: TechTree, Scripts
+        m_MethodName: IncreaseResearchLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 132984058}
+        m_TargetAssemblyTypeName: UIManager, Scripts
+        m_MethodName: EnableTechButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onResearchUpgrade:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1254529032}
+        m_TargetAssemblyTypeName: TechTree, Scripts
+        m_MethodName: IncreaseResearchLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   scaffoldingPrefab: {fileID: 7813893202988338323, guid: 6c344788ab6663c4186be916f6dc007b,
     type: 3}
   UniBuldingCoefficient: 0
@@ -17444,7 +17482,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1072369071}
   m_OnClick:
     m_PersistentCalls:
@@ -20253,6 +20291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f47459505c0d2642a0b5797ef7a11cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  researchLevel: 0
   nodes:
   - {fileID: 836255181}
   - {fileID: 368584738}
