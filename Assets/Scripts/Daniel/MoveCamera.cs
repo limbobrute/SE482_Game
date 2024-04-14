@@ -9,6 +9,7 @@ public class MoveCamera : MonoBehaviour
     // Define the movement constraints
     public float minX = -30;
     public float maxX = 60;
+    [Tooltip("Z-axis is inverted.")]
     public float minZ = -60;
     public float maxZ = 30;
 
