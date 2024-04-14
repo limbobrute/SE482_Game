@@ -1251,10 +1251,10 @@ RectTransform:
   - {fileID: 255981367}
   m_Father: {fileID: 1188522393}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.9, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: -25}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: 5, y: 0}
+  m_SizeDelta: {x: -30, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40421588
 MonoBehaviour:
@@ -4605,10 +4605,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1188522393}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0}
-  m_AnchorMax: {x: 0.9, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
+  m_SizeDelta: {x: -130, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &249625761
 MonoBehaviour:
@@ -6730,6 +6730,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 824952547}
+        m_TargetAssemblyTypeName: BuildingManager, Scripts
+        m_MethodName: AltarBuildMod
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: f7da4af12d0485a45ad182183fea1bc6,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &368584739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8060,10 +8073,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 530810171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: -74, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490180966
 MonoBehaviour:
@@ -8089,7 +8102,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -8827,6 +8840,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 242158401}
+        m_TargetAssemblyTypeName: ResourceManager, Scripts
+        m_MethodName: ChangeResourceGain
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2d8c0daed16f8d049a4aa7cd5e00f706,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -12139,10 +12165,10 @@ RectTransform:
   - {fileID: 1827400499}
   m_Father: {fileID: 1365201101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.9, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: -25}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: 5, y: 0}
+  m_SizeDelta: {x: -50, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &765277083
 MonoBehaviour:
@@ -12296,6 +12322,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 824952547}
+        m_TargetAssemblyTypeName: BuildingManager, Scripts
+        m_MethodName: AltarBuildMod
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 1719012374c63f240bd9e346ff8daf96,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -14227,6 +14266,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 824952547}
+        m_TargetAssemblyTypeName: BuildingManager, Scripts
+        m_MethodName: AltarBuildMod
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 8a05495060b705a41bf4c4b5d598c2f8,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18884,6 +18936,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 242158401}
+        m_TargetAssemblyTypeName: ResourceManager, Scripts
+        m_MethodName: ChangeResourceGain
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 002c4c6037b0cad48a189dc1565d0b81,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1184596828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20592,10 +20657,10 @@ RectTransform:
   - {fileID: 85207484}
   m_Father: {fileID: 1857760668}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.9, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: -25}
-  m_SizeDelta: {x: 30, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1301639495
 MonoBehaviour:
@@ -21735,6 +21800,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 242158401}
+        m_TargetAssemblyTypeName: ResourceManager, Scripts
+        m_MethodName: ChangeResourceGain
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 06d795092e67be1448a880424979dce9,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -23703,6 +23781,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 824952547}
+        m_TargetAssemblyTypeName: BuildingManager, Scripts
+        m_MethodName: AltarBuildMod
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 9e361569369614541ad32fc43e30a5a9,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1468917544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25252,6 +25343,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 242158401}
+        m_TargetAssemblyTypeName: ResourceManager, Scripts
+        m_MethodName: ChangeResourceGain
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 074741edf3b2def47bfc7a8bb9a61357,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -30201,10 +30305,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1193433866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: -74, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922444573
 MonoBehaviour:
@@ -30230,7 +30334,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -30385,6 +30489,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 242158401}
+        m_TargetAssemblyTypeName: ResourceManager, Scripts
+        m_MethodName: ChangeResourceGain
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: da343d09efb92b748a9ea81f152c1661,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -30893,6 +31010,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 824952547}
+        m_TargetAssemblyTypeName: BuildingManager, Scripts
+        m_MethodName: AltarBuildMod
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 3382c6bef61681445aae859c3376599c,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

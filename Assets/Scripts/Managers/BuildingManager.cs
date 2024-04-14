@@ -97,12 +97,15 @@ public class BuildingManager : MonoBehaviour
 
     public void AltarBuildMod(TechTreeNode node)
     {
-        var Dic = node.Bonues;
+        var Dic = node.Bonuses;
         string building = null;
+        Debug.Log(node.name);
         if(Dic.ContainsKey("Housing"))
         { building = "Housing"; }
         else if(Dic.ContainsKey("Mill"))
         { building = "Mill"; }
+        else if (Dic.ContainsKey("Uni"))
+        { building = "Uni"; }        
         //else if()//Add additional building logic here
 
         int bonus = Dic.Get(building);

@@ -28,7 +28,7 @@ public class TechTreeNode : ScriptableObject
     [Tooltip("Dictionary of all prequeisites and if they have been reserached")]
     [SerializeField] public SerializableDictionary<string, bool> Prequisites = new SerializableDictionary<string, bool>();
     [Tooltip("Any and all bonues, with the integer repersenting a precentage")]
-    [SerializeField] public SerializableDictionary<string, int> Bonues = new SerializableDictionary<string, int>();
+    [SerializeField] public SerializableDictionary<string, int> Bonuses = new SerializableDictionary<string, int>();
     public bool Researched = false;
     
 }

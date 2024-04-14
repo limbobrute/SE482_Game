@@ -23,6 +23,8 @@ MonoBehaviour:
     Workforce: 0
   Prequisites:
     _pairs: []
-  Bonues:
-    _pairs: []
+  Bonuses:
+    _pairs:
+    - _key: Uni
+      _value: 10
   Researched: 1

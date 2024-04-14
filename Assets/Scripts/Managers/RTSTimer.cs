@@ -56,7 +56,7 @@ public class RTSTimer : MonoBehaviour
 
         if (minute % 5 == 0)
         {
-            Debug.Log("Multiple of 5");
+            //Debug.Log("Multiple of 5");
             onFiveSeconds?.Invoke();
         }
 

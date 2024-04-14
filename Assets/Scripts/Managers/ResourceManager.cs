@@ -103,7 +103,7 @@ public class ResourceManager : MonoBehaviour
 
     public void ChangeResourceGain(TechTreeNode node)
     {
-        var Dic = node.Bonues;
+        var Dic = node.Bonuses;
         string resource = null;
         if (Dic.ContainsKey("Wood"))
         { resource = "Wood"; }
