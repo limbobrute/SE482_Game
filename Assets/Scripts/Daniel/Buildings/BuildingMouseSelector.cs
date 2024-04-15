@@ -43,7 +43,7 @@ public class BuildingMouseSelector : MonoBehaviour
     {
         if (canSelect)
         {
-            uiManager.OpenBuildingPopup(myBuilding.GetThisUIData(), myBuilding.GetNextUIData());
+            uiManager.OpenBuildingPopup(myBuilding.GetThisUIData(), myBuilding.GetNextUIData(), this.gameObject);
             BuildingFlagSet(!uiManager.GetPopupOpen());
         }
     }

@@ -8,16 +8,7 @@ using UnityEngine.UI;
 
 public class ResourceManager : MonoBehaviour
 {
-    [Serializable]
-    public struct Cost
-    {
-        public int Synthia;
-        public int Metal;
-        public int Crystal;
-        public int Wood;
-        public int Workforce;
-    }
-
+    public BuildingManager buildingManager;
     public int wood;
     public int metal;
     public int crystal;
@@ -77,22 +68,25 @@ public class ResourceManager : MonoBehaviour
     }
 
     //Check to see if the given building can be built
-    public bool CanBuild(string building)
+    public bool CanBuild(Cost buildingCost)
     {
         int StoredWood = wood;
         int StoredMetal = metal;
         int StoredCrystal = crystal;
         int StoredSynthia = synthia;
         int StoredWorkforce = workforce;
-        /*
-         * The reason for the different method of getting the value by key
-         * is due to the nature of the serializable Dictionary 
-         */
-        int AdjustedSynthia = BuidingCostTable.Get(building).Synthia;
-        int AdjustedMetal = BuidingCostTable.Get(building).Metal;
-        int AdjustedCrystal = BuidingCostTable.Get(building).Crystal;
-        int AdjustedWood = BuidingCostTable.Get(building).Wood;
-        int AdjustedWorkforce = BuidingCostTable.Get(building).Workforce;
+
+        int AdjustedSynthia = buildingCost.Synthia;
+        int AdjustedMetal = buildingCost.Metal;
+        int AdjustedCrystal = buildingCost.Crystal;
+        int AdjustedWood = buildingCost.Wood;
+        int AdjustedWorkforce = buildingCost.Workforce;
+
+        double adjuster = buildingManager.UniBuldingCoefficient/100;
+        AdjustedWood = (int)(AdjustedWood * adjuster);
+        AdjustedMetal = (int)(AdjustedMetal * adjuster);
+        AdjustedCrystal = (int)(AdjustedCrystal * adjuster);
+        AdjustedSynthia = (int)(AdjustedSynthia * adjuster);
         /*
          * Change the local Adjusted ints here based on the co-efficents in the buildingManager
          * by building and any golbal co-efficient
@@ -107,6 +101,33 @@ public class ResourceManager : MonoBehaviour
         { return false; }
     }
 
+    public void ChangeResourceGain(TechTreeNode node)
+    {
+        var Dic = node.Bonuses;
+        string resource = null;
+        if (Dic.ContainsKey("Wood"))
+        { resource = "Wood"; }
+        else if (Dic.ContainsKey("Metal"))
+        { resource = "Metal"; }
+        else if (Dic.ContainsKey("Crystal"))
+        { resource = "Crystal"; }
+        else if (Dic.ContainsKey("Synthia"))
+        { resource = "Synthia"; }
+        else if(Dic.ContainsKey("Uni"))
+        { resource = "Uni"; }
+
+        int mod = Dic.Get(resource);
+        double adjuster = mod / 100;
+        if(resource == "Uni")
+        {
+            WoodToAdd += (int)(WoodToAdd * adjuster);
+            MetalToAdd += (int)(MetalToAdd * adjuster);
+            CrystalToAdd += (int)(CrystalToAdd * adjuster);
+            SynthiaToAdd += (int)(SynthiaToAdd * adjuster);
+        }
+        //else if()//Add logic for resource specific modeifiers
+    }
+
     // Method to add resources
     public void AddResource()
     {
@@ -118,10 +139,19 @@ public class ResourceManager : MonoBehaviour
         OnResourceUpdate?.Invoke();
     }
 
-    // Method to deduct resources
-    public void DeductResource()
+   public void ReallocateBuilder(int builders)
     {
-        throw new NotImplementedException("DeductResource is not implemented");
+        workforce += builders;
+    }
+
+    // Method to deduct resources
+    public void DeductResource(Cost resourceCost)
+    {
+        synthia -= resourceCost.Synthia;
+        crystal -= resourceCost.Crystal;
+        metal -= resourceCost.Metal;
+        wood -= resourceCost.Wood;
+        workforce -= resourceCost.Workforce;
     }
 
     public void printResources() {

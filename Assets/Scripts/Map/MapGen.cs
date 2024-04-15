@@ -340,7 +340,7 @@ public class MapGen : MonoBehaviour
                     if (Zheight >= data.LowerRange && Zheight <= data.UpperRange)
                     {
                         newTile = Instantiate(tile, OldTile.transform.position, Quaternion.Euler(90, 0, 0));
-                        newTile.transform.localScale = new Vector3(newTile.transform.localScale.x, newTile.transform.localScale.y, Zheight);
+                        //newTile.transform.localScale = new Vector3(newTile.transform.localScale.x, newTile.transform.localScale.y, Zheight);
                         OldTile.GetComponent<HexRender>().NewTile = newTile;
                         OldTile.GetComponent<MeshRenderer>().enabled = false;
                         MadeTiles[x,y] = newTile;
@@ -350,7 +350,7 @@ public class MapGen : MonoBehaviour
                 if(newTile == null)// I have no clue as to how this can happen, but sometimes it won't make a tile, so we'll force it
                 {
                     newTile = Instantiate(Tiles[2], OldTile.transform.position, Quaternion.Euler(90, 0, 0));
-                    newTile.transform.localScale = new Vector3(newTile.transform.localScale.x, newTile.transform.localScale.y, 7f);
+                    //newTile.transform.localScale = new Vector3(newTile.transform.localScale.x, newTile.transform.localScale.y, 7f);
                     OldTile.GetComponent<HexRender>().NewTile = newTile;
                     OldTile.GetComponent<MeshRenderer>().enabled = false;
                     MadeTiles[x, y] = newTile;
@@ -361,15 +361,15 @@ public class MapGen : MonoBehaviour
         if (MadeTiles[size.x - 1, size.y - 1] != null)
         {
             SetStart();
-            if (!ChangeSmoothing)
+            /*if (!ChangeSmoothing)
             { StartCoroutine(Smoothing()); }
             else
             { StartCoroutine(Smoothing2()); }
-            StopCoroutine(PerlinNoise(offX, offY));
+            StopCoroutine(PerlinNoise(offX, offY));*/
         }
     }
 
-    IEnumerator Smoothing2()
+    /*IEnumerator Smoothing2()
     {
         foreach(GameObject tile in MadeTiles)
         {
@@ -415,5 +415,5 @@ public class MapGen : MonoBehaviour
             neigbhours.NewTile.transform.localScale = new Vector3(neigbhours.NewTile.transform.localScale.x, neigbhours.NewTile.transform.localScale.y, aveheight);
             yield return null;
         }
-    }
+    }*/
 }

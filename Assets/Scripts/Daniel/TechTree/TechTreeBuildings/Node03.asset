@@ -12,27 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60878fda37e2dd34a8022ec1cdd75eb2, type: 3}
   m_Name: Node03
   m_EditorClassIdentifier: 
-  NodeLabel: Green Thumb
+  NodeLabel: Build Time I
   NodeID: 3
-  Description: Lumber mills cost 10% fewer resources.
-  Prereques: 'Wood: 15
-
-    Metal: 5
-
-    SPECIAL 3'
+  Description: Decrease the build time of buildings by 5%
   cost:
-    Housing: 0
-    Metal: 0
-    Energy: 0
-    BioOrganics: 0
+    Wood: 50
+    Crystal: 50
+    Metal: 50
+    Synthia: 25
     Workforce: 0
-    Wood: 0
-    Crystal: 0
-    Synthia: 0
-    WorkForce: 0
-    Time: 0
+  ReqResearchLevel: 1
   Prequisites:
     _pairs: []
-  Bonues:
-    _pairs: []
-  Researched: 0
+  Bonuses:
+    _pairs:
+    - _key: Uni
+      _value: 5
+  Researched: 1

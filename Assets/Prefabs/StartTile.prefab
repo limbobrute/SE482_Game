@@ -85,6 +85,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2473743779639425307}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b3db873f433d5e94c8377b09dc098f22,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8480128011923276638}
   m_SourcePrefab: {fileID: 100100000, guid: b3db873f433d5e94c8377b09dc098f22, type: 3}
 --- !u!1 &4240169931132127765 stripped
 GameObject:
@@ -126,3 +130,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2b88162966597428e0452573484b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8480128011923276638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4240169931132127765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5801545fac7c4de49b651f3a08c4b9cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileType: Start Tile
+  possibleBuildings:
+  - {fileID: 11400000, guid: f267818e0e81e8447b2f809816206501, type: 2}
+  Eneigbhours:
+    Up: {fileID: 0}
+    Down: {fileID: 0}
+    TopLeft: {fileID: 0}
+    TopRight: {fileID: 0}
+    BottomLeft: {fileID: 0}
+    BottomRight: {fileID: 0}
+  UpperRange: 0
+  LowerRange: 0
+  AcceptableRange: 0
