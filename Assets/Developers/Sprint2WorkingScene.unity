@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028462, g: 0.22571574, b: 0.30692294, a: 1}
+  m_IndirectSpecularColor: {r: 0.1802844, g: 0.22571507, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13132,7 +13132,7 @@ MonoBehaviour:
   onResearchUpgrade:
     m_PersistentCalls:
       m_Calls: []
-  scaffoldingPrefab: {fileID: 7813893202988338323, guid: 6c344788ab6663c4186be916f6dc007b,
+  scaffoldingPrefab: {fileID: 1241489709739312654, guid: 956a0c2b364ae574ea15892119dac89f,
     type: 3}
   UniBuldingCoefficient: 0
   LumberCoefficient: 0
