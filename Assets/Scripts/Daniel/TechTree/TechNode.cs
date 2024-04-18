@@ -11,8 +11,8 @@ public class TechNode : MonoBehaviour
     public TechTreeNode nodeData;
 
     public bool canInteract = false;
+    public bool canActivate = false;
     public bool isActivated = false;
-    //public bool canActivate = false;
 
     public TechNode[] nextNodes;
     TechNodeModifyButton nodeButton;
@@ -42,14 +42,13 @@ public class TechNode : MonoBehaviour
         NodeLock();
         canInteract = false;
         nodeData.Researched = false;
-        //canActivate = false;
+        canActivate = false;
     }
 
     public void NodeUnlock()
     {
         nodeButton.ButtonInteractable(true);
         canInteract = true;
-        //canActivate = true;
     }
 
     public void NodeLock()
@@ -66,8 +65,10 @@ public class TechNode : MonoBehaviour
             NodeLock();
             nodeData.Researched = true;
             hoverData.needRequirementPanel = false;
-            //canActivate = false;
+            isActivated = true;
+            canActivate = false;
             canInteract = false;
+            DeductResources();
         }
         else
         {
@@ -81,10 +82,10 @@ public class TechNode : MonoBehaviour
         return costCheck;
     }
 
- //   void DeductResources()
- //   {
- //       resourceManager.DeductResource(nodeData.cost);
- //   }
+    void DeductResources()
+    {
+        resourceManager.DeductResource(nodeData.cost);
+    }
 
     void SetHoverData()
     {

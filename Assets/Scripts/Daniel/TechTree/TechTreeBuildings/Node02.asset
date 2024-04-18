@@ -21,6 +21,7 @@ MonoBehaviour:
     Metal: 50
     Synthia: 25
     Workforce: 0
+    Time: 0
   ReqResearchLevel: 1
   Prequisites:
     _pairs: []
