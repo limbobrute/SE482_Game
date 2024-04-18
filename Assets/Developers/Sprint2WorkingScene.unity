@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1802844, g: 0.22571507, b: 0.3069218, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028462, g: 0.22571574, b: 0.30692294, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -546,12 +546,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: dbdbe9622c9c257458b543ab1722d430, type: 2}
-  nextNodes:
-  - {fileID: 1823938624}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 1823938624}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -722,11 +722,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: 8d543ff378ed1cc46b8fee5f7856f407, type: 2}
-  nextNodes: []
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes: []
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -2803,12 +2803,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 35296f5f581f7b5419342278d5106498, type: 2}
-  nextNodes:
-  - {fileID: 853678022}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 853678022}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -5156,12 +5156,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: 662391e61e6a6c6488473bb8531ff425, type: 2}
-  nextNodes:
-  - {fileID: 21688378}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 21688378}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -5987,12 +5987,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: acb0db2207c77c042b48e111dba64a52, type: 2}
-  nextNodes:
-  - {fileID: 1376363802}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 1376363802}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -6699,12 +6699,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: f7da4af12d0485a45ad182183fea1bc6, type: 2}
-  nextNodes:
-  - {fileID: 888599420}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 888599420}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -7389,12 +7389,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: 9fd84b2b2c707ea4d9332da3a6f9f67d, type: 2}
-  nextNodes:
-  - {fileID: 902351306}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 902351306}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -8814,12 +8814,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 2d8c0daed16f8d049a4aa7cd5e00f706, type: 2}
-  nextNodes:
-  - {fileID: 1184596827}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 1184596827}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -10713,12 +10713,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: bd59178c88d05a8459743588a9abd53a, type: 2}
-  nextNodes:
-  - {fileID: 914137778}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 914137778}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -11437,12 +11437,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 9a492581d2bd5ba4983673897a37b102, type: 2}
-  nextNodes:
-  - {fileID: 120173797}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 120173797}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -12296,12 +12296,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 1719012374c63f240bd9e346ff8daf96, type: 2}
-  nextNodes:
-  - {fileID: 1959623240}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 1959623240}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -13322,14 +13322,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 9a21d37d339ef8543ad89a9ed166e215, type: 2}
+  canInteract: 0
+  isActivated: 0
   nextNodes:
   - {fileID: 1886395257}
   - {fileID: 1348373330}
   - {fileID: 368584738}
-  canInteract: 0
-  isActivated: 0
-  canActivate: 0
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -13622,12 +13622,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: d6ad09df51a9133489c8d8cdbdc89c0c, type: 2}
-  nextNodes:
-  - {fileID: 1914582313}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 1914582313}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -14264,12 +14264,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 8a05495060b705a41bf4c4b5d598c2f8, type: 2}
-  nextNodes:
-  - {fileID: 769821378}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 769821378}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -14453,13 +14453,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: 07be25cc1975c3849ac2391049f8e847, type: 2}
+  canInteract: 0
+  isActivated: 0
   nextNodes:
   - {fileID: 20371812}
   - {fileID: 297420253}
-  canInteract: 0
-  isActivated: 0
-  canActivate: 0
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -14698,13 +14698,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: a22b3b8292c55334e8dfa95ebe844cb2, type: 2}
+  canInteract: 0
+  isActivated: 0
   nextNodes:
   - {fileID: 325089381}
   - {fileID: 419929140}
-  canInteract: 0
-  isActivated: 0
-  canActivate: 0
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -17014,12 +17014,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: ecab1822cf54c864b8ec01331753c7cc, type: 2}
-  nextNodes:
-  - {fileID: 2027068167}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 2027068167}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -18930,11 +18930,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 002c4c6037b0cad48a189dc1565d0b81, type: 2}
-  nextNodes: []
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes: []
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -21799,12 +21799,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 06d795092e67be1448a880424979dce9, type: 2}
-  nextNodes:
-  - {fileID: 1931112308}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 1931112308}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -22257,13 +22257,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: 6b241c7d097bbf6458b65b542ce24fec, type: 2}
+  canInteract: 0
+  isActivated: 0
   nextNodes:
   - {fileID: 1028610548}
   - {fileID: 20371812}
-  canInteract: 0
-  isActivated: 0
-  canActivate: 0
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -23776,11 +23776,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 9e361569369614541ad32fc43e30a5a9, type: 2}
-  nextNodes: []
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes: []
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -25342,12 +25342,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 074741edf3b2def47bfc7a8bb9a61357, type: 2}
-  nextNodes:
-  - {fileID: 540470778}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 540470778}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -28272,11 +28272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: 29fee40f145f9964f8699815c81d34d0, type: 2}
-  nextNodes: []
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes: []
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -29832,12 +29832,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 99d21026f7f5b8449ac9bfb6afda4326, type: 2}
-  nextNodes:
-  - {fileID: 732843991}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 732843991}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -30234,11 +30234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: a08086ac26a3466408dee73700e80c07, type: 2}
-  nextNodes: []
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes: []
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -30488,12 +30488,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: da343d09efb92b748a9ea81f152c1661, type: 2}
-  nextNodes:
-  - {fileID: 1583860021}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 1583860021}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -31009,12 +31009,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 242158401}
   nodeData: {fileID: 11400000, guid: 3382c6bef61681445aae859c3376599c, type: 2}
-  nextNodes:
-  - {fileID: 1468917543}
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes:
+  - {fileID: 1468917543}
   ActivateNode:
     m_PersistentCalls:
       m_Calls:
@@ -31580,11 +31580,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845cb4660ce8970468d4f61c6e1f0776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceManager: {fileID: 0}
   nodeData: {fileID: 11400000, guid: a85e726483547ab43a8b112cb7172db3, type: 2}
-  nextNodes: []
   canInteract: 0
   isActivated: 0
-  canActivate: 0
+  nextNodes: []
   ActivateNode:
     m_PersistentCalls:
       m_Calls:

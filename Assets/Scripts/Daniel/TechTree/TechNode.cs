@@ -7,14 +7,16 @@ using UnityEngine.Events;
 
 public class TechNode : MonoBehaviour
 {
+    [SerializeField] ResourceManager resourceManager;
     public TechTreeNode nodeData;
-    public TechNode[] nextNodes;
-    TechNodeModifyButton nodeButton;
-    ObjectDataForUI hoverData;
 
     public bool canInteract = false;
     public bool isActivated = false;
-    public bool canActivate = false;
+    //public bool canActivate = false;
+
+    public TechNode[] nextNodes;
+    TechNodeModifyButton nodeButton;
+    ObjectDataForUI hoverData;
 
     public UnityEvent ActivateNode;
  
@@ -40,13 +42,14 @@ public class TechNode : MonoBehaviour
         NodeLock();
         canInteract = false;
         nodeData.Researched = false;
-        canActivate = false;
+        //canActivate = false;
     }
 
     public void NodeUnlock()
     {
         nodeButton.ButtonInteractable(true);
         canInteract = true;
+        //canActivate = true;
     }
 
     public void NodeLock()
@@ -57,13 +60,31 @@ public class TechNode : MonoBehaviour
 
     public void Activate()
     {
-        nodeButton.ActivatedColor();
-        NodeLock();
-        nodeData.Researched = true;
-        hoverData.needRequirementPanel = false;
-        canActivate = false;
-        canInteract = false;
+        if (canResearch())
+        {
+            nodeButton.ActivatedColor();
+            NodeLock();
+            nodeData.Researched = true;
+            hoverData.needRequirementPanel = false;
+            //canActivate = false;
+            canInteract = false;
+        }
+        else
+        {
+            Debug.Log("CANNOT RESEARCH!");
+        }
     }
+
+    bool canResearch()
+    {
+        bool costCheck = resourceManager.CanResearch(nodeData);
+        return costCheck;
+    }
+
+ //   void DeductResources()
+ //   {
+ //       resourceManager.DeductResource(nodeData.cost);
+ //   }
 
     void SetHoverData()
     {
