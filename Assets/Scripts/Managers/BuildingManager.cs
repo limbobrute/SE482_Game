@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using System;
 using System.Collections;
 using System.Linq;
+using UnityEditor.Experimental.GraphView;
 
 public class BuildingManager : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class BuildingManager : MonoBehaviour
     //These values are to help track any/all changes to building cost
     [HideInInspector]public int UniBuldingCoefficient = 0;
     [HideInInspector] public int LumberCoefficient = 0;
+
+    //These values are to be only used for reducing the amount of time needed to build the building 
+    [HideInInspector] public int UniBuildTimeCoefficient = 0;
+    [HideInInspector] public int LumberBuildTimeCoefficient = 0;
 
     private void Start()
     {
@@ -116,15 +121,39 @@ public class BuildingManager : MonoBehaviour
         { UniBuldingCoefficient += bonus; }
         //else if()//Add additional building logic here
     }
+
+    public void AlterBuildTime(TechTreeNode node)
+    {
+        var Dic = node.Bonuses;
+        string building = null;
+        Debug.Log(node.name);
+
+        if(Dic.ContainsKey("Lumber"))
+        { building = "Lumber"; }
+        else if(Dic.ContainsKey("Uni"))
+        { building = "Uni"; }
+
+        int bonus = Dic.Get(building);
+        if(building == "Lumber")
+        { LumberBuildTimeCoefficient += bonus; }
+        else if(building == "Uni")
+        { UniBuildTimeCoefficient += bonus; }
+    }
     IEnumerator DelayedInstantiate(BuildingDataNew buildingData, Vector3 instancePositionAtSelection)
     {
         ResourceManager.DeductResource(buildingData.cost);
         ResourceManager.printResources();
 
         GameObject scaffolding = Instantiate(scaffoldingPrefab, instancePositionAtSelection, Quaternion.identity);
-
+        string name = buildingData.buildingName;
+        var time = buildingData.cost.Time;
+        if(name == "Lumbermill")
+        { time = time * (1+(LumberBuildTimeCoefficient/100 + UniBuildTimeCoefficient/100)); }
+        else
+        { time = time * (1 + UniBuildTimeCoefficient / 100); }
         // Wait for the specified amount of in-game time
-        yield return RTSTimer.Instance.WaitForInGameSeconds(buildingData.cost.Time);
+        //yield return RTSTimer.Instance.WaitForInGameSeconds(buildingData.cost.Time);
+        yield return RTSTimer.Instance.WaitForInGameSeconds(time);
 
         // Destroy the Scaffolding
         Destroy(scaffolding);
