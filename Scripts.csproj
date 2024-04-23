@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\Events\WeatherEvent.cs" />
     <Compile Include="Assets\Scripts\Daniel\TechTree\TechNodeHoverText.cs" />
     <Compile Include="Assets\Scripts\Managers\RTSTimer.cs" />
+    <Compile Include="Assets\Scripts\PauseGame.cs" />
     <Compile Include="Assets\Scripts\Daniel\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\BuildingMain.cs" />
     <Compile Include="Assets\Scripts\PSF\SerializableDictionary\Demo\Scripts\SerializableDictionaryDemo_2.cs" />

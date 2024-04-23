@@ -82,7 +82,7 @@ public class ResourceManager : MonoBehaviour
         int AdjustedWood = buildingCost.Wood;
         int AdjustedWorkforce = buildingCost.Workforce;
 
-        double adjuster = buildingManager.UniBuldingCoefficient/100;
+        double adjuster = 1 + (buildingManager.UniBuldingCoefficient/100);
         AdjustedWood = (int)(AdjustedWood * adjuster);
         AdjustedMetal = (int)(AdjustedMetal * adjuster);
         AdjustedCrystal = (int)(AdjustedCrystal * adjuster);
@@ -117,13 +117,13 @@ public class ResourceManager : MonoBehaviour
         { resource = "Uni"; }
 
         int mod = Dic.Get(resource);
-        double adjuster = mod / 100;
+        double adjuster = 1 + (mod / 100);
         if(resource == "Uni")
         {
-            WoodToAdd += (int)(WoodToAdd * adjuster);
-            MetalToAdd += (int)(MetalToAdd * adjuster);
-            CrystalToAdd += (int)(CrystalToAdd * adjuster);
-            SynthiaToAdd += (int)(SynthiaToAdd * adjuster);
+            WoodToAdd = (int)(WoodToAdd * adjuster);
+            MetalToAdd = (int)(MetalToAdd * adjuster);
+            CrystalToAdd = (int)(CrystalToAdd * adjuster);
+            SynthiaToAdd = (int)(SynthiaToAdd * adjuster);
         }
         //else if()//Add logic for resource specific modeifiers
     }

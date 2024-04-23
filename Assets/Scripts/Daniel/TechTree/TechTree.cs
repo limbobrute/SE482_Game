@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class TechTree : MonoBehaviour
 {
     [SerializeField] int researchLevel = 0;
     public TechNode[] nodes;
-    List<TechNode> awaitingResearch = new List<TechNode>();
+    List<Tuple<TechNode, TechNode>> awaitingResearch = new List<Tuple<TechNode, TechNode>>();
     int index = 0;
 
     // Start is called before the first frame update
@@ -20,17 +21,17 @@ public class TechTree : MonoBehaviour
         ActivateNode(index);
     }
 
-    void UnlockNextNodes(int nodeID)
+    public void UnlockNextNodes(int nodeID)
     {
         TechNode currNode = nodes[nodeID];
         for (int i = 0; i < currNode.nextNodes.Length; i++)
         {
             TechNode nextNode = currNode.nextNodes[i];
-            if (!nextNode.nodeData.Researched)
+            if (!nextNode.nodeData.Researched && currNode.isActivated)
             {
                 if (nextNode.nodeData.ReqResearchLevel > researchLevel)
                 {
-                    awaitingResearch.Add(nextNode);
+                    awaitingResearch.Add(new Tuple<TechNode, TechNode>(currNode, nextNode));
                 }
                 else
                 {
@@ -64,13 +65,18 @@ public class TechTree : MonoBehaviour
 
     public void UnlockAwaitingResearch()
     {
-        if(awaitingResearch.Count > 0)
+        if (awaitingResearch.Count > 0)
         {
-            List<TechNode> nodesToUnlock = new List<TechNode>(awaitingResearch);
-            foreach (TechNode node in nodesToUnlock)
+            List<Tuple<TechNode, TechNode>> nodesToUnlock = new List<Tuple<TechNode, TechNode>>(awaitingResearch);
+            foreach (Tuple<TechNode, TechNode> nodePair in nodesToUnlock)
             {
-                node.NodeUnlock();
-                awaitingResearch.Remove(node);
+                TechNode prevNode = nodePair.Item1;
+                TechNode currNode = nodePair.Item2;
+                if (prevNode.isActivated)
+                {
+                    currNode.NodeUnlock();
+                }
+                awaitingResearch.Remove(nodePair);
             }
         }
     }
