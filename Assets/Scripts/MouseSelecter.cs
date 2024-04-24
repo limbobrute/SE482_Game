@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MouseSelecter : MonoBehaviour
@@ -8,6 +9,8 @@ public class MouseSelecter : MonoBehaviour
     UIManager uiManager;
     ObjectDataForUI[] uiData = new ObjectDataForUI[4];
     BuildingDataNew[] buildingDatas = new BuildingDataNew[4];
+    public TextMeshProUGUI text;
+    public string Name;
     private Renderer render;
     private Color color;
     // Start is called before the first frame update
@@ -28,6 +31,7 @@ public class MouseSelecter : MonoBehaviour
         { render = GetComponent<Renderer>(); color = render.material.color; }
 
         render.material.color = Color.blue;
+        text.text = Name;
     }
 
     private void OnMouseExit()

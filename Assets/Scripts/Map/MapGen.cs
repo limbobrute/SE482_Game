@@ -24,6 +24,7 @@ public class MapGen : MonoBehaviour
     public float innersize = 0f;
     public float height = .1f;
     public Material material;
+    public TextMeshProUGUI text;
 
     [Header("Grid Settings")]
     public bool ChangeSmoothing;
@@ -322,17 +323,11 @@ public class MapGen : MonoBehaviour
             for (int y = 0 ; y < size.y; y++)
             {
                 GameObject newTile = null;
-                /*double offX = rand.NextDouble();
-                double offY = rand.NextDouble();*/
 
                 GameObject OldTile = EmptyTiles[x, y];
                 float xCoord = (float)x / size.x * 50f + (float)offX;
                 float yCoord = (float)y / size.y * 50f + (float)offY;
 
-               // Debug.Log("xCoord is " + xCoord + "\n yCord is " + yCoord);
-                //Debug.Log("Perlin noise value is " + Mathf.PerlinNoise(xCoord, yCoord));
-                //float height = Mathf.Lerp(0, 1, Mathf.PerlinNoise(xCoord, yCoord));0
-                //Debug.Log("Height value is " + height);
                 float Zheight = Mathf.Lerp(0, 25, Mathf.PerlinNoise(xCoord, yCoord));
                 foreach(GameObject tile in Tiles)
                 {
@@ -340,7 +335,6 @@ public class MapGen : MonoBehaviour
                     if (Zheight >= data.LowerRange && Zheight <= data.UpperRange)
                     {
                         newTile = Instantiate(tile, OldTile.transform.position, Quaternion.Euler(90, 0, 0));
-                        //newTile.transform.localScale = new Vector3(newTile.transform.localScale.x, newTile.transform.localScale.y, Zheight);
                         OldTile.GetComponent<HexRender>().NewTile = newTile;
                         OldTile.GetComponent<MeshRenderer>().enabled = false;
                         MadeTiles[x,y] = newTile;
@@ -350,11 +344,13 @@ public class MapGen : MonoBehaviour
                 if(newTile == null)// I have no clue as to how this can happen, but sometimes it won't make a tile, so we'll force it
                 {
                     newTile = Instantiate(Tiles[2], OldTile.transform.position, Quaternion.Euler(90, 0, 0));
-                    //newTile.transform.localScale = new Vector3(newTile.transform.localScale.x, newTile.transform.localScale.y, 7f);
                     OldTile.GetComponent<HexRender>().NewTile = newTile;
                     OldTile.GetComponent<MeshRenderer>().enabled = false;
                     MadeTiles[x, y] = newTile;
                 }
+
+                if (newTile.GetComponent<MouseSelecter>() != null)
+                { newTile.GetComponent<MouseSelecter>().text = text; }
             }
             yield return null;
         }
