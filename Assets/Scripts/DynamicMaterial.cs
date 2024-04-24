@@ -6,8 +6,8 @@ public class DynamicMaterial : MonoBehaviour
 {
     public Material[] materials;
     private Renderer rend;
-    private float minHeight = 7f;
-    private float maxHeight = 13f;
+    private float minHeight = 4f;
+    private float maxHeight = 20f;
 
     void Start()
     {

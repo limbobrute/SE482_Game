@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b3db873f433d5e94c8377b09dc098f22,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3db873f433d5e94c8377b09dc098f22,
         type: 3}
@@ -318,6 +318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2b88162966597428e0452573484b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  Name: Grass
 --- !u!114 &1276072672221611539
 MonoBehaviour:
   m_ObjectHideFlags: 0

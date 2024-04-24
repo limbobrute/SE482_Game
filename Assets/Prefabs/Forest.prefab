@@ -179,6 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2b88162966597428e0452573484b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  Name: Forest
 --- !u!114 &7472406500088583184
 MonoBehaviour:
   m_ObjectHideFlags: 0
