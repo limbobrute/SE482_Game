@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Buidlings\Buildings.cs" />
     <Compile Include="Assets\Scripts\Daniel\UI\ObjectDataForUI.cs" />
+    <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Buidlings\BaseBuilding.cs" />
     <Compile Include="Assets\Scripts\SharedStructs.cs" />
     <Compile Include="Assets\Scripts\Map\HexRender.cs" />
