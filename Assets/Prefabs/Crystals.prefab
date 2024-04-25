@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8568741952186744102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4738818270686166560}
+  - component: {fileID: 8543005021390868442}
+  m_Layer: 0
+  m_Name: ModelPlacement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4738818270686166560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8568741952186744102}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2}
+  m_LocalScale: {x: 0.001, y: 0.001, z: 0.01}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4810204705841925876}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8543005021390868442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8568741952186744102}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4993364767120009503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56,12 +109,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b3db873f433d5e94c8377b09dc098f22,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3db873f433d5e94c8377b09dc098f22,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b3db873f433d5e94c8377b09dc098f22,
         type: 3}
@@ -95,7 +148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b3db873f433d5e94c8377b09dc098f22,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4738818270686166560}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b3db873f433d5e94c8377b09dc098f22,
         type: 3}
@@ -114,6 +171,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: -921321669049466105}
   m_SourcePrefab: {fileID: 100100000, guid: b3db873f433d5e94c8377b09dc098f22, type: 3}
+--- !u!4 &4810204705841925876 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b3db873f433d5e94c8377b09dc098f22,
+    type: 3}
+  m_PrefabInstance: {fileID: 4993364767120009503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5299214063944766542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b3db873f433d5e94c8377b09dc098f22,
@@ -157,13 +220,20 @@ MonoBehaviour:
   tileType: Crystal
   possibleBuildings:
   - {fileID: 11400000, guid: edeb02160013e474d886bae1e3c61f84, type: 2}
-  Eneigbhours:
-    Up: {fileID: 0}
-    Down: {fileID: 0}
-    TopLeft: {fileID: 0}
-    TopRight: {fileID: 0}
-    BottomLeft: {fileID: 0}
-    BottomRight: {fileID: 0}
+  ModelPlacer: {fileID: 8568741952186744102}
+  models:
+  - {fileID: 919132149155446097, guid: 979dbea955bb604498d52cd4e36c7704, type: 3}
+  - {fileID: 919132149155446097, guid: 9dc761b71a825dd44a9ffe27b2b6a657, type: 3}
+  NumberOfModels: 2
+  xband:
+    UpperX: 0.005
+    LowerX: -0.005
+  yband:
+    UpperY: 0.0076
+    LowerY: -0.0076
+  zband:
+    UpperZ: -0.2
+    LowerZ: -0.203
   UpperRange: 18.99
   LowerRange: 18
   AcceptableRange: 0.1

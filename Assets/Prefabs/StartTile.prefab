@@ -147,13 +147,18 @@ MonoBehaviour:
   tileType: Start Tile
   possibleBuildings:
   - {fileID: 11400000, guid: f267818e0e81e8447b2f809816206501, type: 2}
-  Eneigbhours:
-    Up: {fileID: 0}
-    Down: {fileID: 0}
-    TopLeft: {fileID: 0}
-    TopRight: {fileID: 0}
-    BottomLeft: {fileID: 0}
-    BottomRight: {fileID: 0}
+  ModelPlacer: {fileID: 0}
+  models: []
+  NumberOfModels: 0
+  xband:
+    UpperX: 0
+    LowerX: 0
+  yband:
+    UpperY: 0
+    LowerY: 0
+  zband:
+    UpperZ: 0
+    LowerZ: 0
   UpperRange: 0
   LowerRange: 0
   AcceptableRange: 0
