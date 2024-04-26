@@ -75,6 +75,9 @@ public class BuildingManager : MonoBehaviour
                 case "Metal Mine":
                     ResourceManager.MetalToAdd = ResourceManager.MetalToAdd - currentBuildingData.flatResourceIncrement;
                     break;
+                case "Synthia Mine":
+                    ResourceManager.SynthiaToAdd = ResourceManager.SynthiaToAdd - currentBuildingData.flatResourceIncrement;
+                    break;
                 case "Research Factory":
                     onResearchUpgrade?.Invoke();
                     break;
@@ -183,6 +186,9 @@ public class BuildingManager : MonoBehaviour
                 break;
             case "Metal Mine":
                 ResourceManager.MetalToAdd = ResourceManager.MetalToAdd + buildingData.flatResourceIncrement;
+                break;
+            case "Synthia Mine":
+                ResourceManager.SynthiaToAdd = ResourceManager.SynthiaToAdd + buildingData.flatResourceIncrement;
                 break;
             case "Research Factory":
                 onResearchBuilt?.Invoke();

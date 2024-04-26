@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d77a1b655230642a112ac54a7f2d15, type: 3}
+  m_Name: SM_5
+  m_EditorClassIdentifier: 
+  buildingName: Synthia Mine
+  buildingLevel: 5
+  cost:
+    Wood: 5000
+    Crystal: 5000
+    Metal: 5000
+    Synthia: 2500
+    Workforce: 18
+    Time: 1500
+  buildingPrefab: {fileID: 3782086991233664731, guid: f16074d8e73e23b4e81ee9d799adfe03,
+    type: 3}
+  icon: {fileID: 0}
+  description: +13 Synthia
+  nextLevel: {fileID: 0}
+  canLevelUp: 0
+  flatResourceIncrement: 13
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

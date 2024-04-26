@@ -212,7 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: Sand
-  possibleBuildings: []
+  possibleBuildings:
+  - {fileID: 11400000, guid: e778e43cc653f0344b088c60c80453d4, type: 2}
   ModelPlacer: {fileID: 6209908969390413983}
   models: []
   NumberOfModels: 0

@@ -39,11 +39,11 @@ public class ResourceManager : MonoBehaviour
 
     private void Start()
     {
-        metal = 50;
-        wood = 50; 
+        metal = 200;
+        wood = 200; 
         workforce = 10;
-        crystal = 50;
-        synthia = 25;
+        crystal = 200;
+        synthia = 100;
     }
 
     //Check to see if the given node can be researched
