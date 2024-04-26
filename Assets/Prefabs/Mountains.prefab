@@ -218,7 +218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: Mountain
-  possibleBuildings: []
+  possibleBuildings:
+  - {fileID: 11400000, guid: dc00b3827a2f05241a609423c0bc7461, type: 2}
   ModelPlacer: {fileID: 2065185177917457408}
   models:
   - {fileID: 919132149155446097, guid: 1b7bdd96aa857884db05d9d6c4e3d5c3, type: 3}

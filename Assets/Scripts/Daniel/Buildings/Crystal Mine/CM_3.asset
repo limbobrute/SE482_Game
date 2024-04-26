@@ -21,7 +21,7 @@ MonoBehaviour:
     Synthia: 25
     Workforce: 7
     Time: 75
-  buildingPrefab: {fileID: 5828796871881705173, guid: 17a243e38ded395408cf393dc94ac75d,
+  buildingPrefab: {fileID: 1941013292792614459, guid: f676004f12a329a42926a67ca1784329,
     type: 3}
   icon: {fileID: 0}
   description: +9 Crystal

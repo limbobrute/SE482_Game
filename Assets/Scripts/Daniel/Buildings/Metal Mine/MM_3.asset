@@ -10,24 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40d77a1b655230642a112ac54a7f2d15, type: 3}
-  m_Name: CM_2
+  m_Name: MM_3
   m_EditorClassIdentifier: 
-  buildingName: Crystal Mine
-  buildingLevel: 2
+  buildingName: Metal Mine
+  buildingLevel: 3
   cost:
-    Wood: 30
-    Crystal: 0
-    Metal: 0
-    Synthia: 15
-    Workforce: 5
-    Time: 45
-  buildingPrefab: {fileID: 1941013292792614459, guid: b051b4f5040b1364a866b05dd8820457,
+    Wood: 10
+    Crystal: 50
+    Metal: 10
+    Synthia: 25
+    Workforce: 7
+    Time: 75
+  buildingPrefab: {fileID: 9218147795629284449, guid: 259e3c523f2dcac41bf6ea4547416ddf,
     type: 3}
   icon: {fileID: 0}
-  description: +7 Crystal
-  nextLevel: {fileID: 11400000, guid: f971a343c63333b40819a15500f5b1d2, type: 2}
+  description: +9 Metal
+  nextLevel: {fileID: 11400000, guid: 2ec9d0e12a2e86345825be0f85f392f0, type: 2}
   canLevelUp: 1
-  flatResourceIncrement: 7
+  flatResourceIncrement: 9
   slots:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

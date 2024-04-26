@@ -72,6 +72,9 @@ public class BuildingManager : MonoBehaviour
                 case "Crystal Mine":
                     ResourceManager.CrystalToAdd = ResourceManager.CrystalToAdd - currentBuildingData.flatResourceIncrement;
                     break;
+                case "Metal Mine":
+                    ResourceManager.MetalToAdd = ResourceManager.MetalToAdd - currentBuildingData.flatResourceIncrement;
+                    break;
                 case "Research Factory":
                     onResearchUpgrade?.Invoke();
                     break;
@@ -177,6 +180,9 @@ public class BuildingManager : MonoBehaviour
                 break;
             case "Crystal Mine":
                 ResourceManager.CrystalToAdd = ResourceManager.CrystalToAdd + buildingData.flatResourceIncrement;
+                break;
+            case "Metal Mine":
+                ResourceManager.MetalToAdd = ResourceManager.MetalToAdd + buildingData.flatResourceIncrement;
                 break;
             case "Research Factory":
                 onResearchBuilt?.Invoke();
