@@ -10,6 +10,7 @@ public class BuildingManager : MonoBehaviour
 {
     [field: SerializeField]
     public ResourceManager ResourceManager { get; set; }
+    [field: SerializeField] AudioManager AudioManager { get; set; }
     [field: SerializeField]
     public List<BuildingMain> BuildingTypesToBuild { get; set; }
 
@@ -42,13 +43,14 @@ public class BuildingManager : MonoBehaviour
         if (ResourceManager.CanBuild(buildingData.cost))
         {
             Vector3 instancePositionAtSelection = instancePostition;
-
+            AudioManager.PlayAudioOnce(3);
             StartCoroutine(DelayedInstantiate(buildingData, instancePositionAtSelection));
 
         }
         else
         {
             Debug.Log("Not Enough Resources to Build");
+            AudioManager.PlayAudioOnce(4);
             onNotEnoughResources?.Invoke();
         }
     }
@@ -93,12 +95,14 @@ public class BuildingManager : MonoBehaviour
             }
             Vector3 buildingPosition = currentBuilding.transform.position;//the upgraded building should not show up where when a different tile is selected
             Destroy(currentBuilding);
+            AudioManager.PlayAudioOnce(3);
             StartCoroutine(DelayedInstantiate(currentBuildingData.nextLevel, buildingPosition));
 
         }
         else
         {
             Debug.Log("Not Enough Resources to Build");
+            AudioManager.PlayAudioOnce(4);
             onNotEnoughResources?.Invoke();
         }
     }

@@ -13517,6 +13517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ResourceManager>k__BackingField: {fileID: 242158401}
+  <AudioManager>k__BackingField: {fileID: 1784420242}
   <BuildingTypesToBuild>k__BackingField:
   - {fileID: 1960676619844392526, guid: 47227a2e1d658564c966aec599a3e466, type: 3}
   <BuildingsInScene>k__BackingField: []
@@ -16405,7 +16406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &982371693
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29537,7 +29538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1819762344
 RectTransform:
   m_ObjectHideFlags: 0
