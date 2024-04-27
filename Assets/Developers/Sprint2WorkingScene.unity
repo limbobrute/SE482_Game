@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1802844, g: 0.22571507, b: 0.3069218, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028462, g: 0.22571574, b: 0.30692294, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -18109,6 +18109,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1784420242}
+        m_TargetAssemblyTypeName: AudioManager, Scripts
+        m_MethodName: PlayAudioOnce
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1072369071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20952,10 +20964,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1072369069}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.1, y: 0.1}
+  m_AnchorMax: {x: 0.9, y: 0.9}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 18, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1259995614
 MonoBehaviour:
@@ -22203,6 +22215,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1784420242}
+        m_TargetAssemblyTypeName: AudioManager, Scripts
+        m_MethodName: PlayAudioOnce
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -26839,6 +26863,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1784420242}
+        m_TargetAssemblyTypeName: AudioManager, Scripts
+        m_MethodName: PlayAudioOnce
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 242158401}
         m_TargetAssemblyTypeName: ResourceManager, Scripts
         m_MethodName: printResources
@@ -28990,6 +29026,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c0267f2558afb594b921164fdc024a47, type: 3}
   - {fileID: 8300000, guid: 3f65cc5a9810b944b87aaadccc3f2cf7, type: 3}
   - {fileID: 8300000, guid: fefcc71389d25c44786436c767767cd7, type: 3}
+  - {fileID: 8300000, guid: 57e1f2f1d21957d4b9c43052a5ae927f, type: 3}
+  - {fileID: 8300000, guid: f10e7ff812627164fa39911459400577, type: 3}
   onStart:
     m_PersistentCalls:
       m_Calls:
@@ -30879,10 +30917,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1647121654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.1, y: 0.1}
+  m_AnchorMax: {x: 0.9, y: 0.9}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 18, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880920055
 MonoBehaviour:
@@ -30931,7 +30969,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.15
+  m_fontSize: 18.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

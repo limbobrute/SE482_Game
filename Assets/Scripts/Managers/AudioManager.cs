@@ -33,6 +33,19 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlayAudioOnce(int clipNumber)
+    {
+        if (clipNumber >= 0 && clipNumber < audioSources.Count)
+        {
+            audioSources[clipNumber].loop = false; // Disable looping
+            audioSources[clipNumber].Play();
+        }
+        else
+        {
+            Debug.Log("Clip number is out of range");
+        }
+    }
+
     public void StopAudio(int clipNumber)
     {
         if (clipNumber >= 0 && clipNumber < audioSources.Count)
@@ -56,5 +69,6 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Clip number is out of range");
         }
     }
+
 
 }
