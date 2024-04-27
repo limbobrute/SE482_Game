@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Buidlings\Buildings.cs" />
     <Compile Include="Assets\Scripts\Daniel\UI\ObjectDataForUI.cs" />
     <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Daniel\CameraController.cs" />
     <Compile Include="Assets\Scripts\Buidlings\BaseBuilding.cs" />
     <Compile Include="Assets\Scripts\SharedStructs.cs" />
     <Compile Include="Assets\Scripts\Map\HexRender.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Assets\Scripts\PSF\SerializableDictionary\Scripts\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\MouseSelecter.cs" />
     <Compile Include="Assets\Scripts\Daniel\Player\Blink.cs" />
-    <Compile Include="Assets\Scripts\Daniel\MoveCamera.cs" />
     <Compile Include="Assets\Scripts\Daniel\Buildings\BuildingMouseSelector.cs" />
     <Compile Include="Assets\Scripts\Events\BaseEvent.cs" />
     <Compile Include="Assets\Scripts\Daniel\Buildings\BuildingDataNew.cs" />

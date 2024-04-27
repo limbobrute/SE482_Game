@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveCamera : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
+    [Header("Zoom Variables")]
     public float speed = 10.0f; // Speed of the camera movement
+    public float zoomSpeed = 5.0f; // Speed of the camera zoom
+    public float minZoom = 10.0f; // Minimum zoom distance
+    public float maxZoom = 50.0f; // Maximum zoom distance
 
     // Define the movement constraints
+    [Header("Movement Contraint Variables")]
     public float minX = -30;
     public float maxX = 60;
-    
-    [Header("Z-axis is inverted.")]
-    public float minZ = 30;
-    public float maxZ = -60;
+    [Tooltip("Z-axis is inverted.")] public float minZ = 30;
+    [Tooltip("Z-axis is inverted.")] public float maxZ = -60;
 
     // Update is called once per frame
     void Update()
@@ -32,5 +35,11 @@ public class MoveCamera : MonoBehaviour
 
         // Move the camera smoothly to the new position
         transform.position = targetPosition;
+
+        // Zoom using mouse wheel (adjust FOV)
+        float zoomInput = Input.GetAxis("Mouse ScrollWheel");
+        float zoom = Camera.main.fieldOfView - zoomInput * zoomSpeed; // Adjust FOV
+        zoom = Mathf.Clamp(zoom, minZoom, maxZoom);
+        Camera.main.fieldOfView = zoom;
     }
 }
