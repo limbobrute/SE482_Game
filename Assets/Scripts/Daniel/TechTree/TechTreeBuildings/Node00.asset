@@ -14,15 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeLabel: BUILDINGS
   NodeID: 0
-  Description: "This is a description. How neat! \n\nSPECIAL 0"
+  Description: 
   cost:
     Wood: 0
     Crystal: 0
     Metal: 0
     Synthia: 0
     Workforce: 0
+    Time: 0
+  ReqResearchLevel: 0
   Prequisites:
     _pairs: []
-  Bonues:
+  Bonuses:
     _pairs: []
   Researched: 1
