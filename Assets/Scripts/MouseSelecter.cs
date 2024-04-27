@@ -7,6 +7,7 @@ public class MouseSelecter : MonoBehaviour
 {
     BuildingManager buildingManager;
     UIManager uiManager;
+    AudioManager audioManager;
     ObjectDataForUI[] uiData = new ObjectDataForUI[4];
     BuildingDataNew[] buildingDatas = new BuildingDataNew[4];
     public TextMeshProUGUI text;
@@ -18,6 +19,7 @@ public class MouseSelecter : MonoBehaviour
     {
         buildingManager = FindObjectOfType<BuildingManager>();
         uiManager = FindObjectOfType<UIManager>();
+        audioManager = FindObjectOfType<AudioManager>();
 
         if (buildingManager == null)
         {
@@ -57,6 +59,7 @@ public class MouseSelecter : MonoBehaviour
                 UpdateUIDataInfo(uiData[i], building);
                 i++;
             }
+            audioManager.PlayAudioOnce(3);
             uiManager.OpenTilePopup(GetComponent<Tile>().tileType, uiData, buildings, buildings.Count);
         }
     }
