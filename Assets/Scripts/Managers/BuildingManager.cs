@@ -60,7 +60,7 @@ public class BuildingManager : MonoBehaviour
             throw new ArgumentNullException(nameof(currentBuildingData));
 
         }
-        if (ResourceManager.CanBuild(currentBuildingData.cost))
+        if (ResourceManager.CanBuild(currentBuildingData.nextLevel.cost))
         {
             BuildingsInScene.Remove(currentBuilding.GetComponent<BuildingMain>());
 

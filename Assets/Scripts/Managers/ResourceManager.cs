@@ -1,6 +1,4 @@
 using UnityEngine;
-using Enums;
-using System;
 using SerializableDictionary.Scripts;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -16,13 +14,13 @@ public class ResourceManager : MonoBehaviour
     public int workforce;
 
     [SerializeField]
-    private int woodToAdd =0;
+    private int woodToAdd =2;
     [SerializeField]
-    private int metalToAdd = 0;
+    private int metalToAdd = 2;
     [SerializeField]
-    private int synthiaToAdd = 0;
+    private int synthiaToAdd = 1;
     [SerializeField]
-    private int crystalToAdd = 0;
+    private int crystalToAdd = 2;
     [SerializeField]
     private int workforceToAdd = 0;//This one may be uneccessary
 
