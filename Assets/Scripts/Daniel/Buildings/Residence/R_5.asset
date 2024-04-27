@@ -10,23 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40d77a1b655230642a112ac54a7f2d15, type: 3}
-  m_Name: R_1
+  m_Name: R_5
   m_EditorClassIdentifier: 
   buildingName: Residence
-  buildingLevel: 1
+  buildingLevel: 5
   cost:
-    Wood: 10
-    Crystal: 10
-    Metal: 10
-    Synthia: 5
-    Workforce: 3
-    Time: 5
-  buildingPrefab: {fileID: 1664158907654926137, guid: 4724d3e9c3b758e449396d7f00e00598,
+    Wood: 1000
+    Crystal: 1000
+    Metal: 1000
+    Synthia: 500
+    Workforce: 11
+    Time: 3000
+  buildingPrefab: {fileID: 1664158907654926137, guid: 3c4d241fd1df1d24992aeefcc9f4b540,
     type: 3}
   icon: {fileID: 0}
-  description: +5 Workforce
-  nextLevel: {fileID: 11400000, guid: efc2c40a7e6c9da428ae6786b2950a17, type: 2}
-  canLevelUp: 1
-  flatResourceIncrement: 5
+  description: +13 Workforce
+  nextLevel: {fileID: 0}
+  canLevelUp: 0
+  flatResourceIncrement: 2
   slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}

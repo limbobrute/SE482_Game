@@ -2,7 +2,7 @@ using UnityEngine;
 using SerializableDictionary.Scripts;
 using UnityEngine.Events;
 using UnityEngine.UI;
-
+using System.Collections.Generic;
 
 public class ResourceManager : MonoBehaviour
 {
@@ -26,7 +26,7 @@ public class ResourceManager : MonoBehaviour
     [field: SerializeField]
     public int CrystalToAdd { get; set; }
     [field: SerializeField]
-    public int WorkforceToAdd { get; set; }
+    public List<int> WorkforceToAdd { get; set; }
 
     private void Start()
     {
@@ -35,6 +35,8 @@ public class ResourceManager : MonoBehaviour
         workforce = 10;
         crystal = 200;
         synthia = 100;
+
+        WorkforceToAdd = new List<int>();
     }
 
     //Check to see if the given node can be researched

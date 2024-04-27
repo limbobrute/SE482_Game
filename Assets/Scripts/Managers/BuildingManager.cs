@@ -78,6 +78,12 @@ public class BuildingManager : MonoBehaviour
                 case "Synthia Mine":
                     ResourceManager.SynthiaToAdd = ResourceManager.SynthiaToAdd - currentBuildingData.flatResourceIncrement;
                     break;
+                case "Residence":
+                    if(currentBuildingData.nextLevel != null)
+                    {
+                    ResourceManager.WorkforceToAdd.Add(currentBuildingData.nextLevel.flatResourceIncrement - currentBuildingData.flatResourceIncrement);
+                    }
+                        break;
                 case "Research Factory":
                     onResearchUpgrade?.Invoke();
                     break;
@@ -189,6 +195,20 @@ public class BuildingManager : MonoBehaviour
                 break;
             case "Synthia Mine":
                 ResourceManager.SynthiaToAdd = ResourceManager.SynthiaToAdd + buildingData.flatResourceIncrement;
+                break;
+            case "Residence":
+                if(buildingData.buildingLevel == 1)
+                {
+                ResourceManager.workforce += buildingData.flatResourceIncrement;
+                }
+                else
+                {
+                    ResourceManager.workforce += ResourceManager.WorkforceToAdd[0];
+                    ResourceManager.WorkforceToAdd.RemoveAt(0);
+                    Debug.LogError("Current logic makes it so that if two residences are being upgraded at once (eg to lvl 3 and to lvl 2 with the to lvl 3 started first) " +
+                        "when lvl 2 compeletes it will get lvl 3's boon and vice versa");
+                }
+                ResourceManager.printResources();
                 break;
             case "Research Factory":
                 onResearchBuilt?.Invoke();
