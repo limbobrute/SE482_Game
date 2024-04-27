@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class TechNode : MonoBehaviour
 {
     [SerializeField] ResourceManager resourceManager;
+    [SerializeField] AudioManager audioManager;
     public TechTreeNode nodeData;
 
     public bool canInteract = false;
@@ -63,6 +64,7 @@ public class TechNode : MonoBehaviour
         {
             nodeButton.ActivatedColor();
             NodeLock();
+            audioManager.PlayAudioOnce(3);
             nodeData.Researched = true;
             hoverData.needRequirementPanel = false;
             isActivated = true;
@@ -72,7 +74,8 @@ public class TechNode : MonoBehaviour
         }
         else
         {
-            Debug.Log("CANNOT RESEARCH!");
+            audioManager.PlayAudioOnce(4);
+            //Debug.Log("CANNOT RESEARCH!");
         }
     }
 
