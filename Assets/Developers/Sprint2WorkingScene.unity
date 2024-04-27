@@ -2777,12 +2777,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   zoomSpeed: 5
-  minZoom: 10
-  maxZoom: 50
-  minX: -13
-  maxX: 61
-  minZ: 16
-  maxZ: -70
+  minZoom: 15
+  maxZoom: 45
+  minX: -20
+  maxX: 94
+  minZ: 20
+  maxZ: -104
+  rotationSpeed: 0.2
 --- !u!1 &119704013
 GameObject:
   m_ObjectHideFlags: 0

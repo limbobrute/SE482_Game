@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\Daniel\Player\SpinObject.cs" />
     <Compile Include="Assets\Scripts\DebugCatcher.cs" />
     <Compile Include="Assets\Scripts\Resources\BaseResource.cs" />
+    <Compile Include="Assets\Scripts\Daniel\CameraController2.cs" />
     <Compile Include="Assets\Scripts\Daniel\Player\DronePlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Daniel\Buildings\BuildingProtoData.cs" />
     <Compile Include="Assets\Scripts\Daniel\Player\PlayerTilt.cs" />
