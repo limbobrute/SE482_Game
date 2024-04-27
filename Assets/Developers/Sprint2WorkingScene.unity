@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028462, g: 0.22571574, b: 0.30692294, a: 1}
+  m_IndirectSpecularColor: {r: 0.1802844, g: 0.22571507, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4630,11 +4630,6 @@ MonoBehaviour:
   crystal: 0
   synthia: 0
   workforce: 0
-  woodToAdd: 0
-  metalToAdd: 0
-  synthiaToAdd: 0
-  crystalToAdd: 0
-  workforceToAdd: 0
   BuidingCostTable:
     _pairs:
     - _key: House
@@ -4692,6 +4687,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  <WoodToAdd>k__BackingField: 2
+  <MetalToAdd>k__BackingField: 2
+  <SynthiaToAdd>k__BackingField: 1
+  <CrystalToAdd>k__BackingField: 2
+  <WorkforceToAdd>k__BackingField: 0
 --- !u!1 &247760545
 GameObject:
   m_ObjectHideFlags: 0

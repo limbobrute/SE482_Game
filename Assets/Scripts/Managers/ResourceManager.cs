@@ -13,27 +13,20 @@ public class ResourceManager : MonoBehaviour
     public int synthia;
     public int workforce;
 
-    [SerializeField]
-    private int woodToAdd =2;
-    [SerializeField]
-    private int metalToAdd = 2;
-    [SerializeField]
-    private int synthiaToAdd = 1;
-    [SerializeField]
-    private int crystalToAdd = 2;
-    [SerializeField]
-    private int workforceToAdd = 0;//This one may be uneccessary
-
-
     [SerializeField] SerializableDictionary<string, Cost> BuidingCostTable = new SerializableDictionary<string, Cost>();
 
     public UnityEvent OnResourceUpdate;
 
-    public int WoodToAdd { get => woodToAdd; set => woodToAdd = value; }
-    public int MetalToAdd { get => metalToAdd; set => metalToAdd = value; }
-    public int SynthiaToAdd { get => synthiaToAdd; set => synthiaToAdd = value; }
-    public int CrystalToAdd { get => crystalToAdd; set => crystalToAdd = value; }
-    public int WorkforceToAdd { get => workforceToAdd; set => workforceToAdd = value; }
+    [field: SerializeField]
+    public int WoodToAdd { get; set; }
+    [field: SerializeField]
+    public int MetalToAdd { get; set; }
+    [field: SerializeField]
+    public int SynthiaToAdd { get; set; }
+    [field: SerializeField]
+    public int CrystalToAdd { get; set; }
+    [field: SerializeField]
+    public int WorkforceToAdd { get; set; }
 
     private void Start()
     {
