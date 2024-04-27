@@ -2924,6 +2924,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 824952547}
+        m_TargetAssemblyTypeName: BuildingManager, Scripts
+        m_MethodName: AlterBuildTime
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 35296f5f581f7b5419342278d5106498,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &120173798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11806,6 +11819,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 824952547}
+        m_TargetAssemblyTypeName: BuildingManager, Scripts
+        m_MethodName: AlterBuildTime
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 9a492581d2bd5ba4983673897a37b102,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &732843992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13991,6 +14017,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 824952547}
+        m_TargetAssemblyTypeName: BuildingManager, Scripts
+        m_MethodName: AlterBuildTime
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: d6ad09df51a9133489c8d8cdbdc89c0c,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -31000,6 +31039,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 824952547}
+        m_TargetAssemblyTypeName: BuildingManager, Scripts
+        m_MethodName: AlterBuildTime
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 99d21026f7f5b8449ac9bfb6afda4326,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1886395258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31397,6 +31449,19 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 824952547}
+        m_TargetAssemblyTypeName: BuildingManager, Scripts
+        m_MethodName: AlterBuildTime
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: a08086ac26a3466408dee73700e80c07,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TechTreeNode, Scripts
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
