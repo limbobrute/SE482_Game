@@ -10,7 +10,13 @@ public class BuildingManager : MonoBehaviour
 {
     [field: SerializeField]
     public ResourceManager ResourceManager { get; set; }
-    [field: SerializeField] AudioManager AudioManager { get; set; }
+
+    [field: SerializeField] 
+    public UIManager UIManager { get; set; }
+
+    [field: SerializeField] 
+    public AudioManager AudioManager { get; set; }
+
     [field: SerializeField]
     public List<BuildingMain> BuildingTypesToBuild { get; set; }
 

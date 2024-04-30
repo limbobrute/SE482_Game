@@ -18,12 +18,21 @@ public class UIManager : MonoBehaviour
     [SerializeField] Button ButtonTech;
     BuildingManager buildingManager;
 
-    bool popupOpen = false;
+    [SerializeField] bool popupOpen = false;
 
     private void Start()
     {
         buildingManager = FindObjectOfType<BuildingManager>();
         InitializeScreen();
+    }
+
+    private void Update()
+    {
+        // This stops NoResource popup from allowing other windows to activate
+        if (screens[5].activeSelf && !popupOpen)
+        {
+            popupOpen = true;
+        }
     }
 
     private void InitializeScreen()
@@ -62,6 +71,11 @@ public class UIManager : MonoBehaviour
     public bool GetPopupOpen()
     {
         return popupOpen;
+    }
+
+    public void SetPopUpOpen(bool isOpen)
+    {
+        popupOpen = isOpen;
     }
 
     public void OpenHoverDisplayPanel(string title, string description)
@@ -220,6 +234,32 @@ public class UIManager : MonoBehaviour
     public void CloseTechTreePopup()
     {
         CloseScreen(screens[3]);
+        popupOpen = false;
+    }
+
+    public void OpenNotEnoughResourcesPopup()
+    {
+        CloseAllScreens();
+        OpenScreen(screens[5]);
+        popupOpen = true;
+    }
+
+    public void CloseNotEnoughResourcesPopup()
+    {
+        CloseScreen(screens[5]);
+        popupOpen = false;
+    }
+
+    public void OpenPauseMenuPopup()
+    {
+        CloseAllScreens();
+        OpenScreen(screens[6]);
+        popupOpen = true;
+    }
+
+    public void ClosePauseMenuPopup()
+    {
+        CloseScreen(screens[6]);
         popupOpen = false;
     }
 }
