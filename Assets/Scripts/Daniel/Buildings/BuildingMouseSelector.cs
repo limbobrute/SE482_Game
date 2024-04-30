@@ -4,12 +4,14 @@ public class BuildingMouseSelector : MonoBehaviour
 {
     [SerializeField] BuildingMain myBuilding;
     [SerializeField] UIManager uiManager;
+    [SerializeField] AudioManager audioManager;
     [SerializeField] bool canHover = true; // Flag to track hover state
     [SerializeField] bool canSelect = true;
 
     private void Awake()
     {
         uiManager = FindObjectOfType<UIManager>();
+        audioManager = FindObjectOfType<AudioManager>();
         myBuilding = GetComponent<BuildingMain>();
     }
 
@@ -44,6 +46,7 @@ public class BuildingMouseSelector : MonoBehaviour
         if (canSelect)
         {
             uiManager.OpenBuildingPopup(myBuilding.GetThisUIData(), myBuilding.GetNextUIData(), this.gameObject);
+            audioManager.PlayAudioOnce(3);
             BuildingFlagSet(!uiManager.GetPopupOpen());
         }
     }

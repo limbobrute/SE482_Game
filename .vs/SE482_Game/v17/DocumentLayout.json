@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\assets\\scripts\\daniel\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|c:\\users\\dleon\\documents\\scsu\\sy24 sp\\se 482 - computer animation and visualization\\se482_game\\assets\\scripts\\pausegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|solutionrelative:assets\\scripts\\pausegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|c:\\users\\dleon\\documents\\scsu\\sy24 sp\\se 482 - computer animation and visualization\\se482_game\\assets\\scripts\\daniel\\buildings\\buildingmouseselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|solutionrelative:assets\\scripts\\daniel\\buildings\\buildingmouseselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|c:\\users\\dleon\\documents\\scsu\\sy24 sp\\se 482 - computer animation and visualization\\se482_game\\assets\\scripts\\daniel\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|solutionrelative:assets\\scripts\\daniel\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,11 +19,11 @@
       "RelativeMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|solutionrelative:assets\\scripts\\mouseselecter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|c:\\users\\dleon\\documents\\scsu\\sy24 sp\\se 482 - computer animation and visualization\\se482_game\\assets\\scripts\\daniel\\ui\\objectdataforui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\assets\\scripts\\daniel\\ui\\objectdataforui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|solutionrelative:assets\\scripts\\daniel\\ui\\objectdataforui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|c:\\users\\dleon\\documents\\scsu\\sy24 sp\\se 482 - computer animation and visualization\\se482_game\\assets\\scripts\\managers\\buildingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\assets\\scripts\\managers\\buildingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{222081EB-6985-ABB2-0099-13DB690F9D2A}|Scripts.csproj|solutionrelative:assets\\scripts\\managers\\buildingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -142,11 +150,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 213,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MouseSelecter.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\MouseSelecter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MouseSelecter.cs",
@@ -155,18 +163,17 @@
               "ViewState": "AQIAABMAAAAAAAAAAAAYwD4AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-27T15:29:24.357Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\UI\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Daniel\\UI\\UIManager.cs",
               "ToolTip": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\UI\\UIManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Daniel\\UI\\UIManager.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAwC8AAAA2AAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAEBdwC8AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T18:13:59.268Z",
               "IsPinned": true,
@@ -174,7 +181,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "PauseGame.cs",
+              "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\PauseGame.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PauseGame.cs",
+              "ToolTip": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\PauseGame.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PauseGame.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T02:08:18.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BuildingMouseSelector.cs",
+              "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\Buildings\\BuildingMouseSelector.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Daniel\\Buildings\\BuildingMouseSelector.cs",
+              "ToolTip": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\Buildings\\BuildingMouseSelector.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Daniel\\Buildings\\BuildingMouseSelector.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwDAAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T02:01:35.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ObjectDataForUI.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\UI\\ObjectDataForUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Daniel\\UI\\ObjectDataForUI.cs",
@@ -182,12 +215,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Daniel\\UI\\ObjectDataForUI.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T20:45:09.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T20:45:09.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "TechTree.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\TechTree\\TechTree.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Daniel\\TechTree\\TechTree.cs",
@@ -199,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "TechTreeNode.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\TechTreeNode.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TechTreeNode.cs",
@@ -211,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TechNode.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\TechTree\\TechNode.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Daniel\\TechTree\\TechNode.cs",
@@ -223,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ResourceManager.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Managers\\ResourceManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\ResourceManager.cs",
@@ -235,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "BuildingManager.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Managers\\BuildingManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\BuildingManager.cs",
@@ -243,12 +275,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Managers\\BuildingManager.cs",
               "ViewState": "AQIAACgAAAAAAAAAAAAgwEAAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T17:51:42.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T17:51:42.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "CameraController2.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\CameraController2.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Daniel\\CameraController2.cs",
@@ -260,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ButtonSoundController.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\ButtonSoundController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Daniel\\ButtonSoundController.cs",
@@ -272,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AudioManager.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Managers\\AudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\AudioManager.cs",
@@ -284,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "CameraController.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\CameraController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Daniel\\CameraController.cs",
@@ -296,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "SharedStructs.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\SharedStructs.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SharedStructs.cs",
@@ -308,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "BuildingDataNew.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\Buildings\\BuildingDataNew.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Daniel\\Buildings\\BuildingDataNew.cs",
@@ -320,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "VisualStudioIntegration.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Library\\PackageCache\\com.unity.ide.visualstudio@2.0.18\\Editor\\VisualStudioIntegration.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ide.visualstudio@2.0.18\\Editor\\VisualStudioIntegration.cs",
@@ -332,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "MoveCamera.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Daniel\\MoveCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Daniel\\MoveCamera.cs",
@@ -344,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "SerializableDictionary.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\PSF\\SerializableDictionary\\Scripts\\SerializableDictionary.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PSF\\SerializableDictionary\\Scripts\\SerializableDictionary.cs",
@@ -356,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "RTSTimer.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Managers\\RTSTimer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\RTSTimer.cs",
@@ -368,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\UI\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\UI\\UIManager.cs",
@@ -379,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "BuildingDataNew.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\Buildings\\BuildingDataNew.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\Buildings\\BuildingDataNew.cs",
@@ -391,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "BuildingMain.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\Buildings\\BuildingMain.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\Buildings\\BuildingMain.cs",
@@ -403,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "BuildingMouseSelector.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\Buildings\\BuildingMouseSelector.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\Buildings\\BuildingMouseSelector.cs",
@@ -415,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "ObjectDataForUI.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\UI\\ObjectDataForUI.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\UI\\ObjectDataForUI.cs",
@@ -427,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "TechNode.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\TechTree\\TechNode.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\TechTree\\TechNode.cs",
@@ -439,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "MoveCamera.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\MoveCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\MoveCamera.cs",
@@ -451,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "BuildingProtoData.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\Buildings\\BuildingProtoData.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\Buildings\\BuildingProtoData.cs",
@@ -463,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Tile.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Map\\Tile.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Map\\Tile.cs",
@@ -475,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "MapGen.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\Map\\MapGen.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Map\\MapGen.cs",
@@ -487,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "TechTree.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\TechTree\\TechTree.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\TechTree\\TechTree.cs",
@@ -499,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "TechTree.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Scripts\\TechTree.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TechTree.cs",
@@ -511,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "TechNodeHoverText.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\TechTree\\TechNodeHoverText.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\TechTree\\TechNodeHoverText.cs",
@@ -523,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "TechNodeModifyButton.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\TechTree\\TechNodeModifyButton.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\TechTree\\TechNodeModifyButton.cs",
@@ -535,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Building.cs",
               "DocumentMoniker": "C:\\Users\\dleon\\Documents\\SCSU\\SY24 SP\\SE 482 - Computer Animation and Visualization\\SE482_Game\\Assets\\Daniel\\Buildings\\Building.cs",
               "RelativeDocumentMoniker": "Assets\\Daniel\\Buildings\\Building.cs",
