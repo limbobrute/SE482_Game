@@ -23,7 +23,7 @@ MonoBehaviour:
     Time: 45
   buildingPrefab: {fileID: 3782086991233664731, guid: 9b51cffaf4930c840b15ef115a874ac9,
     type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 6955506003f50f5409f24516575d62ca, type: 3}
   description: +7 Synthia
   nextLevel: {fileID: 11400000, guid: 41cedf6f19f7f2a4bbfe443dd6a291ff, type: 2}
   canLevelUp: 1

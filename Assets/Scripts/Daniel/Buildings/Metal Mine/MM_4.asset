@@ -23,7 +23,7 @@ MonoBehaviour:
     Time: 375
   buildingPrefab: {fileID: 9218147795629284449, guid: 68a60b4c9cfbce046bb823af9776f7e1,
     type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 954033c25b3ff494793968b67b22f19d, type: 3}
   description: +11 Metal
   nextLevel: {fileID: 11400000, guid: c4b26217cf4d1b7448d5e0cf90b21458, type: 2}
   canLevelUp: 1

@@ -19,10 +19,7 @@ using UnityEngine;
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                UpgradeBuilding(buildingData.nextLevel);
-            }
+
         }
 
         // Called when constructing or upgrading the building
@@ -63,6 +60,7 @@ using UnityEngine;
             od.description = bd.description;
             // Need to further work buff
             od.buff = "+" + bd.description;
+            od.icon = bd.icon;
             od.needRequirementPanel = true;
             od.woodCost = bd.cost.Wood.ToString();
             od.crystalCost = bd.cost.Crystal.ToString();

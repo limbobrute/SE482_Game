@@ -23,7 +23,7 @@ MonoBehaviour:
     Time: 300
   buildingPrefab: {fileID: 4867597468710742087, guid: 7ebcd2afd614b5f4eb6a78f7cada7638,
     type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: f53411e42d3ada649b10cdfb0da3f9b1, type: 3}
   description: +1 Tech
   nextLevel: {fileID: 11400000, guid: 3087fe9e38080da419fc34d0e3ef7d1e, type: 2}
   canLevelUp: 1

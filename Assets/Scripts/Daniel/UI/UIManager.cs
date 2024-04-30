@@ -14,7 +14,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] Button[] buildingsToBuyButtons;
     [SerializeField] Button upgradeButton;
     [SerializeField] Text[] tilePopupTexts;
+    [SerializeField] Image tilePopupImage;
     [SerializeField] Text[] buildingPopupTexts;
+    [SerializeField] Image[] buildingPopupImages;
     [SerializeField] Button ButtonTech;
     BuildingManager buildingManager;
 
@@ -125,16 +127,19 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // Example usage to close the DisplayPanel
     public void CloseHoverDisplayPanel()
     {
         CloseScreen(screens[1]);
     }
 
-    void BuildingDisplay(ObjectDataForUI uiData, Text[] texts, int index)
+    void BuildingDisplay(ObjectDataForUI uiData, Image image, Text[] texts, int index)
     {
         if (uiData != null)
         {
+            if (uiData.icon == null) {
+                Debug.Log("No Image!");
+            }
+            image.sprite = uiData.icon;
             texts[index].text = uiData.objectName + " <Lv" + uiData.level + ">";
             texts[index + 1].text = uiData.description;
             texts[index + 2].text = uiData.woodCost;
@@ -174,9 +179,9 @@ public class UIManager : MonoBehaviour
             int tempI = i;
             buildingsToBuyButtons[i].onClick.AddListener(() => buildingManager.InstantiateBuilding(buildingData[tempI]));
             buildingsToBuyButtons[i].onClick.AddListener(() => CloseTilePopup());
+            uiData[i].icon = buildingData[tempI].icon;
 
-
-            BuildingDisplay(uiData[i], tilePopupTexts, index);
+            BuildingDisplay(uiData[i], tilePopupImage, tilePopupTexts, index);
         }
     }
 
@@ -200,10 +205,11 @@ public class UIManager : MonoBehaviour
         OpenScreen(screens[2]);
         popupOpen = true;
 
+        buildingPopupImages[0].sprite = currUIData.icon;
         buildingPopupTexts[0].text = currUIData.objectName; 
         buildingPopupTexts[1].text = currUIData.objectName + " <Lv" + currUIData.level + ">";
         buildingPopupTexts[2].text = currUIData.description;
-        BuildingDisplay(nextUIData, buildingPopupTexts, 3);
+        BuildingDisplay(nextUIData, buildingPopupImages[1], buildingPopupTexts, 3);
 
         upgradeButton.onClick.AddListener(() => buildingManager.UpgradeBuilding(currentBuilding));
         upgradeButton.onClick.AddListener(() => CloseBuildingPopup());

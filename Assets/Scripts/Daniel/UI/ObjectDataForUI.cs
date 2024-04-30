@@ -9,6 +9,7 @@ public class ObjectDataForUI
     public string level = "";
     public string description = "";
     public string buff = "";
+    public Sprite icon = null;
 
     public bool needRequirementPanel = false;
     public string woodCost = "";
