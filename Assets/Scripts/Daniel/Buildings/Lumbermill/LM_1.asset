@@ -23,7 +23,7 @@ MonoBehaviour:
     Time: 15
   buildingPrefab: {fileID: 958592876648073626, guid: b5ed63401a4cfef499875f70f992a614,
     type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: d4158ca69ec44d34f9b5597f7ee4d980, type: 3}
   description: +5 Wood
   nextLevel: {fileID: 11400000, guid: 5fc07aae33732a543a5685acd7a1f3ee, type: 2}
   canLevelUp: 1

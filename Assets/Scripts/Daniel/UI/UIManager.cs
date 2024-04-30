@@ -77,7 +77,7 @@ public class UIManager : MonoBehaviour
         OpenScreen(screens[1]);
         if (objectUIData.isBuilding)
         {
-            hoverTexts[0].text = objectUIData.objectName + " LV " + objectUIData.level.ToString();
+            hoverTexts[0].text = objectUIData.objectName + " <Lv" + objectUIData.level + ">";
         }
         else
         {
@@ -121,7 +121,7 @@ public class UIManager : MonoBehaviour
     {
         if (uiData != null)
         {
-            texts[index].text = "LV " + uiData.level;
+            texts[index].text = uiData.objectName + " <Lv" + uiData.level + ">";
             texts[index + 1].text = uiData.description;
             texts[index + 2].text = uiData.woodCost;
             texts[index + 3].text = uiData.crystalCost;
@@ -187,7 +187,7 @@ public class UIManager : MonoBehaviour
         popupOpen = true;
 
         buildingPopupTexts[0].text = currUIData.objectName; 
-        buildingPopupTexts[1].text = "LV " + currUIData.level;
+        buildingPopupTexts[1].text = currUIData.objectName + " <Lv" + currUIData.level + ">";
         buildingPopupTexts[2].text = currUIData.description;
         BuildingDisplay(nextUIData, buildingPopupTexts, 3);
 
@@ -222,6 +222,4 @@ public class UIManager : MonoBehaviour
         CloseScreen(screens[3]);
         popupOpen = false;
     }
-
-
 }

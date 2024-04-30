@@ -23,7 +23,7 @@ MonoBehaviour:
     Time: 15
   buildingPrefab: {fileID: 1941013292792614459, guid: c9b34a098c7518e4592b8bc71ff978be,
     type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: e76c8fc46ef0350409c7d3478e12d4a8, type: 3}
   description: +5 Crystal
   nextLevel: {fileID: 11400000, guid: 53c51813a6a349748b5ac44b8410a62b, type: 2}
   canLevelUp: 1
