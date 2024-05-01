@@ -27,7 +27,7 @@ MonoBehaviour:
   description: +11 Workforce
   nextLevel: {fileID: 11400000, guid: 7ef5ef9637d0a0b47870f14c274f1aec, type: 2}
   canLevelUp: 1
-  flatResourceIncrement: 2
+  flatResourceIncrement: 11
   slots:
   - {fileID: 0}
   - {fileID: 0}

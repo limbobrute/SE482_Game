@@ -20,14 +20,14 @@ MonoBehaviour:
     Metal: 30
     Synthia: 15
     Workforce: 5
-    Time: 10
+    Time: 90
   buildingPrefab: {fileID: 1664158907654926137, guid: fb972068b1ec9724088981a3e80572fd,
     type: 3}
   icon: {fileID: 21300000, guid: 9ad94de9041e8b34d82cd62eaf606390, type: 3}
   description: +7 Workforce
   nextLevel: {fileID: 11400000, guid: afcf5d7ede150fb418c540bb380fd5e9, type: 2}
   canLevelUp: 1
-  flatResourceIncrement: 2
+  flatResourceIncrement: 7
   slots:
   - {fileID: 0}
   - {fileID: 0}
